@@ -13,7 +13,6 @@ import {
   REGION_CULTURE,
   getOptimizedQueries,
   classifyCategoryAdvanced,
-  generateValueAnalysis,
   isMemeWorthy,
 } from "@/lib/region-knowledge";
 
@@ -381,7 +380,7 @@ function buildResourceOneLiner(types: ResourceType[]): string {
   return `可转化为${names}`;
 }
 
-// ============ 智能摘要生成 ============
+// ============ 热点总结 ============
 
 function buildSmartSummary(
   item: RawItem,
@@ -393,16 +392,8 @@ function buildSmartSummary(
   const desc = stripHtml(item.description || "");
   const text = `${title} ${desc}`.toLowerCase();
 
-  // 1. 热点概述:用中文总结这个梗是什么
-  const summary = generateChineseSummary(title, desc, text, category, region);
-
-  // 2. 价值分析:为什么这个梗对BS有价值
-  const valueAnalysis = generateValueAnalysis(title, desc, category, region);
-
-  // 3. 落地建议:具体怎么做
-  const resourceAdvice = buildSpecificResourceAdvice(title, desc, resourceTypes, region);
-
-  return `【热点概述】${summary}\n\n【价值分析】${valueAnalysis}\n\n【落地建议】${resourceAdvice}`;
+  // 直接对搜索内容做中文总结
+  return generateChineseSummary(title, desc, text, category, region);
 }
 
 /**
@@ -563,44 +554,6 @@ function smartTranslate(desc: string): string {
     .replace(/\bevent\b/gi, "活动")
     .replace(/\bcollaboration\b/gi, "联动");
   return cleaned;
-}
-
-function buildSpecificResourceAdvice(title: string, desc: string, types: ResourceType[], region: Region): string {
-  const text = `${title} ${desc}`.toLowerCase();
-  const regionName = region === "SEA" ? "东南亚" : "拉美";
-  const suggestions: string[] = [];
-
-  for (const rt of types.slice(0, 2)) {
-    switch (rt) {
-      case "character_skin":
-        if (/anime|cosplay/.test(text)) suggestions.push("提取动漫角色配色+服装剪影,融入BS战术装甲风格做主题皮肤");
-        else if (/kpop|idol/.test(text)) suggestions.push("参考偶像舞台造型的配色和元素,做潮流向角色皮肤");
-        else if (/skull|calavera|mask/.test(text)) suggestions.push("直接做骷髅/面具主题限定皮肤,视觉冲击力强");
-        else suggestions.push("提取核心视觉特征做限定主题角色皮肤");
-        break;
-      case "emote":
-        if (/dance|choreography|challenge/.test(text)) suggestions.push("还原核心舞蹈动作做全身表情,玩家会主动录屏传播");
-        else suggestions.push("提取该梗的标志性动作做3-5秒循环表情");
-        break;
-      case "spray":
-        suggestions.push("将梗图核心视觉做成2D喷漆,简化设计保证对局中远距离可读");
-        break;
-      case "playpal":
-        suggestions.push("做Q版chibi化盘盘伴侣,加入该梗特征的待机动画和互动反应");
-        break;
-      case "lobby_theme":
-        suggestions.push("提取音乐节奏和视觉符号做沉浸式大厅主题,配套动态背景");
-        break;
-      case "event_bundle":
-        suggestions.push("整合为3-5件套限时主题礼包,搭配活动任务引导玩家广泛参与");
-        break;
-      default:
-        suggestions.push(`快速产出${RESOURCE_NAMES[rt]}类资源,抓住热度窗口`);
-    }
-  }
-
-  suggestions.push(`重点面向${regionName}玩家审美偏好做设计调整`);
-  return suggestions.join(";") + "。建议1-2周内完成初版概念。";
 }
 
 // ============ Compliance Check ============
