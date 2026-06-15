@@ -1,9 +1,20 @@
 /**
- * Client-side version of the discover engine.
- * Uses allorigins.win as CORS proxy to fetch Bing News RSS from the browser.
+ * Client-side discover engine v2
+ * 
+ * 改进点：
+ * 1. 搜索查询基于地区文化特色优化
+ * 2. 分类使用智能规则引擎（非简单关键词匹配）
+ * 3. 价值分析基于地区文化差异做深度解读
+ * 4. 热点总结结构化，包含"是什么+为什么重要+怎么用"
  */
 
 import type { Trend, Region, TrendCategory, TrendScores, ResourceType, Platform } from "@/types/trend";
+import {
+  REGION_CULTURE,
+  getOptimizedQueries,
+  classifyCategoryAdvanced,
+  generateValueAnalysis,
+} from "@/lib/region-knowledge";
 
 // ============ Utilities ============
 
@@ -45,23 +56,22 @@ export async function discoverTrendsClient(region: Region): Promise<Trend[]> {
   return scored.slice(0, 50);
 }
 
-// ============ NSFW Filter ============
+// ============ Content Filter ============
 
 function isInappropriate(text: string): boolean {
   const lower = text.toLowerCase();
   const blocked = [
     "porn", "xxx", "nsfw", "nude", "naked", "sex ", "sexual", "erotic",
-    "hentai", "onlyfans", "stripper", "strip club", "adult film",
-    "prostitut", "escort", "orgasm", "fetish", "bondage", "milf",
-    "explicit", "x-rated", "xrated", "playboy", "brazzers",
+    "hentai", "onlyfans", "stripper", "adult film",
+    "prostitut", "escort", "orgasm", "fetish", "bondage",
     "gore", "murder", "suicide", "self-harm", "terrorist",
     "drug dealer", "cartel violence", "mass shooting",
     "child abuse", "pedophil", "trafficking",
-    "chokes to death", "killed", "dies", "dead body", "homicide",
     "rape", "assault", "stabbed", "shooting victim",
     "overdose", "fentanyl death",
     "lawsuit", "scam", "fraud", "arrest", "prison",
-    "bankruptcy", "divorce",
+    "bankruptcy", "stock market", "interest rate", "federal reserve",
+    "congressional", "parliament", "gdp growth", "inflation rate",
   ];
   return blocked.some(word => lower.includes(word));
 }
@@ -69,28 +79,37 @@ function isInappropriate(text: string): boolean {
 // ============ CORS Proxy Fetch ============
 
 async function proxyFetch(url: string): Promise<string> {
-  const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 12000);
-  try {
-    const res = await fetch(proxyUrl, { signal: controller.signal });
-    if (!res.ok) return "";
-    return await res.text();
-  } catch {
-    return "";
-  } finally {
-    clearTimeout(timer);
+  // Try multiple proxies for reliability
+  const proxies = [
+    `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+    `https://corsproxy.io/?${encodeURIComponent(url)}`,
+  ];
+  
+  for (const proxyUrl of proxies) {
+    try {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 12000);
+      const res = await fetch(proxyUrl, { signal: controller.signal });
+      clearTimeout(timer);
+      if (res.ok) {
+        const text = await res.text();
+        if (text && text.length > 100) return text;
+      }
+    } catch {
+      continue;
+    }
   }
+  return "";
 }
 
 // ============ Source Fetching ============
 
 async function fetchAllSources(region: Region): Promise<RawItem[]> {
-  const queries = getSearchQueries(region);
+  const queries = getOptimizedQueries(region);
   const allItems: RawItem[] = [];
 
-  // Batch fetch - max 6 concurrent to avoid proxy rate limit
-  const batchSize = 6;
+  // Batch fetch - max 4 concurrent
+  const batchSize = 4;
   for (let i = 0; i < queries.length; i += batchSize) {
     const batch = queries.slice(i, i + batchSize);
     const results = await Promise.allSettled(batch.map(q => fetchBingNews(q)));
@@ -101,7 +120,7 @@ async function fetchAllSources(region: Region): Promise<RawItem[]> {
     }
   }
 
-  // Deduplicate
+  // Deduplicate by normalized title
   const seen = new Set<string>();
   return allItems.filter((item) => {
     const key = item.title.toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 40);
@@ -109,59 +128,6 @@ async function fetchAllSources(region: Region): Promise<RawItem[]> {
     seen.add(key);
     return true;
   });
-}
-
-// ============ Search Queries ============
-
-function getSearchQueries(region: Region): string[] {
-  const year = new Date().getFullYear();
-  const core = [
-    `TikTok viral ${year}`,
-    `TikTok trending meme ${year}`,
-    `TikTok dance viral`,
-    `TikTok challenge trend ${year}`,
-    `YouTube viral trending ${year}`,
-    `YouTube trending video ${year}`,
-    `TikTok cosplay gaming`,
-    `TikTok anime viral`,
-    `Discord meme gaming viral`,
-  ];
-
-  if (region === "SEA") {
-    return [
-      ...core,
-      `TikTok Indonesia viral`,
-      `TikTok Philippines viral`,
-      `TikTok Thailand viral`,
-      `TikTok Vietnam trending`,
-      `TikTok Malaysia viral`,
-      `YouTube Indonesia trending`,
-      `YouTube Philippines trending`,
-      `TikTok K-pop dance Southeast Asia`,
-      `TikTok anime cosplay Asia`,
-      `TikTok cute animal pet viral Asia`,
-      `TikTok capybara cat viral`,
-      `TikTok festival celebration Asia ${year}`,
-      `TikTok gaming Free Fire Mobile Legends`,
-    ];
-  }
-  return [
-    ...core,
-    `TikTok Brazil viral`,
-    `TikTok Mexico viral`,
-    `TikTok Argentina viral`,
-    `TikTok Colombia viral`,
-    `YouTube Brazil trending`,
-    `YouTube Mexico trending`,
-    `TikTok reggaeton dance viral`,
-    `TikTok anime cosplay Latin America`,
-    `TikTok cute animal pet viral`,
-    `TikTok capybara viral`,
-    `TikTok Dia de Muertos Carnival`,
-    `TikTok lucha libre mask Mexico`,
-    `TikTok gaming Free Fire viral`,
-    `TikTok graffiti street art neon`,
-  ];
 }
 
 // ============ Bing News RSS ============
@@ -199,12 +165,12 @@ function parseBingRSS(xml: string): RawItem[] {
     const cleanedTitle = cleanTitle(stripHtml(title));
     const fullText = `${cleanedTitle} ${stripHtml(desc)}`.toLowerCase();
 
-    let platform: Platform = "tiktok";
-    if (/youtube|youtuber/.test(fullText)) platform = "youtube";
-    else if (/tiktok|tik tok/.test(fullText)) platform = "tiktok";
-    else if (/discord/.test(fullText)) platform = "web";
-
-    if (/stock market|interest rate|federal reserve|gdp growth|inflation rate|congressional|parliament/.test(fullText)) continue;
+    // 平台检测（更精确）
+    let platform: Platform = "web";
+    if (/tiktok|tik\s*tok/i.test(fullText)) platform = "tiktok";
+    else if (/youtube|youtuber|yt\b/i.test(fullText)) platform = "youtube";
+    else if (/\bx\.com|twitter|tweet/i.test(fullText)) platform = "x";
+    else if (/reddit|subreddit/i.test(fullText)) platform = "reddit";
 
     items.push({
       title: cleanedTitle,
@@ -218,19 +184,25 @@ function parseBingRSS(xml: string): RawItem[] {
   return items;
 }
 
-// ============ Processing ============
+// ============ Processing (使用新引擎) ============
 
 function processTrend(item: RawItem, region: Region): Trend | null {
   if (!item.title || item.title.length < 5) return null;
 
   const text = `${item.title} ${item.description}`.toLowerCase();
-  const category = classifyCategory(text);
-  const scores = calculateScores(text, item, region);
+  
+  // 使用智能分类
+  const category = classifyCategoryAdvanced(item.title, item.description, region);
+  
+  // 评分（基于地区文化加权）
+  const scores = calculateScoresV2(text, item, region, category);
   if (scores.categoryAffinity <= 1) return null;
 
-  const suggestedTypes = suggestResourceTypes(text, category);
+  const suggestedTypes = suggestResourceTypesV2(text, category, region);
   const resourceSuggestion = buildResourceOneLiner(suggestedTypes);
-  const summary = buildChineseSummary(item, category, region, suggestedTypes);
+  
+  // 使用智能分析生成摘要
+  const summary = buildSmartSummary(item, category, region, suggestedTypes);
   const complianceNote = checkCompliance(text);
 
   return {
@@ -251,88 +223,80 @@ function processTrend(item: RawItem, region: Region): Trend | null {
   };
 }
 
-// ============ Compliance Check ============
+// ============ V2 评分（地区文化加权） ============
 
-function checkCompliance(text: string): string | undefined {
-  const celebs = /taylor swift|drake|messi|ronaldo|blackpink|bts|mrbeast|pewdiepie|shakira|bad bunny|neymar|mbapp|jisoo|jennie|lisa|ive |aespa|stray kids/i;
-  if (celebs.test(text)) {
-    return "\u26a0\ufe0f 涉及真人肖像权，需规避直接使用真人形象，建议提取视觉风格/动作元素进行二次创作";
-  }
-  const ips = /marvel|disney|one piece|naruto|demon slayer|jujutsu|dragon ball|pokemon|hello kitty|sanrio|star wars|harry potter|dc comics|batman|spider.?man|genshin/i;
-  if (ips.test(text)) {
-    return "\u26a0\ufe0f 涉及第三方IP版权，需获取授权或仅参考视觉风格方向，不可直接使用角色/标志";
-  }
-  const sensitive = /politic|election|president|religious|mosque|church|temple|protest|military coup|territorial|separatist|genocide/i;
-  if (sensitive.test(text)) {
-    return "\u26a0\ufe0f 涉及政治/宗教敏感内容，建议仅提取非争议性视觉元素，规避文化冲突";
-  }
-  return undefined;
-}
-
-// ============ Category Classification ============
-
-function classifyCategory(text: string): TrendCategory {
-  if (/meme|funny|joke|humor|viral challenge|prank|reaction/.test(text)) return "meme";
-  if (/movie|film|series|netflix|anime|drama|trailer|cinema|tv show/.test(text)) return "film_tv";
-  if (/christmas|halloween|new year|carnival|eid|diwali|lunar|festival|holiday|dia de|thanksgiving/.test(text)) return "festival";
-  if (/tradition|cultural|heritage|folk|indigenous|local custom|ritual/.test(text)) return "culture";
-  if (/earthquake|hurricane|olympic|world cup|election|pandemic|war|breaking/.test(text)) return "big_event";
-  return "pop_element";
-}
-
-// ============ Scoring ============
-
-function calculateScores(text: string, item: RawItem, region: Region): TrendScores {
+function calculateScoresV2(text: string, item: RawItem, region: Region, category: TrendCategory): TrendScores {
+  const culture = REGION_CULTURE[region];
+  
   let categoryAffinity = 2;
   let adaptationCost = 3;
   let mobileFit = 3;
-  let audienceMatch = 3;
+  let audienceMatch = 2;
   let freshness = 3;
-  let marketHeat = 3;
+  let marketHeat = 2;
 
-  // Category Affinity
-  if (/skin|costume|outfit|armor|character|avatar|cosplay/.test(text)) categoryAffinity += 2;
-  else if (/dance|emote|move|gesture|challenge/.test(text)) categoryAffinity += 2;
-  else if (/weapon|gun|sword|blade/.test(text)) categoryAffinity += 2;
-  else if (/meme|funny|sticker|emoji|spray|graffiti/.test(text)) categoryAffinity += 1;
-  else if (/music|song|beat|rhythm/.test(text)) categoryAffinity += 1;
-  if (/gaming|game|gamer|esport|streamer/.test(text)) categoryAffinity += 1;
+  // === Category Affinity（与游戏资源的亲和度）===
+  if (/skin|costume|outfit|armor|character|avatar|cosplay|fashion|style/.test(text)) categoryAffinity += 2;
+  else if (/dance|emote|move|gesture|challenge|choreography/.test(text)) categoryAffinity += 2;
+  else if (/weapon|gun|sword|blade|neon|glow/.test(text)) categoryAffinity += 2;
+  else if (/meme|funny|sticker|emoji|spray|graffiti|art/.test(text)) categoryAffinity += 1;
+  else if (/music|song|beat|rhythm|audio|sound/.test(text)) categoryAffinity += 1;
+  if (/gaming|game|gamer|esport|streamer|free\s*fire|pubg|mobile\s*legends/.test(text)) categoryAffinity += 1;
+  // 动漫/二次元天然高亲和
+  if (/anime|manga|cosplay|waifu|chibi/.test(text)) categoryAffinity += 1;
 
-  // Adaptation Cost
-  if (/simple|minimal|clean|flat|2d|cartoon|chibi/.test(text)) adaptationCost += 1;
+  // === Adaptation Cost（改造成本，高分=容易改造）===
+  if (/simple|minimal|clean|flat|2d|cartoon|chibi|icon/.test(text)) adaptationCost += 1;
   if (/complex|detailed|realistic|photorealistic|intricate/.test(text)) adaptationCost -= 1;
-  if (/neon|glow|cyber|futuristic|tech/.test(text)) adaptationCost += 1;
+  if (/neon|glow|cyber|futuristic|tech/.test(text)) adaptationCost += 1; // 与BS风格吻合
+  if (/skull|mask|helmet|armor/.test(text)) adaptationCost += 1; // 容易做角色设计
 
-  // Mobile Fit
-  if (/bold|bright|colorful|vibrant|contrast|neon/.test(text)) mobileFit += 1;
-  if (/subtle|pastel|minimalist|tiny detail/.test(text)) mobileFit -= 1;
-  if (/silhouette|iconic|recognizable/.test(text)) mobileFit += 1;
+  // === Mobile Fit（手机屏幕辨识度）===
+  if (/bold|bright|colorful|vibrant|contrast|neon|fluorescent/.test(text)) mobileFit += 1;
+  if (/subtle|pastel|minimalist|tiny\s*detail/.test(text)) mobileFit -= 1;
+  if (/silhouette|iconic|recognizable|big|large/.test(text)) mobileFit += 1;
 
-  // Audience Match
+  // === Audience Match（地区受众匹配 - 核心改进）===
+  // 检查是否匹配该地区的热门IP
+  const ipMatch = culture.hotIPs.filter(ip => text.includes(ip));
+  if (ipMatch.length >= 2) audienceMatch += 3;
+  else if (ipMatch.length === 1) audienceMatch += 2;
+  
+  // 检查是否匹配地区音乐口味
+  if (culture.musicTaste.some(m => text.includes(m))) audienceMatch += 1;
+  
+  // 检查是否匹配地区游戏文化
+  if (culture.gamingCulture.some(g => text.includes(g))) audienceMatch += 1;
+  
+  // 地区特定加分
   if (region === "SEA") {
-    if (/kpop|k-pop|anime|manga|cute|kawaii|idol/.test(text)) audienceMatch += 2;
-    else if (/indonesia|philippines|thailand|vietnam|malaysia|singapore/.test(text)) audienceMatch += 1;
+    if (/kpop|k-?pop|blackpink|bts|newjeans|stray\s*kids/.test(text)) audienceMatch += 1;
+    if (/kawaii|cute|chibi|adorable|pet/.test(text)) audienceMatch += 1;
+    if (/indonesia|philippines|thailand|vietnam|malaysia|singapore/.test(text)) audienceMatch += 1;
   } else {
-    if (/reggaeton|latin|brazil|mexico|carnival|soccer|futbol/.test(text)) audienceMatch += 2;
-    else if (/argentina|colombia|chile|peru/.test(text)) audienceMatch += 1;
+    if (/reggaeton|latin|cumbia|trap\s*latino|corridos/.test(text)) audienceMatch += 1;
+    if (/football|soccer|futbol|copa|liga/.test(text)) audienceMatch += 1;
+    if (/brazil|mexico|argentina|colombia|chile|peru/.test(text)) audienceMatch += 1;
+    if (/skull|calavera|neon|graffiti|lowrider/.test(text)) audienceMatch += 1;
   }
-  if (/gen.?z|youth|teen|young|student/.test(text)) audienceMatch += 1;
 
-  // Freshness
+  // === Freshness ===
   if (item.publishedAt) {
     const age = Date.now() - new Date(item.publishedAt).getTime();
     const days = age / (1000 * 60 * 60 * 24);
     if (days <= 2) freshness = 5;
     else if (days <= 7) freshness = 4;
     else if (days <= 14) freshness = 3;
-    else freshness = 2;
+    else if (days <= 30) freshness = 2;
+    else freshness = 1;
   }
 
-  // Market Heat
-  if (/viral|trending|explod|blow up|million|billion/.test(text)) marketHeat += 2;
-  else if (/popular|famous|hit|top|hot/.test(text)) marketHeat += 1;
+  // === Market Heat ===
+  if (/viral|explod|blow\s*up|million|billion|massive|huge/.test(text)) marketHeat += 2;
+  else if (/popular|famous|hit|top|hot|trending|trend/.test(text)) marketHeat += 1;
+  if (/tiktok|youtube|instagram/.test(text)) marketHeat += 1;
 
-  // Clamp
+  // Clamp all to 1-5
   const clamp = (v: number) => Math.max(1, Math.min(5, v));
   categoryAffinity = clamp(categoryAffinity);
   adaptationCost = clamp(adaptationCost);
@@ -352,7 +316,7 @@ function calculateScores(text: string, item: RawItem, region: Region): TrendScor
   };
 }
 
-// ============ Resource Suggestions ============
+// ============ V2 资源建议（地区差异化） ============
 
 const RESOURCE_NAMES: Record<ResourceType, string> = {
   character_skin: "角色皮肤",
@@ -368,29 +332,42 @@ const RESOURCE_NAMES: Record<ResourceType, string> = {
   playpal: "盘盘(PlayPal)",
 };
 
-function suggestResourceTypes(text: string, category: TrendCategory): ResourceType[] {
+function suggestResourceTypesV2(text: string, category: TrendCategory, region: Region): ResourceType[] {
   const types: ResourceType[] = [];
 
-  if (/skin|costume|outfit|cosplay|fashion|dress|wear|character|avatar|face|mask/.test(text)) types.push("character_skin");
+  // 基于内容特征
+  if (/skin|costume|outfit|cosplay|fashion|dress|wear|character|avatar|face|mask|armor/.test(text)) types.push("character_skin");
   if (/weapon|gun|sword|blade|neon|cyber|mecha|rifle/.test(text)) types.push("weapon_skin");
   if (/dance|move|gesture|challenge|emote|pose|choreography/.test(text)) types.push("emote");
-  if (/meme|reaction|face|funny|sticker|emoji|graffiti|spray|art|skull|calavera/.test(text)) types.push("spray");
+  if (/meme|reaction|funny|sticker|emoji|graffiti|spray|art|skull|calavera/.test(text)) types.push("spray");
   if (/cute|pet|companion|mascot|chibi|creature|animal|capybara|cat|dog/.test(text)) types.push("playpal");
   if (/effect|explosion|fire|lightning|magic|kill|finisher/.test(text)) types.push("finisher");
-  if (/music|beat|ambient|vibe|theme|aesthetic/.test(text)) types.push("lobby_theme");
+  if (/music|beat|ambient|vibe|theme|aesthetic|song|audio/.test(text)) types.push("lobby_theme");
   if (/accessory|charm|pendant|miniature|keychain/.test(text)) types.push("weapon_charm");
   if (/car|vehicle|racing|drift|lowrider|motorcycle/.test(text)) types.push("vehicle_skin");
   if (/fly|sky|wing|parachute|glide/.test(text)) types.push("parachute_skin");
   if (/festival|event|celebration|holiday|bundle|seasonal|carnival/.test(text)) types.push("event_bundle");
 
+  // 基于地区偏好补充
   if (types.length === 0) {
-    switch (category) {
-      case "meme": types.push("spray", "emote"); break;
-      case "film_tv": types.push("character_skin", "weapon_skin"); break;
-      case "festival": types.push("event_bundle", "character_skin"); break;
-      case "culture": types.push("character_skin", "spray"); break;
-      case "big_event": types.push("spray", "event_bundle"); break;
-      case "pop_element": types.push("character_skin", "emote"); break;
+    if (region === "SEA") {
+      switch (category) {
+        case "meme": types.push("spray", "emote"); break;
+        case "film_tv": types.push("character_skin", "weapon_skin"); break;
+        case "festival": types.push("event_bundle", "character_skin"); break;
+        case "culture": types.push("character_skin", "playpal"); break;
+        case "big_event": types.push("event_bundle", "spray"); break;
+        case "pop_element": types.push("character_skin", "emote", "playpal"); break;
+      }
+    } else {
+      switch (category) {
+        case "meme": types.push("spray", "emote"); break;
+        case "film_tv": types.push("character_skin", "weapon_skin"); break;
+        case "festival": types.push("event_bundle", "character_skin", "spray"); break;
+        case "culture": types.push("character_skin", "vehicle_skin"); break;
+        case "big_event": types.push("event_bundle", "character_skin"); break;
+        case "pop_element": types.push("character_skin", "emote", "lobby_theme"); break;
+      }
     }
   }
 
@@ -402,47 +379,78 @@ function buildResourceOneLiner(types: ResourceType[]): string {
   return `可转化为${names}`;
 }
 
-// ============ Chinese Summary ============
+// ============ 智能摘要生成 ============
 
-function buildChineseSummary(
+function buildSmartSummary(
   item: RawItem,
   category: TrendCategory,
   region: Region,
   resourceTypes: ResourceType[]
 ): string {
   const desc = stripHtml(item.description || "");
-  const regionName = region === "SEA" ? "东南亚" : "拉美";
-  const platformName = item.platform === "tiktok" ? "TikTok" : item.platform === "youtube" ? "YouTube" : "网络";
+  const whatIs = desc.length > 20 ? desc.slice(0, 250) : item.title;
+  
+  // 使用知识库生成价值分析
+  const valueAnalysis = generateValueAnalysis(item.title, item.description, category, region);
+  
+  // 生成具体的资源建议
+  const resourceAdvice = buildSpecificResourceAdvice(item.title, item.description, resourceTypes, region);
 
-  const whatIs = desc.length > 20 ? desc.slice(0, 200) : item.title;
-  const analysis = buildSpecificAnalysis(item.title, desc, category, resourceTypes, regionName, platformName);
-  const action = `建议快速产出${resourceTypes.map(rt => RESOURCE_NAMES[rt]).join("/")}类资源，抓住热度窗口期。`;
-
-  return `【热点概述】${whatIs}\n\n【价值分析】${analysis}\n\n【资源建议】${action}`;
+  return `【热点概述】${whatIs}\n\n【价值分析】${valueAnalysis}\n\n【落地建议】${resourceAdvice}`;
 }
 
-function buildSpecificAnalysis(
-  title: string, desc: string, _category: TrendCategory,
-  _resourceTypes: ResourceType[], regionName: string, platformName: string
-): string {
+function buildSpecificResourceAdvice(title: string, desc: string, types: ResourceType[], region: Region): string {
   const text = `${title} ${desc}`.toLowerCase();
-  const traits: string[] = [];
-
-  if (/dance|choreography|move/.test(text)) traits.push("具有明确的动作编排，可直接转化为游戏内表情动作");
-  if (/cute|kawaii|adorable|animal|pet|capybara|raccoon|cat|dog/.test(text)) traits.push("萌系/动物元素在年轻玩家中有极高接受度，适合做盘盘/挂件等可爱向资源");
-  if (/cosplay|costume|outfit|skin/.test(text)) traits.push("角色装扮元素可直接参考做角色皮肤设计");
-  if (/song|music|beat|rhythm/.test(text)) traits.push("音乐/节奏元素可用于大厅主题或动作配乐");
-  if (/meme|funny|humor|joke/.test(text)) traits.push("梗图的社交传播性强，做成喷漆/表情后玩家会主动使用和分享");
-  if (/viral|trending|challenge/.test(text)) traits.push(`当前在${platformName}上爆火，时效性强，建议快速响应`);
-  if (/anime|manga|cartoon/.test(text)) traits.push("动漫元素在目标市场玩家群体中认知度极高");
-  if (/neon|glow|cyber|futuristic/.test(text)) traits.push("视觉风格与Bloodstrike赛博朋克美学高度契合");
-  if (/festival|holiday|celebration|carnival/.test(text)) traits.push(`${regionName}本地节日元素，能触发玩家文化认同感和付费意愿`);
-
-  if (traits.length === 0) {
-    traits.push(`该内容在${platformName}上获得大量关注，表明${regionName}玩家对此类内容有兴趣`);
+  const suggestions: string[] = [];
+  
+  for (const rt of types.slice(0, 2)) {
+    switch (rt) {
+      case "character_skin":
+        if (/anime|cosplay/.test(text)) suggestions.push("提取动漫角色配色+服装剪影融入BS战术装甲");
+        else if (/kpop|idol/.test(text)) suggestions.push("参考偶像舞台造型做潮流向角色皮肤");
+        else if (/skull|calavera|mask/.test(text)) suggestions.push("直接做骷髅/面具主题限定皮肤");
+        else suggestions.push("提取视觉特征做限定主题角色皮肤");
+        break;
+      case "emote":
+        if (/dance|choreography/.test(text)) suggestions.push("1:1还原舞蹈动作做全身表情");
+        else suggestions.push("提取标志性动作做3-5秒循环表情");
+        break;
+      case "spray":
+        suggestions.push("提取梗图核心视觉做2D喷漆，保证远距离可读");
+        break;
+      case "playpal":
+        suggestions.push("做Q版/chibi化盘盘伴侣，加入趋势元素的待机动画");
+        break;
+      case "lobby_theme":
+        suggestions.push("提取音乐节奏和视觉氛围做沉浸式大厅背景");
+        break;
+      case "event_bundle":
+        suggestions.push("整合为3-5件套限时主题礼包（皮肤+武器+配件）");
+        break;
+      default:
+        suggestions.push(`快速产出${RESOURCE_NAMES[rt]}类资源`);
+    }
   }
+  
+  return suggestions.join("；") + "。建议在热度窗口期（1-2周内）完成初版概念。";
+}
 
-  return traits.slice(0, 3).join("。") + "。";
+// ============ Compliance Check ============
+
+function checkCompliance(text: string): string | undefined {
+  const celebs = /taylor swift|drake|messi|ronaldo|blackpink|bts|mrbeast|pewdiepie|shakira|bad bunny|neymar|mbapp|jisoo|jennie|lisa|ive |aespa|stray kids|newjeans|peso pluma|karol g|feid/i;
+  if (celebs.test(text)) {
+    return "\u26a0\ufe0f 涉及真人肖像权，需规避直接使用真人形象，建议提取视觉风格/动作元素进行二次创作";
+  }
+  const ips = /marvel|disney|one piece|naruto|demon slayer|jujutsu|dragon ball|pokemon|hello kitty|sanrio|star wars|harry potter|dc comics|batman|spider.?man|genshin|honkai|mobile legends/i;
+  if (ips.test(text)) {
+    return "\u26a0\ufe0f 涉及第三方IP版权，需获取授权或仅参考视觉风格方向，不可直接使用角色/标志";
+  }
+  const sensitive = /politic|election|president|religious|mosque|church|temple|protest|military coup|territorial|separatist|genocide/i;
+  if (sensitive.test(text)) {
+    return "\u26a0\ufe0f 涉及政治/宗教敏感内容，建议仅提取非争议性视觉元素，规避文化冲突";
+  }
+  return undefined;
 }
 
 // ============ XML Helpers ============
