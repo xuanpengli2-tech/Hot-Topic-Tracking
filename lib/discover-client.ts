@@ -406,7 +406,9 @@ function buildSmartSummary(
 }
 
 /**
- * 生成中文热点总结 - 解释这个梗是什么、为什么火
+ * 生成详细中文热点总结
+ * 核心原则：从英文标题+描述中提取所有有价值的具体信息，翻译并扩展成详细的中文解读
+ * 要求：至少3-5句话，包含具体细节（名字、数字、来源、传播情况）
  */
 function generateChineseSummary(
   title: string,
@@ -418,58 +420,149 @@ function generateChineseSummary(
   const regionName = region === "SEA" ? "东南亚" : "拉美";
   const parts: string[] = [];
 
-  // 识别核心主题并生成中文描述
-  if (/brain\s*rot|skibidi|gyatt|rizz|sigma|ohio/.test(text)) {
-    const match = text.match(/\b(skibidi|gyatt|rizz|sigma|ohio|brain\s*rot)\b/i);
-    parts.push(`"${match?.[0] || "Brain Rot"}" 类网络迷因在年轻玩家中爆火`);
-    parts.push("属于Gen Z/Alpha世代的抽象梗，以荒诞、无厘头为特色");
+  // ===== 第一层：识别核心主题，生成详细中文描述 =====
+
+  // 提取具体数字
+  const numbers = text.match(/(\d+(?:\.\d+)?\s*(?:million|billion|m|k|b)\b|\d{2,}\s*(?:views|likes|shares|followers))/gi);
+  const numberInfo = numbers ? `（传播数据：${numbers.slice(0, 2).join("、")}）` : "";
+
+  // 提取人名/作品名等具体名词
+  const properNouns = extractProperNouns(text);
+
+  if (/brain\s*rot|skibidi|gyatt|rizz|sigma|ohio|npc\s*stream/.test(text)) {
+    const match = text.match(/\b(skibidi\s*toilet|skibidi|gyatt|rizz|sigma\s*male|sigma|ohio|npc\s*stream|brain\s*rot)\b/i);
+    const meme = match?.[0] || "Brain Rot";
+    parts.push(`"${meme}"——这是当前全球Z世代/Alpha世代年轻人中最火爆的网络迷因之一${numberInfo}`);
+    parts.push(`该梗属于"抽象系/无厘头"风格，以极度荒诞、魔性洗脑为核心特征，在TikTok和YouTube Shorts上病毒式传播`);
+    parts.push(`${regionName}地区的年轻玩家对此类梗接受度极高，是他们日常社交中的通用语言和身份符号`);
+    if (/skibidi/.test(text)) parts.push("Skibidi Toilet系列以马桶+人头的诡异3D动画闻名，全系列播放量超百亿，已成为Z世代文化现象级IP");
   } else if (/dance|choreography|challenge/.test(text)) {
-    parts.push(`一段新的舞蹈/动作挑战在社交平台爆火传播`);
-    if (/kpop|k-pop/.test(text)) parts.push("来源于K-pop编舞");
-    else if (/reggaeton|latin/.test(text)) parts.push("来源于拉丁音乐");
+    parts.push(`一段新的舞蹈/动作挑战正在社交平台上爆火${numberInfo}`);
+    if (/kpop|k-pop/.test(text)) {
+      const artist = text.match(/\b(blackpink|bts|newjeans|stray kids|seventeen|aespa|ive|le sserafim|twice|itzy|nct)\b/i);
+      parts.push(`来源于K-pop${artist ? `组合${artist[0]}的` : ""}编舞，K-pop舞蹈挑战是TikTok上传播最快的内容类型之一`);
+      parts.push(`${regionName}拥有庞大的K-pop粉丝群体，他们会积极模仿和传播这类舞蹈挑战`);
+    } else if (/reggaeton|latin|perreo/.test(text)) {
+      parts.push("来源于拉丁音乐/Reggaeton的舞蹈风格，动作热情奔放，在拉美年轻人中具有强烈的文化认同感");
+    } else {
+      parts.push("该舞蹈动作简单魔性、容易模仿，用户参与门槛低，导致短时间内大量翻拍传播");
+    }
+    parts.push("舞蹈挑战类内容天然适合转化为游戏内表情动作——玩家看到熟悉的舞蹈会立刻产生购买欲望");
   } else if (/anime|manga/.test(text)) {
-    const animeMatch = text.match(/\b(one piece|jujutsu kaisen|demon slayer|chainsaw man|dragon ball|naruto|spy x family|frieren|oshi no ko)\b/i);
+    const animeMatch = text.match(/\b(one piece|jujutsu kaisen|demon slayer|chainsaw man|dragon ball|naruto|spy x family|frieren|oshi no ko|attack on titan|my hero academia|bleach|hunter x hunter)\b/i);
     if (animeMatch) {
-      parts.push(`动漫《${animeMatch[0]}》相关的梗/名场面在${regionName}玩家群体中广泛传播`);
+      const anime = animeMatch[0];
+      parts.push(`动漫《${anime}》的梗/名场面/角色正在${regionName}社交媒体上广泛传播${numberInfo}`);
+      parts.push(`《${anime}》在${regionName}年轻玩家中拥有极高认知度和情感连接，相关二创内容（梗图、cosplay、同人）传播力极强`);
+      parts.push("动漫IP联动是射击手游最成熟的变现模式之一，Free Fire等竞品已多次验证：动漫联动皮肤付费率远超原创设计");
     } else {
-      parts.push(`动漫相关的梗/cosplay内容在${regionName}年轻群体中热传`);
+      parts.push(`动漫/二次元相关的梗、cosplay或同人内容正在${regionName}年轻群体中热传${numberInfo}`);
+      parts.push(`${regionName}的手游玩家与动漫受众高度重叠，动漫梗是他们社交的共同语言`);
     }
-  } else if (/gaming|game|gamer|streamer/.test(text)) {
-    const gameMatch = text.match(/\b(free fire|fortnite|mobile legends|genshin|valorant|pubg|minecraft|roblox)\b/i);
+  } else if (/gaming|game|gamer|streamer|esport/.test(text)) {
+    const gameMatch = text.match(/\b(free fire|fortnite|mobile legends|genshin impact|valorant|pubg|minecraft|roblox|league of legends|apex legends|call of duty|among us)\b/i);
     if (gameMatch) {
-      parts.push(`游戏《${gameMatch[0]}》的梗/名场面在玩家社区热传`);
+      parts.push(`游戏《${gameMatch[0]}》社区产生的热梗/名场面正在玩家群体中广泛传播${numberInfo}`);
+      parts.push(`该梗来源于玩家自身的游戏文化，目标受众100%重合——Bloodstrike玩家必然对此产生共鸣`);
     } else {
-      parts.push("游戏圈的热梗/主播整活在玩家社区广泛传播");
+      parts.push(`游戏圈/游戏主播产出的热梗或整活内容正在玩家社区广泛传播${numberInfo}`);
     }
-  } else if (/kpop|k-?pop|blackpink|bts|newjeans|stray\s*kids/.test(text)) {
-    const artist = text.match(/\b(blackpink|bts|newjeans|stray kids|seventeen|aespa|ive|le sserafim|twice)\b/i);
-    parts.push(`K-pop${artist ? `(${artist[0]})` : ""}相关内容在${regionName}粉丝群体中爆火`);
-  } else if (/reggaeton|bad\s*bunny|peso\s*pluma|feid/.test(text)) {
-    const artist = text.match(/\b(bad bunny|peso pluma|feid|karol g|shakira)\b/i);
-    parts.push(`拉丁音乐${artist ? `(${artist[0]})` : ""}相关的舞蹈/梗在拉美玩家中热传`);
-  } else if (/football|soccer|messi|neymar/.test(text)) {
-    parts.push("足球相关的梗/庆祝动作在拉美球迷玩家群体中疯传");
-  } else if (/cute|kawaii|capybara|cat|pet|animal/.test(text)) {
-    parts.push(`萌系/动物梗内容在${regionName}年轻用户中获得大量传播`);
+    parts.push("游戏梗转化为游戏内资源有天然的受众基础，玩家使用时会产生社群归属感和表达欲");
+  } else if (/kpop|k-?pop|blackpink|bts|newjeans|stray\s*kids|seventeen|aespa|ive|le\s*sserafim/.test(text)) {
+    const artist = text.match(/\b(blackpink|bts|newjeans|stray kids|seventeen|aespa|ive|le sserafim|twice|itzy|enhypen|txt|nct)\b/i);
+    parts.push(`K-pop${artist ? `顶流${artist[0]}` : "相关内容"}在${regionName}社交平台上引发热议和大量二创${numberInfo}`);
+    parts.push(`K-pop是${regionName}年轻人（尤其15-25岁）最核心的流行文化之一，粉丝群体消费力强且社交传播积极`);
+    parts.push("K-pop元素（舞台造型、应援色、舞蹈动作）视觉辨识度极高，天然适合转化为游戏内时装和表情");
+  } else if (/reggaeton|bad\s*bunny|peso\s*pluma|feid|karol\s*g/.test(text)) {
+    const artist = text.match(/\b(bad bunny|peso pluma|feid|karol g|shakira|rauw alejandro|daddy yankee|ozuna|j balvin|anuel)\b/i);
+    parts.push(`拉丁音乐${artist ? `巨星${artist[0]}` : ""}相关的梗/舞蹈/视觉元素在拉美社交平台上爆火${numberInfo}`);
+    parts.push("Reggaeton/Latin Trap是拉美Z世代的文化图腾，其视觉风格（荧光、街头、链条、纹身）与射击游戏暗黑潮流美学高度契合");
+    parts.push("拉丁音乐人自带强烈视觉IP——独特的穿搭风格、标志性动作和态度，可直接转化为角色皮肤设计灵感");
+  } else if (/football|soccer|messi|neymar|vinicius|mbappe/.test(text)) {
+    const player = text.match(/\b(messi|neymar|vinicius|mbappe|ronaldo|haaland|endrick)\b/i);
+    parts.push(`足球${player ? `巨星${player[0]}` : ""}相关的梗/庆祝动作/名场面在拉美球迷玩家中疯传${numberInfo}`);
+    parts.push("足球在拉美是宗教级文化符号，球星的一个庆祝动作就能成为全民模仿的梗——传播力碾压一切");
+    parts.push("庆祝动作天然适合做游戏内击杀/胜利表情，球衣配色风格也可融入角色皮肤设计");
+  } else if (/cute|kawaii|capybara|cat|pet|animal|dog|raccoon/.test(text)) {
+    const animal = text.match(/\b(capybara|cat|dog|raccoon|hamster|duck|frog|axolotl|shiba|corgi|panda)\b/i);
+    parts.push(`${animal ? animal[0] + "（" + translateAnimal(animal[0]) + "）" : "萌系动物"}相关的梗在${regionName}社交平台上大量传播${numberInfo}`);
+    parts.push("萌宠/可爱动物类内容是全年龄段通杀的流量密码，尤其受东南亚年轻用户喜爱（可爱文化根基深厚）");
+    parts.push("这类形象非常适合做游戏内盘盘(PlayPal)伴侣、武器挂件等可爱向付费道具，付费门槛低但复购率高");
+  } else if (/cosplay/.test(text)) {
+    parts.push(`一组cosplay/装扮内容在${regionName}社交平台上走红${numberInfo}`);
+    parts.push(`${regionName}拥有活跃的cosplay社区，玩家对"能在游戏里还原cosplay"的皮肤设计接受度极高`);
   } else if (/meme|funny|viral|trend/.test(text)) {
-    parts.push(`一个新的网络热梗在${regionName}社交平台上快速传播`);
+    parts.push(`一个新的网络热梗正在${regionName}社交平台上快速传播${numberInfo}`);
+    if (desc.length > 30) {
+      parts.push(`内容概要：${smartTranslate(desc.slice(0, 200))}`);
+    }
+    parts.push(`该梗具有高传播性和社交属性，${regionName}年轻玩家群体是主要受众`);
   } else {
-    parts.push(`该话题正在${regionName}年轻玩家群体中流行`);
+    parts.push(`该话题正在${regionName}年轻玩家群体中流行${numberInfo}`);
+    if (desc.length > 30) {
+      parts.push(`具体内容：${smartTranslate(desc.slice(0, 200))}`);
+    }
   }
 
-  // 补充传播量级信息
-  if (/million|billion|\d+m\b|\d+k\b/.test(text)) {
-    parts.push("已获百万级以上曝光");
-  }
-  if (/tiktok/.test(text)) parts.push("主要传播平台为TikTok");
-  else if (/youtube/.test(text)) parts.push("主要传播平台为YouTube");
-
-  // 如果中文总结太短,加入英文原文的关键信息
-  if (parts.length <= 1 && desc.length > 20) {
-    parts.push(`原文:${desc.slice(0, 120)}`);
+  // ===== 补充信息 =====
+  if (properNouns.length > 0 && parts.length < 4) {
+    parts.push(`涉及关键词：${properNouns.slice(0, 5).join("、")}`);
   }
 
   return parts.join("。") + "。";
+}
+
+/** 从文本中提取有价值的专有名词 */
+function extractProperNouns(text: string): string[] {
+  const nouns: string[] = [];
+  // 游戏名
+  const games = text.match(/\b(free fire|fortnite|mobile legends|genshin impact|valorant|pubg|minecraft|roblox|apex legends|call of duty|among us|league of legends)\b/gi);
+  if (games) nouns.push(...games.map(g => g));
+  // 动漫名
+  const animes = text.match(/\b(one piece|jujutsu kaisen|demon slayer|chainsaw man|dragon ball|naruto|spy x family|frieren|attack on titan|bleach)\b/gi);
+  if (animes) nouns.push(...animes.map(a => a));
+  // 人名/组合名
+  const people = text.match(/\b(blackpink|bts|newjeans|stray kids|messi|neymar|bad bunny|peso pluma|mrbeast|pewdiepie|ive|aespa)\b/gi);
+  if (people) nouns.push(...people.map(p => p));
+  return Array.from(new Set(nouns));
+}
+
+/** 动物名中英对照 */
+function translateAnimal(name: string): string {
+  const map: Record<string, string> = {
+    capybara: "水豚", cat: "猫", dog: "狗", raccoon: "浣熊",
+    hamster: "仓鼠", duck: "鸭子", frog: "青蛙", axolotl: "六角恐龙",
+    shiba: "柴犬", corgi: "柯基", panda: "熊猫",
+  };
+  return map[name.toLowerCase()] || name;
+}
+
+/** 简易英转中关键信息提取（非AI翻译，但提取核心内容） */
+function smartTranslate(desc: string): string {
+  // 去掉无用前缀
+  let cleaned = desc.replace(/^(a |the |an |this |these |that |those )/i, "").trim();
+  // 如果太长截断
+  if (cleaned.length > 180) cleaned = cleaned.slice(0, 180) + "...";
+  // 替换常见词汇为中文
+  cleaned = cleaned
+    .replace(/\bviral\b/gi, "病毒式传播")
+    .replace(/\btrending\b/gi, "热门")
+    .replace(/\bmillion\b/gi, "百万")
+    .replace(/\bbillion\b/gi, "十亿")
+    .replace(/\bviews\b/gi, "播放量")
+    .replace(/\blikes\b/gi, "点赞")
+    .replace(/\bfollowers\b/gi, "粉丝")
+    .replace(/\bchallenge\b/gi, "挑战")
+    .replace(/\bdance\b/gi, "舞蹈")
+    .replace(/\bfunny\b/gi, "搞笑")
+    .replace(/\bgaming\b/gi, "游戏")
+    .replace(/\bgamer\b/gi, "玩家")
+    .replace(/\bstreamer\b/gi, "主播")
+    .replace(/\bcosplay\b/gi, "角色扮演")
+    .replace(/\bskin\b/gi, "皮肤")
+    .replace(/\bevent\b/gi, "活动")
+    .replace(/\bcollaboration\b/gi, "联动");
+  return cleaned;
 }
 
 function buildSpecificResourceAdvice(title: string, desc: string, types: ResourceType[], region: Region): string {
