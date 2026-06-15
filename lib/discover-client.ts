@@ -1,11 +1,11 @@
 /**
  * Client-side discover engine v2
- * 
- * 改进点：
+ *
+ * 改进点:
  * 1. 搜索查询基于地区文化特色优化
- * 2. 分类使用智能规则引擎（非简单关键词匹配）
+ * 2. 分类使用智能规则引擎(非简单关键词匹配)
  * 3. 价值分析基于地区文化差异做深度解读
- * 4. 热点总结结构化，包含"是什么+为什么重要+怎么用"
+ * 4. 热点总结结构化,包含"是什么+为什么重要+怎么用"
  */
 
 import type { Trend, Region, TrendCategory, TrendScores, ResourceType, Platform } from "@/types/trend";
@@ -86,7 +86,7 @@ async function proxyFetch(url: string): Promise<string> {
     `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
     `https://corsproxy.io/?${encodeURIComponent(url)}`,
   ];
-  
+
   for (const proxyUrl of proxies) {
     try {
       const controller = new AbortController();
@@ -167,7 +167,7 @@ function parseBingRSS(xml: string): RawItem[] {
     const cleanedTitle = cleanTitle(stripHtml(title));
     const fullText = `${cleanedTitle} ${stripHtml(desc)}`.toLowerCase();
 
-    // 平台检测（更精确）
+    // 平台检测(更精确)
     let platform: Platform = "web";
     if (/tiktok|tik\s*tok/i.test(fullText)) platform = "tiktok";
     else if (/youtube|youtuber|yt\b/i.test(fullText)) platform = "youtube";
@@ -192,17 +192,17 @@ function processTrend(item: RawItem, region: Region): Trend | null {
   if (!item.title || item.title.length < 5) return null;
 
   const text = `${item.title} ${item.description}`.toLowerCase();
-  
+
   // 使用智能分类
   const category = classifyCategoryAdvanced(item.title, item.description, region);
-  
-  // 评分（基于地区文化加权）
+
+  // 评分(基于地区文化加权)
   const scores = calculateScoresV2(text, item, region, category);
   if (scores.categoryAffinity <= 1) return null;
 
   const suggestedTypes = suggestResourceTypesV2(text, category, region);
   const resourceSuggestion = buildResourceOneLiner(suggestedTypes);
-  
+
   // 使用智能分析生成摘要
   const summary = buildSmartSummary(item, category, region, suggestedTypes);
   const complianceNote = checkCompliance(text);
@@ -225,11 +225,11 @@ function processTrend(item: RawItem, region: Region): Trend | null {
   };
 }
 
-// ============ V2 评分（地区文化加权） ============
+// ============ V2 评分(地区文化加权) ============
 
 function calculateScoresV2(text: string, item: RawItem, region: Region, category: TrendCategory): TrendScores {
   const culture = REGION_CULTURE[region];
-  
+
   let categoryAffinity = 2;
   let adaptationCost = 3;
   let mobileFit = 3;
@@ -237,7 +237,7 @@ function calculateScoresV2(text: string, item: RawItem, region: Region, category
   let freshness = 3;
   let marketHeat = 2;
 
-  // === Category Affinity（与游戏资源的亲和度）===
+  // === Category Affinity(与游戏资源的亲和度)===
   if (/skin|costume|outfit|armor|character|avatar|cosplay|fashion|style/.test(text)) categoryAffinity += 2;
   else if (/dance|emote|move|gesture|challenge|choreography/.test(text)) categoryAffinity += 2;
   else if (/weapon|gun|sword|blade|neon|glow/.test(text)) categoryAffinity += 2;
@@ -247,29 +247,29 @@ function calculateScoresV2(text: string, item: RawItem, region: Region, category
   // 动漫/二次元天然高亲和
   if (/anime|manga|cosplay|waifu|chibi/.test(text)) categoryAffinity += 1;
 
-  // === Adaptation Cost（改造成本，高分=容易改造）===
+  // === Adaptation Cost(改造成本,高分=容易改造)===
   if (/simple|minimal|clean|flat|2d|cartoon|chibi|icon/.test(text)) adaptationCost += 1;
   if (/complex|detailed|realistic|photorealistic|intricate/.test(text)) adaptationCost -= 1;
   if (/neon|glow|cyber|futuristic|tech/.test(text)) adaptationCost += 1; // 与BS风格吻合
   if (/skull|mask|helmet|armor/.test(text)) adaptationCost += 1; // 容易做角色设计
 
-  // === Mobile Fit（手机屏幕辨识度）===
+  // === Mobile Fit(手机屏幕辨识度)===
   if (/bold|bright|colorful|vibrant|contrast|neon|fluorescent/.test(text)) mobileFit += 1;
   if (/subtle|pastel|minimalist|tiny\s*detail/.test(text)) mobileFit -= 1;
   if (/silhouette|iconic|recognizable|big|large/.test(text)) mobileFit += 1;
 
-  // === Audience Match（地区受众匹配 - 核心改进）===
+  // === Audience Match(地区受众匹配 - 核心改进)===
   // 检查是否匹配该地区的热门IP
   const ipMatch = culture.hotIPs.filter(ip => text.includes(ip));
   if (ipMatch.length >= 2) audienceMatch += 3;
   else if (ipMatch.length === 1) audienceMatch += 2;
-  
+
   // 检查是否匹配地区音乐口味
   if (culture.musicTaste.some(m => text.includes(m))) audienceMatch += 1;
-  
+
   // 检查是否匹配地区游戏文化
   if (culture.gamingCulture.some(g => text.includes(g))) audienceMatch += 1;
-  
+
   // 地区特定加分
   if (region === "SEA") {
     if (/kpop|k-?pop|blackpink|bts|newjeans|stray\s*kids/.test(text)) audienceMatch += 1;
@@ -318,7 +318,7 @@ function calculateScoresV2(text: string, item: RawItem, region: Region, category
   };
 }
 
-// ============ V2 资源建议（地区差异化） ============
+// ============ V2 资源建议(地区差异化) ============
 
 const RESOURCE_NAMES: Record<ResourceType, string> = {
   character_skin: "角色皮肤",
@@ -389,52 +389,125 @@ function buildSmartSummary(
   region: Region,
   resourceTypes: ResourceType[]
 ): string {
+  const title = item.title;
   const desc = stripHtml(item.description || "");
-  const whatIs = desc.length > 20 ? desc.slice(0, 250) : item.title;
-  
-  // 使用知识库生成价值分析
-  const valueAnalysis = generateValueAnalysis(item.title, item.description, category, region);
-  
-  // 生成具体的资源建议
-  const resourceAdvice = buildSpecificResourceAdvice(item.title, item.description, resourceTypes, region);
+  const text = `${title} ${desc}`.toLowerCase();
 
-  return `【热点概述】${whatIs}\n\n【价值分析】${valueAnalysis}\n\n【落地建议】${resourceAdvice}`;
+  // 1. 热点概述:用中文总结这个梗是什么
+  const summary = generateChineseSummary(title, desc, text, category, region);
+
+  // 2. 价值分析:为什么这个梗对BS有价值
+  const valueAnalysis = generateValueAnalysis(title, desc, category, region);
+
+  // 3. 落地建议:具体怎么做
+  const resourceAdvice = buildSpecificResourceAdvice(title, desc, resourceTypes, region);
+
+  return `【热点概述】${summary}\n\n【价值分析】${valueAnalysis}\n\n【落地建议】${resourceAdvice}`;
+}
+
+/**
+ * 生成中文热点总结 - 解释这个梗是什么、为什么火
+ */
+function generateChineseSummary(
+  title: string,
+  desc: string,
+  text: string,
+  category: TrendCategory,
+  region: Region
+): string {
+  const regionName = region === "SEA" ? "东南亚" : "拉美";
+  const parts: string[] = [];
+
+  // 识别核心主题并生成中文描述
+  if (/brain\s*rot|skibidi|gyatt|rizz|sigma|ohio/.test(text)) {
+    const match = text.match(/\b(skibidi|gyatt|rizz|sigma|ohio|brain\s*rot)\b/i);
+    parts.push(`"${match?.[0] || "Brain Rot"}" 类网络迷因在年轻玩家中爆火`);
+    parts.push("属于Gen Z/Alpha世代的抽象梗，以荒诞、无厘头为特色");
+  } else if (/dance|choreography|challenge/.test(text)) {
+    parts.push(`一段新的舞蹈/动作挑战在社交平台爆火传播`);
+    if (/kpop|k-pop/.test(text)) parts.push("来源于K-pop编舞");
+    else if (/reggaeton|latin/.test(text)) parts.push("来源于拉丁音乐");
+  } else if (/anime|manga/.test(text)) {
+    const animeMatch = text.match(/\b(one piece|jujutsu kaisen|demon slayer|chainsaw man|dragon ball|naruto|spy x family|frieren|oshi no ko)\b/i);
+    if (animeMatch) {
+      parts.push(`动漫《${animeMatch[0]}》相关的梗/名场面在${regionName}玩家群体中广泛传播`);
+    } else {
+      parts.push(`动漫相关的梗/cosplay内容在${regionName}年轻群体中热传`);
+    }
+  } else if (/gaming|game|gamer|streamer/.test(text)) {
+    const gameMatch = text.match(/\b(free fire|fortnite|mobile legends|genshin|valorant|pubg|minecraft|roblox)\b/i);
+    if (gameMatch) {
+      parts.push(`游戏《${gameMatch[0]}》的梗/名场面在玩家社区热传`);
+    } else {
+      parts.push("游戏圈的热梗/主播整活在玩家社区广泛传播");
+    }
+  } else if (/kpop|k-?pop|blackpink|bts|newjeans|stray\s*kids/.test(text)) {
+    const artist = text.match(/\b(blackpink|bts|newjeans|stray kids|seventeen|aespa|ive|le sserafim|twice)\b/i);
+    parts.push(`K-pop${artist ? `(${artist[0]})` : ""}相关内容在${regionName}粉丝群体中爆火`);
+  } else if (/reggaeton|bad\s*bunny|peso\s*pluma|feid/.test(text)) {
+    const artist = text.match(/\b(bad bunny|peso pluma|feid|karol g|shakira)\b/i);
+    parts.push(`拉丁音乐${artist ? `(${artist[0]})` : ""}相关的舞蹈/梗在拉美玩家中热传`);
+  } else if (/football|soccer|messi|neymar/.test(text)) {
+    parts.push("足球相关的梗/庆祝动作在拉美球迷玩家群体中疯传");
+  } else if (/cute|kawaii|capybara|cat|pet|animal/.test(text)) {
+    parts.push(`萌系/动物梗内容在${regionName}年轻用户中获得大量传播`);
+  } else if (/meme|funny|viral|trend/.test(text)) {
+    parts.push(`一个新的网络热梗在${regionName}社交平台上快速传播`);
+  } else {
+    parts.push(`该话题正在${regionName}年轻玩家群体中流行`);
+  }
+
+  // 补充传播量级信息
+  if (/million|billion|\d+m\b|\d+k\b/.test(text)) {
+    parts.push("已获百万级以上曝光");
+  }
+  if (/tiktok/.test(text)) parts.push("主要传播平台为TikTok");
+  else if (/youtube/.test(text)) parts.push("主要传播平台为YouTube");
+
+  // 如果中文总结太短,加入英文原文的关键信息
+  if (parts.length <= 1 && desc.length > 20) {
+    parts.push(`原文:${desc.slice(0, 120)}`);
+  }
+
+  return parts.join("。") + "。";
 }
 
 function buildSpecificResourceAdvice(title: string, desc: string, types: ResourceType[], region: Region): string {
   const text = `${title} ${desc}`.toLowerCase();
+  const regionName = region === "SEA" ? "东南亚" : "拉美";
   const suggestions: string[] = [];
-  
+
   for (const rt of types.slice(0, 2)) {
     switch (rt) {
       case "character_skin":
-        if (/anime|cosplay/.test(text)) suggestions.push("提取动漫角色配色+服装剪影融入BS战术装甲");
-        else if (/kpop|idol/.test(text)) suggestions.push("参考偶像舞台造型做潮流向角色皮肤");
-        else if (/skull|calavera|mask/.test(text)) suggestions.push("直接做骷髅/面具主题限定皮肤");
-        else suggestions.push("提取视觉特征做限定主题角色皮肤");
+        if (/anime|cosplay/.test(text)) suggestions.push("提取动漫角色配色+服装剪影,融入BS战术装甲风格做主题皮肤");
+        else if (/kpop|idol/.test(text)) suggestions.push("参考偶像舞台造型的配色和元素,做潮流向角色皮肤");
+        else if (/skull|calavera|mask/.test(text)) suggestions.push("直接做骷髅/面具主题限定皮肤,视觉冲击力强");
+        else suggestions.push("提取核心视觉特征做限定主题角色皮肤");
         break;
       case "emote":
-        if (/dance|choreography/.test(text)) suggestions.push("1:1还原舞蹈动作做全身表情");
-        else suggestions.push("提取标志性动作做3-5秒循环表情");
+        if (/dance|choreography|challenge/.test(text)) suggestions.push("还原核心舞蹈动作做全身表情,玩家会主动录屏传播");
+        else suggestions.push("提取该梗的标志性动作做3-5秒循环表情");
         break;
       case "spray":
-        suggestions.push("提取梗图核心视觉做2D喷漆，保证远距离可读");
+        suggestions.push("将梗图核心视觉做成2D喷漆,简化设计保证对局中远距离可读");
         break;
       case "playpal":
-        suggestions.push("做Q版/chibi化盘盘伴侣，加入趋势元素的待机动画");
+        suggestions.push("做Q版chibi化盘盘伴侣,加入该梗特征的待机动画和互动反应");
         break;
       case "lobby_theme":
-        suggestions.push("提取音乐节奏和视觉氛围做沉浸式大厅背景");
+        suggestions.push("提取音乐节奏和视觉符号做沉浸式大厅主题,配套动态背景");
         break;
       case "event_bundle":
-        suggestions.push("整合为3-5件套限时主题礼包（皮肤+武器+配件）");
+        suggestions.push("整合为3-5件套限时主题礼包,搭配活动任务引导玩家广泛参与");
         break;
       default:
-        suggestions.push(`快速产出${RESOURCE_NAMES[rt]}类资源`);
+        suggestions.push(`快速产出${RESOURCE_NAMES[rt]}类资源,抓住热度窗口`);
     }
   }
-  
-  return suggestions.join("；") + "。建议在热度窗口期（1-2周内）完成初版概念。";
+
+  suggestions.push(`重点面向${regionName}玩家审美偏好做设计调整`);
+  return suggestions.join(";") + "。建议1-2周内完成初版概念。";
 }
 
 // ============ Compliance Check ============
@@ -442,15 +515,15 @@ function buildSpecificResourceAdvice(title: string, desc: string, types: Resourc
 function checkCompliance(text: string): string | undefined {
   const celebs = /taylor swift|drake|messi|ronaldo|blackpink|bts|mrbeast|pewdiepie|shakira|bad bunny|neymar|mbapp|jisoo|jennie|lisa|ive |aespa|stray kids|newjeans|peso pluma|karol g|feid/i;
   if (celebs.test(text)) {
-    return "\u26a0\ufe0f 涉及真人肖像权，需规避直接使用真人形象，建议提取视觉风格/动作元素进行二次创作";
+    return "\u26a0\ufe0f 涉及真人肖像权,需规避直接使用真人形象,建议提取视觉风格/动作元素进行二次创作";
   }
   const ips = /marvel|disney|one piece|naruto|demon slayer|jujutsu|dragon ball|pokemon|hello kitty|sanrio|star wars|harry potter|dc comics|batman|spider.?man|genshin|honkai|mobile legends/i;
   if (ips.test(text)) {
-    return "\u26a0\ufe0f 涉及第三方IP版权，需获取授权或仅参考视觉风格方向，不可直接使用角色/标志";
+    return "\u26a0\ufe0f 涉及第三方IP版权,需获取授权或仅参考视觉风格方向,不可直接使用角色/标志";
   }
   const sensitive = /politic|election|president|religious|mosque|church|temple|protest|military coup|territorial|separatist|genocide/i;
   if (sensitive.test(text)) {
-    return "\u26a0\ufe0f 涉及政治/宗教敏感内容，建议仅提取非争议性视觉元素，规避文化冲突";
+    return "\u26a0\ufe0f 涉及政治/宗教敏感内容,建议仅提取非争议性视觉元素,规避文化冲突";
   }
   return undefined;
 }
