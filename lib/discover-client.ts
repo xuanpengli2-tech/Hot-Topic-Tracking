@@ -14,6 +14,7 @@ import {
   getOptimizedQueries,
   classifyCategoryAdvanced,
   generateValueAnalysis,
+  isMemeWorthy,
 } from "@/lib/region-knowledge";
 
 // ============ Utilities ============
@@ -48,8 +49,9 @@ export async function discoverTrendsClient(region: Region): Promise<Trend[]> {
   const rawItems = await fetchAllSources(region);
 
   const scored = rawItems
+    .filter((item) => isMemeWorthy(item.title, item.description, region))
     .map((item) => processTrend(item, region))
-    .filter((t): t is Trend => t !== null && t.scores.total >= 18)
+    .filter((t): t is Trend => t !== null && t.scores.total >= 16)
     .filter((t) => !isInappropriate(t.title + " " + t.summary))
     .sort((a, b) => b.scores.total - a.scores.total);
 
