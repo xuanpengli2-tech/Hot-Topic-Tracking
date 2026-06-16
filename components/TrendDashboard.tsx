@@ -24,6 +24,7 @@ interface Report {
   sourceUrl: string;
   scores?: Scores;
   resourceTypes?: string[];
+  imagePrompt?: string;
 }
 
 interface ReportData {
@@ -80,6 +81,26 @@ export default function TrendDashboard() {
   const [loading, setLoading] = useState(true);
   const [mainTab, setMainTab] = useState<MainTab>("trends");
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [copiedId, setCopiedId] = useState<string | null>(null);
+
+  async function copyPrompt(report: Report) {
+    if (!report.imagePrompt) return;
+    try {
+      await navigator.clipboard.writeText(report.imagePrompt);
+      setCopiedId(report.id);
+      setTimeout(() => setCopiedId(null), 2000);
+    } catch (e) {
+      // fallback
+      const ta = document.createElement("textarea");
+      ta.value = report.imagePrompt;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+      setCopiedId(report.id);
+      setTimeout(() => setCopiedId(null), 2000);
+    }
+  }
 
   useEffect(() => { loadData(); }, []);
 
@@ -160,6 +181,18 @@ export default function TrendDashboard() {
           <strong>🧠 深度分析 & BS启示</strong>
           <p>{report.summary}</p>
         </div>
+
+        {/* Image Prompt Copy Button */}
+        {report.imagePrompt && isExpanded && (
+          <div className="card-prompt">
+            <button
+              className="copy-prompt-btn"
+              onClick={() => copyPrompt(report)}
+            >
+              {copiedId === report.id ? "✅ 已复制!" : "🎨 复制AI绘图提示词"}
+            </button>
+          </div>
+        )}
 
         <div className="card-actions">
           <button
