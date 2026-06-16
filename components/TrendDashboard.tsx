@@ -150,6 +150,8 @@ export default function TrendDashboard() {
   function renderCard(report: Report) {
     const isExpanded = expandedId === report.id;
     const promptSets = getPromptSets(report);
+    const introLabel = mainTab === "competitors" ? "竞品动作" : "梗介绍";
+    const observationLabel = mainTab === "competitors" ? "拆解重点" : "资源观察";
 
     return (
       <div key={report.id} className="report-card">
@@ -172,11 +174,11 @@ export default function TrendDashboard() {
         <h3 className="card-title">{report.title}</h3>
 
         <div className="card-highlights">
-          <strong>梗介绍</strong>
+          <strong>{introLabel}</strong>
           <p>{report.memeIntro || report.highlights}</p>
           {report.memeIntro && (
             <div className="resource-observation">
-              <strong>资源观察</strong>
+              <strong>{observationLabel}</strong>
               <p>{report.highlights}</p>
             </div>
           )}
