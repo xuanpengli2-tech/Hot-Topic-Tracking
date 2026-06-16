@@ -2,6 +2,13 @@
 
 These rules define how trend cards should generate AI image prompts for Bloodstrike-style resources.
 
+Use only these four resource directions in trend cards:
+
+- character skin
+- weapon skin
+- emote
+- finisher
+
 ## Core Principle
 
 Trend adaptation does not mean forcing every meme into a purely hard-surface military skin. Match the visual treatment to the meme:
@@ -24,19 +31,20 @@ Every role/weapon prompt should avoid:
 
 ## Weapon Skin Prompt Pattern
 
-Weapon prompts can use more than one view. Prefer:
+Weapon prompts should be more than a flat decal idea. They can use more than one view. Prefer:
 
 - main side-on full weapon render
-- 2-4 small detail callouts: receiver, barrel, magazine, charm, muzzle VFX, material panel
+- 2-4 small detail callouts: receiver, barrel, magazine, muzzle VFX, material panel, inspection animation frame
 - dark blue/black studio background
 - realistic weapon base with premium stylized overlays
 - clear material language: PBR gunmetal, enamel, chrome, carbon fiber, glass, resin, leather, fabric insert
 - readable silhouette, decorative panels, decals, energy inlays, charms, animated VFX hints
+- 3D geometry changes such as raised armor shells, transparent core windows, animated rails, custom magazine, reactive muzzle, kill effect, reload effect, or inspect animation
 
 For cute memes, allow:
 
 - rounded mascot decals
-- toy-like resin charms
+- toy-like mascot parts integrated as clean accessories or micro 3D badges
 - soft color accents
 - cute cartoon stickers
 - playful muzzle or reload VFX
@@ -52,15 +60,16 @@ Character prompts can use:
 - tactical silhouette first, trend details second
 - stylized but polished materials
 
-Cute or humorous character skins are allowed, such as shark, duck, capybara, or mascot-inspired skins, as long as they are not childish pajamas and still fit a shooter.
+Cute or humorous character skins are allowed, such as shark, duck, capybara, or mascot-inspired skins, as long as they are not childish pajamas and still fit a shooter. Add enough gear structure so the skin feels like combat equipment, not cosplay clothing only.
 
-## Emote / Charm Pattern
+## Emote / Finisher Pattern
 
-Emotes and charms can carry more direct meme energy than weapon and character skins:
+Emotes and finishers can carry more direct meme energy than weapon and character skins:
 
 - emotes can be funnier, more exaggerated, and more cartoon
-- charms can use cute animal or toy shapes more literally
-- sprays can be flatter, sticker-like, and simpler
+- finishers should turn the meme into a readable 2-4 second combat beat
+- finishers can use VFX, camera cuts, impact frames, or a short prop/mascot appearance
+- finishers must avoid gore and horror even when the meme is dark
 
 Still avoid horror, disgust, real logos, and copied IP.
 

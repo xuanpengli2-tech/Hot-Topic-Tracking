@@ -58,15 +58,8 @@ const SCORE_LABELS: Record<keyof Scores, string> = {
 const RESOURCE_LABELS: Record<string, string> = {
   character_skin: "角色皮肤",
   weapon_skin: "枪械皮肤",
-  weapon_charm: "武器挂饰",
   finisher: "终结技",
   emote: "表情动作",
-  spray: "喷漆",
-  lobby_theme: "大厅主题",
-  event_bundle: "活动礼包",
-  parachute_skin: "降落伞",
-  vehicle_skin: "载具皮肤",
-  playpal: "战斗伙伴",
 };
 
 function getCoverLabel(report: Report) {

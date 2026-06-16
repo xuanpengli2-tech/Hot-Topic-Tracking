@@ -21,6 +21,7 @@
         },
         "resourceTypes": [
           "character_skin",
+          "weapon_skin",
           "emote",
           "finisher"
         ],
@@ -28,12 +29,22 @@
           {
             "type": "character_skin",
             "label": "角色皮肤提示词",
-            "prompt": "Bloodstrike character skin concept sheet, full-body front hero render plus 3 small detail callouts for glowing eye visor, rune gloves, and shadow-energy coat hem; original shadow hunter tactical operator, black armored longcoat over slim combat bodysuit, purple energy veins across shoulder plates and gloves, matte black leather, brushed gunmetal armor, cyan and purple rim lighting, premium anime dark-fantasy influence but still tactical shooter style, attractive and heroic, not horror, no Cthulhu, no gore, no monster body, no copied IP, 4K"
+            "prompt": "Bloodstrike character skin concept sheet, full-body front hero render plus detail callouts for glowing eye visor, rune gloves, back coat silhouette, and shadow-energy shoulder armor; original shadow hunter tactical operator, black armored longcoat over combat bodysuit, purple energy veins, matte leather and brushed gunmetal, heroic anime dark-fantasy influence but still tactical shooter, attractive and premium, no horror, no Cthulhu, no copied IP, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; Shadow Monarch assault rifle theme, black graphite frame with raised obsidian armor fins, transparent violet energy core windows inside receiver, animated shadow particles flowing through barrel channels, custom angular magazine with purple rune light, inspect animation shows shadow mist unfolding around the weapon, kill effect creates a brief purple silhouette burst, sleek dark anime sci-fi skin"
           },
           {
             "type": "emote",
             "label": "Emote提示词",
-            "prompt": "Bloodstrike emote key art, tactical operator performing a short shadow awakening victory pose, head lowered then one glowing eye opens, purple shadow wings briefly unfold behind the body, ground ripple expands under boots, cinematic low angle, clean readable silhouette, dark blue studio stage, PBR tactical gear, dramatic but not horror, 4K"
+            "prompt": "Bloodstrike emote concept sheet, operator lowers head, one eye glows violet, then a short shadow aura expands from boots; 3 pose frames, clean readable body language, dramatic but stylish, dark blue studio stage, tactical outfit, no horror, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike finisher concept art, 3-panel action sequence: target is locked by floating shadow blades, operator snaps fingers, purple shadow cage collapses into a clean energy burst, no gore, no body horror, cinematic camera, dark anime tactical VFX, 4K"
           }
         ],
         "memeIntro": "这个热点不是单一梗，而是一类东南亚二创里很常见的“暗影觉醒爽点”：用户会剪 Solo Leveling、JJK 等动漫角色开大、抬眼、召唤暗影或释放蓝紫能量的片段，再配燃向音乐做成短视频。它的核心情绪是“我从普通状态突然变成压迫感很强的主角”，所以传播时常见黑色长风衣、发光眼睛、暗影粒子、瞬间定格和强反差转场。对不看动漫的人来说，可以理解成一种“角色觉醒/变身开大”的视觉梗。"
@@ -44,7 +55,7 @@
         "category": "印尼Brainrot梗",
         "title": "Tung Tung Tung Sahur：敲门节奏、木偶感动作和荒诞音频，是东南亚低成本高传播Emote素材",
         "highlights": "这个梗的传播点不是精致舞蹈，而是“凌晨敲门节奏+木头怪物+僵硬摆动”的强记忆组合。它已经被 TikTok、YouTube Shorts、Roblox 和 CapCut 模板反复二创，动作短、节奏清楚，玩家一眼能复刻。",
-        "summary": "BS 适合把它做成击杀后嘲讽 Emote：角色用枪托敲三下空气门板，头和肩膀像木偶一样卡顿摇摆，最后出现一个木质门牌挂饰弹跳。它的商业价值在于制作成本低、上线快、适合作为限时任务或免费传播奖励。合规上要避免直接复刻具体木头角色外形，抽象为“midnight knock rhythm”。",
+        "summary": "BS 适合把它做成击杀后嘲讽 Emote：角色用枪托敲三下空气门板，头和肩膀像木偶一样卡顿摇摆，最后出现一个木质门牌装置弹跳。进一步可以扩展成木质节奏角色皮、三连敲击枪械皮和节奏冲击处决动作。合规上要避免直接复刻具体木头角色外形，抽象为“midnight knock rhythm”。",
         "sourceUrl": "https://knowyourmeme.com/memes/tung-tung-tung-sahur",
         "sourceMetric": "KnowYourMeme梗源说明",
         "scores": {
@@ -57,20 +68,31 @@
           "total": 8.6
         },
         "resourceTypes": [
+          "character_skin",
+          "weapon_skin",
           "emote",
-          "weapon_charm",
-          "spray"
+          "finisher"
         ],
         "promptSets": [
           {
-            "type": "emote",
-            "label": "Emote提示词",
-            "prompt": "Bloodstrike comedy taunt emote concept art, tactical operator knocks an invisible wooden door three times with the rifle stock, stiff puppet-like shoulder and head movement, orange impact rings at each knock, deadpan expression, compact 3-second loop pose, dark studio floor, warm wood particles, PBR nylon and gunmetal materials, absurd viral rhythm energy, no copied meme character, 4K"
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike character skin concept sheet, original midnight rhythm raider operator, tactical jacket with carved wood armor accents, orange pulse strips, small door-knocker badge on chest, reinforced gloves shaped for rhythmic hits, full-body front render plus glove, shoulder, and backpack detail callouts, funny but cool, no copied meme character, no horror, 4K"
           },
           {
-            "type": "weapon_charm",
-            "label": "武器挂饰提示词",
-            "prompt": "Bloodstrike weapon charm concept art, small original wooden midnight doorplate charm dangling from an SMG rail, carved knock marks, tiny vibrating bell, orange rhythm wave decals, brushed metal clasp, dark blue studio product render, PBR wood grain and aged brass, funny collectible shooter accessory, 4K"
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; Tung rhythm SMG theme, matte black receiver with carved dark-wood mechanical armor plates, bronze door-knocker charging handle, orange soundwave energy channel inside barrel, custom magazine with three-beat pulse indicator, reload animation makes the side plates knock three times with warm sparks, muzzle VFX emits clean circular knock waves, humorous but premium tactical skin"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike comedy taunt emote concept sheet, 4 key frames: operator knocks an invisible door three times with rifle stock, shoulders move stiffly like a puppet, orange impact rings pop on beat, final deadpan pose, compact loop, funny not creepy, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike non-gore finisher concept art, target is trapped inside three glowing wooden doorframes, operator knocks three times, orange rhythm shockwave launches target away in a cartoon impact burst, no horror, no gore, funny tactical meme energy, 4K"
           }
         ],
         "memeIntro": "Tung Tung Tung Sahur 是印尼斋月叫人起床吃封斋饭的敲击声被网络二创后形成的荒诞 Brainrot 梗。短视频里通常会出现木头怪物、重复的“Tung Tung Tung”敲门节奏、僵硬摆动和很魔性的音频，观众觉得好笑是因为它像民俗声音、低成本怪物和机械舞步混在一起，既怪又容易模仿。它不是精致舞蹈，而是靠声音记忆点和三连敲动作传播。"
@@ -94,20 +116,31 @@
           "total": 8.1
         },
         "resourceTypes": [
-          "emote",
           "character_skin",
-          "lobby_theme"
+          "weapon_skin",
+          "emote",
+          "finisher"
         ],
         "promptSets": [
           {
             "type": "character_skin",
             "label": "角色皮肤提示词",
-            "prompt": "Bloodstrike character skin concept sheet, front full-body render plus side/back UI-detail callouts, tactical operator wearing dark gray combat suit with cyan AR-HUD grid projected across armor panels, translucent stat bars near shoulders, scanning line across helmet visor, weapon inspection stance, blue grid floor, clean futuristic interface accents, matte tactical fabric and chrome armor, polished sci-fi shooter skin, no real game UI logos, no cluttered text, 4K"
+            "prompt": "Bloodstrike character skin concept sheet, front full-body render plus side/back UI-detail callouts, tactical operator wearing dark gray combat suit with cyan AR-HUD grid projected across armor panels, stat bars near shoulders, scan-line helmet visor, weapon inspection stance, clean futuristic interface accents, polished sci-fi shooter skin, no real game UI logos, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; Player Select rifle theme, dark tactical frame with transparent cyan UI panels embedded into receiver, rotating stat-wheel module near stock, holographic ammo counter on magazine, animated scan line travels along barrel during inspect, reload animation projects class icons and locks them into the chamber, clean HUD sci-fi weapon not flat UI stickers"
           },
           {
             "type": "emote",
             "label": "Emote提示词",
-            "prompt": "Bloodstrike lobby emote concept art, operator performs a character select idle animation, slow turntable pose, rifle raised for inspection, holographic selection frame locks around the body, stat bars flicker beside the character, dark menu-like studio background, cyan rim light, polished game showcase key art, 4K"
+            "prompt": "Bloodstrike lobby emote concept sheet, operator performs character-select idle animation, slow turntable pose, rifle raised for inspection, holographic selection frame locks around body, stat bars flicker beside character, 3 key frames, polished game showcase, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike finisher concept art, target is highlighted by a holographic selection box, UI cursor confirms target, operator fires one clean cyan data-shot, target dissolves into pixelated scan particles, no gore, futuristic HUD VFX, 4K"
           }
         ],
         "memeIntro": "Choose Your Character / Loading Screen Pose 是用户把自己拍成“游戏选人界面角色”的梗：人站在镜头前摆待机姿势，画面加上角色名、属性条、扫描线、旋转展示或加载界面音效。它好玩的地方在于把现实人物包装成可选择角色，观众会立刻联想到格斗游戏、FPS选角、大厅展示和皮肤预览。这个梗本身就有游戏 UI 语言，所以理解门槛低。"
@@ -116,9 +149,9 @@
         "id": "trend-sea-0616-04",
         "date": "2026-06-16",
         "category": "泰国动物梗",
-        "title": "Moo Deng 暴躁小河马：圆滚、湿润高光和冲撞反差，适合挂饰、表情动作和低门槛枪皮贴花",
-        "highlights": "Moo Deng 的爆点是“可爱但有攻击性”：张嘴、弹跳、冲撞、水润皮肤。比普通萌宠更适合射击游戏，因为它有明确动作记忆点，可以转化成击杀嘲讽和武器挂饰的弹跳反馈。",
-        "summary": "BS 不必做真实动物复刻，而是做原创 angry baby hippo 系列。挂饰可以保留圆滚小动物的可爱冲撞感；Emote 可以表现角色被小河马冲撞后退；枪皮可以更卡通幽默，但必须好看、干净、像高级游戏皮肤：用圆润河马徽章、水波能量、灰蓝装甲和粉色小点缀做主题，不要做恐怖、恶心、克苏鲁或脏兮兮的生物枪。",
+        "title": "Moo Deng 暴躁小河马：圆滚、湿润高光和冲撞反差，适合角色皮、枪械皮、Emote和处决动作",
+        "highlights": "Moo Deng 的爆点是“可爱但有攻击性”：张嘴、弹跳、冲撞、水润皮肤。比普通萌宠更适合射击游戏，因为它有明确动作记忆点，可以转化成卡通角色皮、幽默枪械皮、击杀嘲讽Emote和无血腥处决动作。",
+        "summary": "BS 不必做真实动物复刻，而是做原创 angry baby hippo 系列。角色皮可以保留圆滚小动物的可爱冲撞感；Emote 可以表现角色被小河马冲撞后退；枪皮可以更卡通幽默，但必须好看、干净、像高级游戏皮肤：用圆润河马徽章、水波能量、灰蓝装甲和粉色小点缀做主题，不要做恐怖、恶心、克苏鲁或脏兮兮的生物枪。",
         "sourceUrl": "https://knowyourmeme.com/memes/moo-deng-the-baby-hippo",
         "sourceMetric": "KnowYourMeme动物梗说明",
         "scores": {
@@ -131,25 +164,31 @@
           "total": 8.6
         },
         "resourceTypes": [
-          "weapon_charm",
+          "character_skin",
+          "weapon_skin",
           "emote",
-          "weapon_skin"
+          "finisher"
         ],
         "promptSets": [
           {
-            "type": "weapon_charm",
-            "label": "武器挂饰提示词",
-            "prompt": "Bloodstrike weapon charm concept art, original angry baby hippo charm with rounded gray resin body, glossy wet skin shader, tiny pink open mouth, exaggerated angry eyebrows, water droplets, dangling from matte black SMG by reinforced metal clasp, dark blue studio product lighting, cute but aggressive shooter collectible, no zoo logo, 4K"
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike cute tactical character skin concept sheet, original Splash Hippo operator, full-body front render plus helmet, backpack, knee pad, and mascot patch callouts; gray-blue waterproof combat jacket, rounded armor plates, soft pink accent straps, tiny hippo badge, aqua water tank backpack, playful but battle-ready, attractive cartoon-shooter style, not childish pajamas, no horror, no gross texture, 4K"
           },
           {
             "type": "weapon_skin",
             "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike cute premium weapon skin concept sheet, main side-on compact SMG render plus 4 detail callouts for receiver mascot decal, magazine pattern, resin charm, and aqua muzzle VFX; realistic SMG base with playful cartoon baby hippo theme, smooth dark graphite gunmetal, soft gray-blue armor panels, glossy enamel water-ripple channels, small rounded pink cheek accent decals, cheerful hippo mascot badge on receiver, tiny resin hippo charm hanging under rail, clean cyan rim light, PBR metal, enamel, glass and resin, cute humorous shooter skin, attractive store-thumbnail quality, not scary, not ugly, no gore, no Cthulhu, no organic flesh, no mouth-shaped gun parts, no disgusting wet creature texture, 4K"
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; cute baby hippo SMG theme, compact SMG with smooth rounded sci-fi armor shells, gray-blue enamel plates, soft pink accent buttons, raised cheerful hippo mascot badge on receiver, translucent aqua water-core tube along barrel, custom magazine shaped like a clean water capsule, inspect animation makes tiny water bubbles flow through the core, kill effect splashes a cute aqua ripple, no organic flesh, no mouth-shaped gun parts, cute and premium"
           },
           {
             "type": "emote",
             "label": "Emote提示词",
-            "prompt": "Bloodstrike comedy emote key art, tactical operator tries to pet a tiny original baby hippo mascot, hippo suddenly charges forward like a battering ram, operator slides back with exaggerated surprise pose, water splash particles, dark studio floor, readable action arc, playful shooter-game humor, 4K"
+            "prompt": "Bloodstrike comedy emote concept sheet, operator tries to pet tiny original baby hippo mascot, mascot bumps forward like a soft battering ram, operator slides back with surprised but funny pose, water splash particles, 4 key frames, cute not scary, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike playful finisher concept art, tiny hippo mascot charges through a glowing water lane, target is knocked into a harmless giant bubble, bubble pops into aqua confetti, no gore, cute slapstick shooter finisher, 4K"
           }
         ],
         "memeIntro": "Moo Deng 是泰国 Khao Kheow Open Zoo 的侏儒河马宝宝，因为圆滚身体、湿润反光皮肤、张嘴表情和暴躁冲撞动作在 TikTok 上爆红。这个梗的笑点不是“萌宠安静可爱”，而是“小小一只却很有攻击性”：会弹跳、冲人、张嘴、被摸就反应很大。用户转发它通常是在表达“可爱但脾气很大”“小体型大能量”的反差感。"
@@ -158,9 +197,9 @@
         "id": "trend-sea-0616-05",
         "date": "2026-06-16",
         "category": "节奏嘲讽",
-        "title": "Tung Tung 衍生木头门牌：把短命热梗拆成挂饰、喷漆和击杀反馈，比直接做角色更稳",
-        "highlights": "同一个梗可以拆成低风险资源：木头门牌、鼓槌节奏、三连敲击、橙色音波。这样既能借热点，又不依赖具体梗角色生命期，适合放进战令小奖励、限时登录奖励或击杀反馈。",
-        "summary": "资源优先级建议：先做挂饰和喷漆，再做 Emote。挂饰在奔跑和开火时产生轻微敲击动画；喷漆可以是“三段音波+木纹裂缝”；Emote 则复用三连敲节奏。这个方向的好处是成本低且不怕梗退潮，坏处是商业单价不宜太高。",
+        "title": "Tung Tung 衍生木头门牌：把短命热梗拆成角色皮、枪皮、Emote和处决动作",
+        "highlights": "同一个梗可以拆成四类核心资源：木质节奏角色皮、三连敲击枪械皮、短循环Emote、击杀后的节奏冲击处决动作。这样既能借热点，又不依赖具体梗角色生命期，适合放进限时活动和战令主题。",
+        "summary": "资源优先级建议：先做 Emote 和处决动作，快速抓住三连敲节奏；再做木质节奏枪皮和角色皮，形成完整小主题。枪皮不要只是木纹贴图，而要有三段发光节奏核心、机械门扣结构和检视动画。这个方向成本可控，也不怕梗退潮太快。",
         "sourceUrl": "https://knowyourmeme.com/memes/tung-tung-tung-sahur",
         "sourceMetric": "KnowYourMeme梗源说明",
         "scores": {
@@ -173,20 +212,31 @@
           "total": 8.4
         },
         "resourceTypes": [
-          "weapon_charm",
-          "spray",
-          "emote"
+          "character_skin",
+          "weapon_skin",
+          "emote",
+          "finisher"
         ],
         "promptSets": [
           {
-            "type": "weapon_charm",
-            "label": "武器挂饰提示词",
-            "prompt": "Bloodstrike weapon charm product render, small cracked wooden sign charm shaped like a door knocker, three carved rhythm marks, tiny bronze hinge, warm orange pulse lines, attached to black rifle with metal clasp, dark studio background, PBR wood and brass, compact readable silhouette for mobile, 4K"
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike rhythm sentinel character skin concept sheet, tactical operator with dark wood-and-gunmetal armor accents, orange pulse cables, compact doorplate device on forearm, full-body render plus wrist device, boots, shoulder armor callouts, funny midnight knock motif but sleek shooter design, no copied meme character, 4K"
           },
           {
-            "type": "spray",
-            "label": "喷漆提示词",
-            "prompt": "Bloodstrike spray decal design, stylized three-beat knock icon, cracked wood texture, orange comic impact rings, bold simple shapes readable at small size, no text logo, transparent background, shooter game reward sticker style, 4K"
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; Knock Signal rifle theme, black gunmetal base with raised carved-wood side plates, bronze hinge-like mechanical rail, three orange rhythm cores visible under glass, custom magazine with pulse meter, inspect animation taps the receiver three times and lights each core, kill effect releases clean triple-ring shockwave, premium not just wooden texture"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike short emote concept sheet, operator performs three-beat knock rhythm on a floating tactical door panel, orange sound rings, stiff shoulder bounce, final thumbs-up deadpan pose, readable loop, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike finisher concept art, three glowing orange door panels slam down around target in rhythm, operator knocks once, panels burst outward into comic soundwave, target launched away cleanly, no gore, 4K"
           }
         ],
         "memeIntro": "这是 Tung Tung Tung Sahur 的拆分用法：不再把整个木头怪物当成资源，而是把最容易被记住的三件事拿出来，分别是木头门牌、三连敲节奏和橙色音波。很多热梗寿命很短，但声音和动作符号可以活得更久。用户看到木门、敲击节奏和卡顿动作，就能想起原梗，不需要完整复刻角色。"
@@ -195,9 +245,9 @@
         "id": "trend-sea-0616-06",
         "date": "2026-06-16",
         "category": "Ugly-cute潮玩",
-        "title": "Labubu式怪萌挂饰热：不碰现成IP，抽取尖牙、毛绒、盲盒编号和包挂展示逻辑",
-        "highlights": "东南亚社媒和线下商场的怪萌挂饰热度持续，本质不是某个单品，而是“丑萌脸、尖牙、毛绒/搪胶质感、挂在包上展示”的社交货币。射击游戏里同样有枪械挂饰、背包和武器展示场景。",
-        "summary": "BS 可以做原创 street monster charm 系列：小怪物作为挂饰或背包装饰存在，开火时眼睛发光；枪皮可以偏潮玩、卡通、幽默，用编号贴纸、霓虹眼睛图标、搪胶小配件和干净的玩具包装感。它可以怪萌，但不能丑、恐怖、牙齿外翻或怪物身体化；重点是“可收藏的小潮玩”，不是惊悚怪物。",
+        "title": "Labubu式怪萌潮玩热：不碰现成IP，抽取尖牙、毛绒、盲盒编号和包挂展示逻辑",
+        "highlights": "东南亚社媒和线下商场的怪萌潮玩热度持续，本质不是某个单品，而是“丑萌脸、尖牙、毛绒/搪胶质感、挂在包上展示”的社交货币。射击游戏里可以转成角色皮、枪械皮、Emote和处决动作，而不是复刻玩具IP。",
+        "summary": "BS 可以做原创 street monster toy 系列：小怪物作为角色装备、枪身徽章或动画道具存在，开火时眼睛发光；枪皮可以偏潮玩、卡通、幽默，用编号贴纸、霓虹眼睛图标、搪胶小配件和干净的玩具包装感。它可以怪萌，但不能丑、恐怖、牙齿外翻或怪物身体化；重点是“可收藏的小潮玩”，不是惊悚怪物。",
         "sourceUrl": "https://www.channelnewsasia.com/today/big-read/pop-mart-labubu-worldwide-craze-5354541",
         "sourceMetric": "CNA全球热潮报道",
         "scores": {
@@ -210,20 +260,31 @@
           "total": 8.4
         },
         "resourceTypes": [
-          "weapon_charm",
+          "character_skin",
           "weapon_skin",
-          "character_skin"
+          "emote",
+          "finisher"
         ],
         "promptSets": [
           {
-            "type": "weapon_charm",
-            "label": "武器挂饰提示词",
-            "prompt": "Bloodstrike original ugly-cute monster weapon charm, fuzzy tiny street monster with oversized round eyes, tiny sharp teeth, stitched vinyl ears, chunky blind-box toy silhouette, biting onto assault rifle side rail, flocked fabric and glossy vinyl faceplate, neon purple eyes, serial-number tag, dark studio product render, no existing toy IP, 4K"
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike street toy collector character skin concept sheet, full-body front render plus backpack, mask, shoulder charm, and glove callouts; tactical outfit with glossy vinyl armor pods, purple-cyan neon seams, blind-box serial tags, small original ugly-cute mascot patches, cool and playful, not creepy, no copied toy IP, no horror, 4K"
           },
           {
             "type": "weapon_skin",
             "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike playful collectible weapon skin concept sheet, side-on assault rifle hero render plus close-up callouts for receiver sticker cluster, magazine serial number, small toy charm, and neon eye light; realistic tactical rifle silhouette with glossy violet and cyan enamel armor plates, matte black gunmetal base, chrome rails, clean blind-box serial number decals, holographic cute monster-eye icon, small original ugly-cute vinyl toy charm as accessory only, cool toy-tech crossover, polished and fun, not horror, not ugly, no gore, no Cthulhu, no exposed teeth on gun, no monster flesh, no dirty fur covering the gun, 4K"
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; collectible toy-tech assault rifle theme, 3D glossy vinyl armor pods mounted over gunmetal frame, transparent capsule receiver with tiny rotating mascot badge, custom magazine like a premium blind-box display window, chrome rails, violet/cyan emissive seams, inspect animation opens a small capsule window and lights the mascot icon, kill effect releases playful neon sticker burst, not flat decals, not horror, no teeth on gun body"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike playful emote concept sheet, operator shakes a small mystery capsule, cute mascot icon pops out as hologram, operator catches it and poses, 4 key frames, toy-collector humor, no copied IP, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike finisher concept art, target is sealed inside a holographic blind-box cube, cube spins and pops open with neon confetti, operator presents a tiny mascot icon, no gore, funny collectible-toy energy, 4K"
           }
         ],
         "memeIntro": "Labubu 式怪萌挂饰热，本质是“丑萌潮玩成为社交展示物”的现象：用户把带尖牙、毛绒、搪胶质感的小怪物挂在包上、手机上或拍开箱视频。它的吸引力来自反差，既有一点怪、有一点坏，又是可收藏的小东西。对游戏来说，这不是要复制某个 IP，而是抓住“怪萌小挂件、盲盒编号、收藏展示”的消费心理。"
@@ -234,7 +295,7 @@
         "category": "泰国泼水节",
         "title": "Songkran 水枪狂欢：本地节日+水战天然贴合射击品类，适合做清爽高识别枪皮和夏日Emote",
         "highlights": "泰国 Songkran 的视觉关键词非常适合枪皮：水枪、水花、荧光防水袋、街头湿身狂欢、白色粉末和热带花环。它比泛泛的夏日主题更本地、更有东南亚识别度，也和“射击”动作天然联想。",
-        "summary": "这是新增的枪皮优先卡。枪械皮肤可以做透明水箱、蓝绿渐变珐琅、水滴粒子和防水贴纸，参考 BS 枪皮的横向产品展示与发光分区；Emote 可以是角色用水枪扫射镜头后擦脸庆祝；挂饰可做迷你水桶或防水袋。节日文化方向适合做 4 月档活动，也能在夏日档复用。",
+        "summary": "这是枪械皮肤和角色皮肤都很强的节日卡。枪械皮肤可以做透明水箱、蓝绿渐变珐琅、水滴粒子、防水贴纸和检视动画，参考 BS 枪皮的横向产品展示与发光分区；角色皮可以做战术防水装甲、水箱背包和泼水节粉末标记；Emote 是角色用水枪扫射镜头后擦脸庆祝；处决动作则做无血腥水球冲击。节日文化方向适合 4 月档活动，也能在夏日档复用。",
         "sourceUrl": "https://www.tatnews.org/2025/03/thailand-unveils-maha-songkran-world-water-festival-2025/",
         "sourceMetric": "泰国旅游局泼水节来源",
         "scores": {
@@ -247,25 +308,31 @@
           "total": 8.6
         },
         "resourceTypes": [
+          "character_skin",
           "weapon_skin",
           "emote",
-          "weapon_charm"
+          "finisher"
         ],
         "promptSets": [
           {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike Songkran splash operator concept sheet, full-body render plus water backpack, visor, glove nozzle, and flower armband callouts; tactical waterproof armor, aqua transparent tanks, white powder marks, tropical micro-patterns, clean festive summer shooter skin, not swimsuit, not toy costume, 4K"
+          },
+          {
             "type": "weapon_skin",
             "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike legendary sci-fi weapon skin concept sheet, side-on assault rifle main render plus detail callouts for translucent water-core receiver, magazine glass panel, waterproof pouch charm, and muzzle water VFX; inspired by Thai Songkran water festival, realistic rifle base, dark gunmetal chassis with polished chrome rails, aqua-blue glass inlays, clean white powder-splash graphic decals, thin neon cyan water-flow light strips, elegant tropical flower micro-engraving, bright festive but premium shooter style, no toy water gun silhouette, no messy slime, no organic coating, 4K"
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; Songkran hydro assault rifle theme, dark gunmetal chassis with transparent aqua water-core receiver, animated micro-pump tubes along barrel, chrome pressure valves, custom magazine as reinforced water cell, flower-engraved stock, inspect animation circulates glowing water through the weapon, reload vents mist, kill effect creates clean water splash ring, premium sci-fi not toy water gun"
           },
           {
             "type": "emote",
             "label": "Emote提示词",
-            "prompt": "Bloodstrike summer emote key art, tactical operator pulls out a colorful water blaster, sprays a wide arc of glowing aqua water, wipes face and laughs in victory pose, floating water droplets and festival powder particles, bright but tactical styling, dark studio floor with cyan highlights, 4K"
+            "prompt": "Bloodstrike summer emote concept sheet, operator pulls compact water blaster module, sprays glowing aqua arc, wipes visor, victory pose, festival powder particles, 4 key frames, bright but tactical, 4K"
           },
           {
-            "type": "weapon_charm",
-            "label": "武器挂饰提示词",
-            "prompt": "Bloodstrike weapon charm concept art, tiny translucent Songkran water bucket charm with aqua liquid inside, waterproof phone pouch tag, silver clasp, water droplets, attached to black rifle rail, dark studio product render, PBR clear resin and metal, 4K"
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike non-gore finisher concept art, operator fires hydro pulse, target is lifted inside a transparent water sphere, sphere spins and bursts into festival splash and flower petals, no pain, no gore, clean celebratory VFX, 4K"
           }
         ],
         "memeIntro": "Songkran 是泰国新年泼水节，社媒上最常见的是街头大规模水战：水枪互射、泼水、白色粉末、花衬衫、防水袋、音乐和人群狂欢。它不是普通夏日玩水，而是东南亚识别度很强的节日场景。用户爱看这类内容，是因为画面直接、欢乐、参与感强，而且“水枪大战”天然和射击游戏有动作联想。"
@@ -278,7 +345,7 @@
         "category": "世界杯庆祝",
         "title": "2026世界杯拉美庆祝动作：膝滑、桑巴摆胯和球迷呐喊，适合做赛季Emote与免费回流奖励",
         "highlights": "世界杯开赛期，拉美用户会持续产出庆祝舞、进球模仿、球衣改装和观赛反应。对 BS 来说，重点不是复制球队或球员，而是把“进球瞬间”做成短、爽、可截图的胜利动作。",
-        "summary": "Emote 可以做两段：先膝滑张臂，再站起做桑巴/指天庆祝；角色皮肤只抽取运动护具、臂章配色、球鞋纹理，不使用真实队徽。它适合作为免费登录奖励，把世界杯热度引到日活，再用更精致的付费枪皮或挂饰承接转化。",
+        "summary": "Emote 可以做两段：先膝滑张臂，再站起做桑巴/指天庆祝；角色皮肤只抽取运动护具、臂章配色、球鞋纹理，不使用真实队徽。它适合作为免费登录奖励，把世界杯热度引到日活，再用更精致的付费枪皮、角色皮和处决动作承接转化。",
         "sourceUrl": "https://www.youtube.com/@fifaworldcup/shorts",
         "sourceMetric": "FIFA官方YouTube Shorts",
         "scores": {
@@ -291,20 +358,31 @@
           "total": 8.6
         },
         "resourceTypes": [
-          "emote",
           "character_skin",
-          "spray"
+          "weapon_skin",
+          "emote",
+          "finisher"
         ],
         "promptSets": [
           {
-            "type": "emote",
-            "label": "Emote提示词",
-            "prompt": "Bloodstrike victory emote concept art, tactical operator performs a football goal knee slide with arms wide, then rises into a quick samba-style celebration, golden confetti, stadium floodlight rim light, tactical uniform with abstract green, gold and blue sport accents, no team logos, dynamic low angle, PBR game render, 4K"
-          },
-          {
             "type": "character_skin",
             "label": "角色皮肤提示词",
-            "prompt": "Bloodstrike event character skin concept sheet, full-body front render plus detail callouts for armband, shin-guard knee pad, glove grip texture, and chest decal; tactical operator wearing combat gear with subtle football celebration styling, abstract green-gold-blue sport accents, goalkeeper grip gloves, spray-painted football lightning decal, athletic but tactical silhouette, locker-room background, polished PBR fabric, rubber and metal, no official team marks, no real player likeness, 4K"
+            "prompt": "Bloodstrike football celebration operator concept sheet, full-body front render plus armband, shin-guard knee pad, glove texture, and chest decal callouts; tactical combat gear with subtle sport armor, abstract green-gold-blue accents, athletic silhouette, premium event skin, no official team marks, no real player likeness, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; Victory Pitch rifle theme, black tactical frame with green-gold-blue anodized armor plates, carbon-fiber sport grip, custom magazine with turf-like micro texture under glass, small stadium-light module near receiver, inspect animation flashes scoreboard-like light bars, kill effect triggers golden confetti arc, premium sport event weapon not jersey sticker"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike victory emote concept sheet, operator knee-slides with arms wide, rises into quick samba-style celebration, golden confetti and stadium rim light, 4 key frames, no team logos, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike football finisher concept art, operator kicks a glowing energy ball that curves around target, impact becomes stadium light burst and confetti, target launched backward cleanly, no gore, no real team marks, 4K"
           }
         ],
         "memeIntro": "世界杯庆祝梗是拉美社媒的高频内容：用户模仿球员进球后的膝滑、张臂、指天、桑巴舞步、集体呐喊和观赛反应。这个内容不是某一个固定动作，而是一组“进球后情绪爆发”的模板。它容易传播，因为观众不需要懂复杂背景，只要看到庆祝动作、球迷颜色和体育场灯光，就能理解胜利、炫耀和嘲讽的情绪。"
@@ -330,18 +408,29 @@
         "resourceTypes": [
           "character_skin",
           "weapon_skin",
-          "emote"
+          "emote",
+          "finisher"
         ],
         "promptSets": [
           {
             "type": "character_skin",
             "label": "角色皮肤提示词",
-            "prompt": "Bloodstrike character skin concept sheet, full-body front hero render plus close-up callouts for tactical cowboy hat, gold chain, shotgun holster, and coat material; original Latin dark-western tactical operator, black armored duster coat, reinforced wide-brim tactical hat, gold chain over Kevlar vest, black sunglasses, gold-accented shotgun resting on shoulder, amber desert-night rim light, stylish and premium, no real musician likeness, no horror, no gore, 4K"
+            "prompt": "Bloodstrike Latin dark-western character skin concept sheet, full-body hero render plus tactical cowboy hat, gold chain, shotgun holster, and coat material callouts; black armored duster coat, reinforced wide-brim hat, Kevlar vest, polished gold accents, amber desert-night rim light, stylish premium shooter skin, no real musician likeness, no horror, 4K"
           },
           {
             "type": "weapon_skin",
             "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike premium shotgun weapon skin concept sheet, side-on shotgun render plus detail callouts for receiver engraving, leather grip wrap, eagle-feather charm, and amber energy core; realistic tactical shotgun silhouette, matte black gunmetal chassis, engraved black-gold filigree armor plates, angular sci-fi bevels, dark leather wrap, subtle desert dust edge wear, warm amber emissive glass inside receiver cuts, sleek Latin dark-western futuristic shooter skin, no real musician logo, no skull gore, no excessive ornament blocking silhouette, 4K"
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; dark corridos shotgun theme, matte black shotgun with raised black-gold engraved armor plates, mechanical golden receiver ribs, leather-wrapped grip, amber energy core visible through glass chamber, eagle-feather metal charm integrated near pump, inspect animation spins gold cylinder and glows through filigree cuts, kill effect creates clean amber dust ring, premium structure beyond flat engraving"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike swagger emote concept sheet, operator tips reinforced tactical hat, flips shotgun once, gold dust glints under amber streetlight, calm confident pose, 3 key frames, no real artist likeness, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike dark-western finisher concept art, operator fires amber energy shot, golden lasso-like light ring pulls target into silhouette, dust burst and coin-like sparks, no gore, cinematic Latin outlaw style, 4K"
           }
         ],
         "memeIntro": "Corridos Tumbados / Peso Pluma 相关内容代表的是拉美年轻人的暗黑街头西部美学：宽檐帽、黑金穿搭、金链、墨镜、沙漠夜景和一点危险感。社媒里它经常出现在音乐剪辑、穿搭展示、演唱会片段和态度型短视频里。这个热点不是要做歌手本人，而是提取一种“拉丁暗黑牛仔/街头赏金客”的身份符号。"
@@ -352,7 +441,7 @@
         "category": "足球+Brainrot",
         "title": "足球庆祝与Brainrot僵硬舞步混剪：把高情绪庆祝突然切成荒诞动作，适合搞笑击杀Emote",
         "highlights": "拉美足球内容本来就高频，再叠加全球 Brainrot 的僵硬动作，会形成强反差：上一秒热血膝滑，下一秒突然机械走路。它很适合射击游戏击杀后短动画，因为只需要 2 个姿态就能制造笑点。",
-        "summary": "做法是把足球庆祝做成“前半段爽感”，再用僵硬卡顿作为“后半段梗感”。玩家会在击杀回放、短视频二创里更愿意截取这种反差动作。视觉上可用运动护具和小球喷漆点到为止，不出现球队标志。",
+        "summary": "做法是把足球庆祝做成“前半段爽感”，再用僵硬卡顿作为“后半段梗感”。玩家会在击杀回放、短视频二创里更愿意截取这种反差动作。视觉上可用运动护具、球形能量轨迹和故障帧特效点到为止，不出现球队标志。",
         "sourceUrl": "https://www.youtube.com/results?search_query=football+celebration+brainrot+meme",
         "sourceMetric": "YouTube可访问梗视频入口",
         "scores": {
@@ -365,20 +454,31 @@
           "total": 8.4
         },
         "resourceTypes": [
+          "character_skin",
+          "weapon_skin",
           "emote",
-          "spray",
-          "event_bundle"
+          "finisher"
         ],
         "promptSets": [
           {
-            "type": "emote",
-            "label": "Emote提示词",
-            "prompt": "Bloodstrike meme emote key art, tactical operator begins a triumphant football knee slide, then freezes mid-slide and switches into stiff robot-like brainrot walk, arms locked at 90 degrees, deadpan face, comic impact lines, tactical outfit with small abstract football doodle on armor, no team logos, bright readable pose, 4K"
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike meme football glitch character skin concept sheet, tactical operator with sport shin armor, glitchy robot-joint light strips, small abstract ball doodle on chest plate, full-body plus knee pad, elbow, visor callouts, funny but cool, no team marks, 4K"
           },
           {
-            "type": "spray",
-            "label": "喷漆提示词",
-            "prompt": "Bloodstrike spray decal, stylized football knee-slide silhouette glitching into robot pose, motion streaks, simple black-white-gold palette, readable at small size, no team marks, transparent background, 4K"
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; Goal Glitch SMG theme, tactical SMG with split design: smooth sport-white armor plates on front half and neon glitch black-cyan mechanical panels on rear half, animated knee-slide motion streaks embedded under glass, custom magazine with glitch ball icon, inspect animation switches from stadium lights to robot scan lines, kill effect freezes target in comic glitch frame, not just stickers"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike meme emote concept sheet, operator starts triumphant knee slide then freezes mid-slide into stiff robot-like brainrot walk, deadpan face, 4 key frames, funny contrast, no team logos, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike finisher concept art, target is hit by glowing football trail, screen freezes into glitch frame, operator does one stiff robot step, target pops away as pixel confetti, no gore, humorous sports-brainrot VFX, 4K"
           }
         ],
         "memeIntro": "足球庆祝 + Brainrot 混剪，是把原本热血的进球庆祝突然接上僵硬、荒诞、机械感舞步的反差梗。视频通常先让人物膝滑或挥臂庆祝，下一秒突然卡顿、机器人走路或表情变呆。笑点来自情绪急转弯：前半段像体育高光，后半段像网络抽象整活。它很适合短视频，因为 2 秒内就能完成反差。"
@@ -387,9 +487,9 @@
         "id": "trend-latam-0616-04",
         "date": "2026-06-16",
         "category": "Capybara动物梗",
-        "title": "Capybara / Capibara Chill Meme：拉美天然动物亲切感，可做“战场松弛感”枪皮和挂饰",
+        "title": "Capybara / Capibara Chill Meme：拉美天然动物亲切感，可做“战场松弛感”角色皮、枪皮、Emote和处决动作",
         "highlights": "Capybara 在英语互联网是老牌松弛动物梗，在西语/葡语语境里又有本地亲切感。它的传播点是极度淡定、谁都能坐在旁边、和高压战斗形成反差。",
-        "summary": "枪皮方向可以更可爱、更幽默：做“战场松弛感”的水豚主题枪皮，允许出现圆润水豚徽章、暖棕装甲、泡泡水纹、小橙子贴标和水豚挂饰，但整体仍然要像 BS 的高品质枪皮。不要把枪做成脏毛绒或生物组织；它应该是干净、可爱、松弛、适合商店展示的卡通科技枪。",
+        "summary": "枪皮方向可以更可爱、更幽默：做“战场松弛感”的水豚主题枪皮，允许出现圆润水豚徽章、暖棕装甲、泡泡水纹、小橙子贴标和水豚小装饰，但整体仍然要像 BS 的高品质枪皮。角色皮可以做暖棕碳纤维护甲和水波护目镜；Emote 与处决动作突出“完全不慌”的反差。",
         "sourceUrl": "https://knowyourmeme.com/memes/ok-i-pull-up",
         "sourceMetric": "KnowYourMeme水豚梗说明",
         "scores": {
@@ -402,25 +502,31 @@
           "total": 8.7
         },
         "resourceTypes": [
-          "weapon_charm",
+          "character_skin",
           "weapon_skin",
-          "emote"
+          "emote",
+          "finisher"
         ],
         "promptSets": [
           {
-            "type": "weapon_skin",
-            "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike cute capybara weapon skin concept sheet, main side-on assault rifle render plus 4 detail callouts for capybara mascot badge, warm brown armor panel, aqua ripple energy inlay, and tiny orange charm; realistic rifle base with playful cartoon capybara theme, matte black and dark bronze gunmetal frame, warm caramel-brown enamel panels, rounded capybara face decal on stock, tiny orange fruit sticker near magazine, translucent aqua water-ripple channels along receiver and barrel, small smiling capybara resin charm below rail, clean cozy premium shooter skin, attractive and humorous, not ugly, not horror, no Cthulhu, no gore, no dirty fur, no organic flesh, 4K"
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike cozy capybara tactical skin concept sheet, full-body operator render plus backpack, shoulder pad, glove, and mascot patch callouts; warm brown carbon-fiber armor panels, aqua ripple visor, orange fruit tag, small capybara patch, relaxed confident tactical silhouette, cute but premium shooter style, not pajamas, no horror, 4K"
           },
           {
-            "type": "weapon_charm",
-            "label": "武器挂饰提示词",
-            "prompt": "Bloodstrike weapon charm concept art, tiny original capybara charm in warm brown resin, sleepy confident eyes, orange fruit beside mouth, mini water ripple base, attached to rifle with brushed metal clasp, dark studio product render, cute calm collectible, 4K"
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; cute capybara assault rifle theme, realistic rifle base with warm caramel-brown 3D armor shells, rounded capybara mascot badge embedded in stock, aqua water-ripple energy channel through receiver, custom magazine with calm bubble window, tiny orange charm, inspect animation shows slow water ripples and relaxed mascot hologram, kill effect creates soft aqua bubble burst, clean humorous premium skin, no dirty fur, no organic flesh"
           },
           {
             "type": "emote",
             "label": "Emote提示词",
-            "prompt": "Bloodstrike chill emote key art, tactical operator sits calmly in an imaginary hot spring after victory, small capybara-like companion beside boots, steam bubbles and water ripples, relaxed confident pose, dark studio floor, warm/cyan lighting contrast, original animal design, 4K"
+            "prompt": "Bloodstrike chill emote concept sheet, operator sits calmly in imaginary hot spring after victory, small capybara-like hologram beside boots, steam bubbles and water ripples, relaxed confident pose, 4 key frames, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike non-gore finisher concept art, target is slowed by calm aqua ripple field, giant capybara-shaped bubble rolls past, target gently floats away in bubbles, funny relaxed finisher, no horror, no gore, 4K"
           }
         ],
         "memeIntro": "Capybara / Capibara Chill Meme 是“水豚很松弛”的动物梗。视频里水豚通常安静坐着、泡水、和其他动物待在一起，看起来完全不慌。它在拉美还有语言和地域亲切感，因为 capibara/capivara 本来就是当地熟悉的动物词。用户转发它往往是在表达“我很稳”“随便吧”“压力再大我也不慌”。"
@@ -429,9 +535,9 @@
         "id": "trend-latam-0616-05",
         "date": "2026-06-16",
         "category": "Brazilian Phonk/Funk",
-        "title": "Brazilian Phonk/Funk：低音、漂移、霓虹波形和街头速度感，适合高识别枪皮/载具皮",
+        "title": "Brazilian Phonk/Funk：低音、漂移、霓虹波形和街头速度感，适合高识别枪械皮、角色皮、Emote和处决动作",
         "highlights": "Brazilian phonk/funk 在 YouTube、Shorts、TikTok 的游戏、健身、驾驶场景中反复出现，视觉上常绑定夜路、霓虹、低频波形、漂移轨迹。它不是某首歌，而是一套“速度+低音+巴西街头”的视觉语法。",
-        "summary": "枪皮可以做黑色枪身、绿色/金色波形发光条、扬声器网格纹理、轮胎漂移贴花和低频冲击波枪口特效；载具皮则用同样的霓虹轨迹。版权上只借音乐场景语言，不使用具体歌曲采样、歌名或厂牌标志。",
+        "summary": "枪皮可以做黑色枪身、绿色/金色波形发光结构、扬声器网格机械护木、轮胎漂移立体刻线和低频冲击波枪口特效；角色皮可以做赛博街头赛车手；Emote 和处决动作则用低音波形、速度线和漂移光轨表现。版权上只借音乐场景语言，不使用具体歌曲采样、歌名或厂牌标志。",
         "sourceUrl": "https://aesthetics.fandom.com/wiki/Brazilian_Phonk",
         "sourceMetric": "Brazilian Phonk视觉风格说明",
         "scores": {
@@ -444,20 +550,31 @@
           "total": 8.5
         },
         "resourceTypes": [
+          "character_skin",
           "weapon_skin",
-          "vehicle_skin",
+          "emote",
           "finisher"
         ],
         "promptSets": [
           {
-            "type": "weapon_skin",
-            "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike epic futuristic weapon skin concept sheet, side-on assault rifle hero render plus detail callouts for waveform channel, speaker-grille handguard, tire-mark stock decal, and holographic muzzle shockwave; realistic tactical rifle silhouette, matte black gunmetal base with angular chrome armor plates, neon lime and gold emissive waveform channels recessed into receiver, controlled hot pink and lime rim lights, sleek cyber street-racing energy, premium PBR metal, enamel, chrome and emissive glass, no messy graffiti overload, no cartoon deformation, 4K"
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike Brazilian phonk cyber-racer operator concept sheet, full-body render plus helmet visor, jacket lights, gloves, and boot thruster callouts; matte black tactical suit, neon lime and gold waveform strips, chrome armor edges, street-racing energy, premium shooter style, no real music logos, 4K"
           },
           {
-            "type": "vehicle_skin",
-            "label": "载具皮肤提示词",
-            "prompt": "Bloodstrike vehicle skin concept art, compact combat buggy with matte black body, neon lime waveform decals, gold wheel rims, drift tire smoke with audio pulse rings, street-night lighting, Brazilian phonk speed energy without real music logos, high-detail PBR game asset, 4K"
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; Brazilian phonk cyber rifle theme, matte black rifle with raised angular chrome aero fins, recessed neon lime and gold waveform energy channels, speaker-grille mechanical handguard, custom magazine with pulsing equalizer window, tire-mark stock sculpted into armor not flat decal, inspect animation syncs waveform lights to bass pulse, kill effect sends circular low-frequency shockwave, sleek aggressive cyber street skin"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike phonk emote concept sheet, operator taps wrist device, bass waveform pulses around body, quick shoulder bounce and weapon spin, neon lime/gold light trails, 4 key frames, no real music logos, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike phonk finisher concept art, low-frequency shockwave rings expand from weapon, target is lifted by neon bass field then launched into speed-line silhouette, no gore, cyber street racing VFX, 4K"
           }
         ],
         "memeIntro": "Brazilian Phonk/Funk 在短视频里常被用作游戏、高速驾驶、健身和炫技剪辑的背景音乐。它的梗点不是某一首歌，而是一整套视听标签：重低音、重复采样、夜路、霓虹、漂移、速度线和街头压迫感。观众听到这种节奏，会自然联想到快速移动、击杀集锦、赛车和高能操作。"
@@ -466,9 +583,9 @@
         "id": "trend-latam-0616-06",
         "date": "2026-06-16",
         "category": "墨西哥动物足球梗",
-        "title": "Mexico World Cup Duck：穿球衣小鸭病毒视频，适合做可爱挂饰、带球Emote和赛季喷漆",
+        "title": "Mexico World Cup Duck：穿球衣小鸭病毒视频，适合可爱角色皮、枪械皮、Emote和处决动作",
         "highlights": "墨西哥球衣小鸭这类视频的优势很明确：动物形象无攻击性、足球元素一眼识别、动作可以做成摇摆走路。它比正式吉祥物更像玩家会自发转发的社媒梗。",
-        "summary": "BS 不建议做真实球队或赛事标志，而是做原创 street football duck：小鸭挂饰戴抽象色块围巾，开火时左右摇摆；Emote 里小鸭带球冲向前，角色做进球庆祝；喷漆做鸭脚印+足球轨迹。它适合世界杯赛季任务奖励。",
+        "summary": "BS 不建议做真实球队或赛事标志，而是做原创 street football duck：角色皮用小鸭队友和抽象运动配色，枪械皮用黄色装甲、球形弹匣窗口和鸭脚光轨，Emote 里小鸭带球冲向前，处决动作则做无血腥的球场彩带冲击。它适合世界杯赛季任务和商店小主题。",
         "sourceUrl": "https://www.ndtv.com/offbeat/watch-duck-wearing-mexico-jersey-during-fifa-world-cup-goes-viral-11630537",
         "sourceMetric": "世界杯病毒动物视频报道",
         "scores": {
@@ -481,20 +598,31 @@
           "total": 8.4
         },
         "resourceTypes": [
-          "weapon_charm",
+          "character_skin",
+          "weapon_skin",
           "emote",
-          "spray"
+          "finisher"
         ],
         "promptSets": [
           {
-            "type": "weapon_charm",
-            "label": "武器挂饰提示词",
-            "prompt": "Bloodstrike original football duck weapon charm, tiny yellow duck with abstract green-white-red street football scarf, no team logos, orange beak, glossy toy resin body, dangling from compact SMG, tiny football at feet, dark studio product render, PBR resin and fabric, 4K"
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike street football duck operator concept sheet, tactical operator with yellow-white accent armor, duck-foot charm motif as patch, abstract green-white-red scarf wrap on arm, full-body plus helmet, backpack, glove callouts, cute sport event skin but combat-ready, no team logos, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; football duck compact SMG theme, black gunmetal SMG with glossy yellow-white armor shells, small rounded duck mascot badge on receiver, green-white-red abstract scarf ribbon wrapped as clean 3D strip around stock, custom magazine with tiny ball window, inspect animation shows duck-foot light trail, kill effect releases playful football bounce VFX, cute premium not childish, no team marks"
           },
           {
             "type": "emote",
             "label": "Emote提示词",
-            "prompt": "Bloodstrike playful victory emote key art, tactical operator places a tiny original football duck on the ground, duck waddles forward with a small ball, operator follows with goal celebration pose, duck-footprint motion trails, warm stadium rim light, no official team marks, 4K"
+            "prompt": "Bloodstrike playful victory emote concept sheet, operator places tiny original football duck hologram on ground, duck waddles with small ball, operator follows with goal celebration pose, duck-footprint motion trails, 4 key frames, no team marks, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike cute football finisher concept art, holographic duck dribbles glowing ball around target, operator kicks final energy pass, target pops away in harmless stadium confetti, no gore, funny sport mascot finisher, 4K"
           }
         ],
         "memeIntro": "Mexico World Cup Duck 指的是穿墨西哥球衣或足球配色装饰的小鸭视频在世界杯语境里传播。它的可爱点很直接：小动物摇摇晃晃走路，身上有足球/国家颜色元素，看起来比正式吉祥物更像民间自发玩出来的梗。用户喜欢转发，是因为它轻松、无攻击性、很适合表达支持球队或赛季氛围。"
@@ -505,7 +633,7 @@
         "category": "巴西Festa Junina",
         "title": "Festa Junina / São João 旗盒彩棚：彩旗、篝火、玉米和民俗格纹，可做拉美本地节日枪皮",
         "highlights": "巴西 Festa Junina 的识别元素非常适合从文化节日转成武器外观：三角彩旗、稻草帽、篝火、玉米、格纹布和 forró 舞步。它比泛足球内容更本地、更有差异化，也不会依赖具体名人或IP。",
-        "summary": "这是新增的枪皮优先卡。枪械皮肤可以按 BS 现有枪皮语言做横向展示：深色枪身保留战术感，枪托和护木加入彩旗珐琅分区，弹匣做格纹织物贴片，枪口火焰做篝火金橙粒子。Emote 可以是角色做简短 quadrilha 方阵舞步；挂饰做迷你稻草帽或玉米灯笼。适合 6 月拉美活动档。",
+        "summary": "这是枪械皮肤和角色皮肤都很强的拉美本地节日卡。枪械皮肤可以按 BS 现有枪皮语言做横向展示：深色枪身保留战术感，枪托和护木加入彩旗珐琅分区，弹匣做格纹织物嵌片，枪口火焰做篝火金橙粒子。角色皮可以做彩旗装甲边、格纹臂章和篝火能量核心；Emote 是简短 quadrilha 方阵舞步；处决动作做无血腥彩旗光带和篝火冲击。适合 6 月拉美活动档。",
         "sourceUrl": "https://www.gov.br/turismo/pt-br/assuntos/noticias/as-tradicionais-quadrilhas-juninas-sao-oficializadas-como-manifestacoes-culturais-nacionais",
         "sourceMetric": "巴西旅游部节日文化来源",
         "scores": {
@@ -518,25 +646,31 @@
           "total": 8.4
         },
         "resourceTypes": [
+          "character_skin",
           "weapon_skin",
           "emote",
-          "weapon_charm"
+          "finisher"
         ],
         "promptSets": [
           {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike Festa Junina tactical festival skin concept sheet, full-body operator render plus hat badge, plaid armband, shoulder armor, and belt prop callouts; matte black combat gear with colorful pennant trims, warm bonfire glow, subtle folk pattern armor engravings, festive but not costume-only, premium shooter skin, 4K"
+          },
+          {
             "type": "weapon_skin",
             "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike festive sci-fi weapon skin concept sheet, side-on assault rifle main render plus detail callouts for pennant enamel inlay, plaid magazine insert, corn lantern charm, and bonfire muzzle core; inspired by Brazilian Festa Junina, realistic hard-surface rifle silhouette, tactical matte black gunmetal base with gold trim, colorful triangular pennant shapes as clean enamel panels, red-blue-yellow folk pattern micro-engraving, warm orange emissive glass in muzzle brake and receiver, joyful but sleek premium shooter skin, no messy craft junk, no toy-like shape, no horror, 4K"
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; Festa Junina assault rifle theme, matte black gunmetal base with raised gold-trimmed armor shells, colorful triangular pennant enamel inlays built into receiver and stock, controlled plaid magazine insert under glass, warm bonfire orange energy core in muzzle and chamber, tiny corn-lantern mechanical module, inspect animation unfolds small pennant light strips and ember particles, kill effect creates clean bonfire spark ring, festive but sleek premium weapon"
           },
           {
             "type": "emote",
             "label": "Emote提示词",
-            "prompt": "Bloodstrike festival emote concept art, tactical operator performs a short Festa Junina quadrilha step, quick side-step and hat-tip gesture, colorful pennant flags swirl behind, warm bonfire sparks, tactical outfit with subtle plaid armband, no real festival logo, joyful but battle-ready, 4K"
+            "prompt": "Bloodstrike festival emote concept sheet, operator performs short quadrilha side-step and hat-tip, colorful pennant light ribbons swirl behind, warm bonfire sparks, tactical outfit with subtle plaid armband, 4 key frames, no real logo, 4K"
           },
           {
-            "type": "武器挂饰",
-            "label": "武器挂饰提示词",
-            "prompt": "Bloodstrike weapon charm concept art, miniature straw hat and corn lantern charm tied with red-blue pennant ribbon, warm orange inner glow, attached to black rifle rail with brass clasp, dark studio product render, PBR straw, enamel and metal, 4K"
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike Festa Junina finisher concept art, target is surrounded by rotating pennant light ribbons, operator triggers bonfire-orange energy pulse, sparks rise like festival fireworks and target is launched away cleanly, no gore, joyful cultural VFX, 4K"
           }
         ],
         "memeIntro": "Festa Junina / São João 是巴西六月节日文化，社媒内容常见彩色三角旗、篝火、稻草帽、格纹衣服、玉米食物和 quadrilha 方阵舞。它不是单纯节庆新闻，而是一套很鲜明的本地视觉符号。用户看到这些元素，会想到乡村派对、舞蹈、集市、火光和集体庆祝，和泛足球内容相比更有本地差异化。"
@@ -550,8 +684,8 @@
         "date": "2026-06-16",
         "game": "PUBG Mobile",
         "title": "PUBG Mobile：K-pop、Brainrot、足球和神话套装并行，用“皮肤+专属Emote”扩大付费感知",
-        "highlights": "竞品把强IP、热梗和体育节点拆成多个活动入口，同时给高阶皮肤配置专属动作/击杀表现。对 BS 的启示是：热点资源不要只做皮肤，最好绑定动作、挂饰、喷漆或任务链。",
-        "summary": "BS 可以把热点卡片拆成“低成本传播件”和“高价值付费件”：免费给喷漆/挂饰/Emote，付费承接角色皮和枪皮。这样既能利用热梗短周期，又能把美术成本押在长线可复用资产上。",
+        "highlights": "竞品把强IP、热梗和体育节点拆成多个活动入口，同时给高阶皮肤配置专属动作/击杀表现。对 BS 的启示是：热点资源不要只做皮肤，最好绑定角色皮、枪械皮、Emote和处决动作。",
+        "summary": "BS 可以把热点卡片拆成“低成本传播件”和“高价值付费件”：用 Emote 和处决动作抓传播，用角色皮和枪械皮承接付费。这样既能利用热梗短周期，又能把美术成本押在长线可复用资产上。",
         "sourceUrl": "https://www.pubgmobile.com/"
       },
       {
@@ -580,7 +714,7 @@
         "game": "PUBG Mobile",
         "title": "PUBG Mobile：真实赛事节点做免费回流，付费皮肤做转化承接",
         "highlights": "体育大事件常被竞品用来做日活回流：免费球衣、登录奖励、任务道具降低回流门槛，再把玩家导向更高价值皮肤。",
-        "summary": "BS 的拉美活动可以复用这个结构：世界杯/节日给免费喷漆和挂饰，商店推出更高精度的枪皮、角色皮和终结技。",
+        "summary": "BS 的拉美活动可以复用这个结构：世界杯/节日用 Emote 和处决动作做回流钩子，商店推出更高精度的枪械皮和角色皮。",
         "sourceUrl": "https://www.pubgmobile.com/"
       }
     ]
@@ -590,6 +724,12 @@
     "totalTrends": 14,
     "totalCompetitors": 4,
     "retentionDays": 5,
-    "assetPromptRules": "docs/asset-prompt-rules.md"
+    "assetPromptRules": "docs/asset-prompt-rules.md",
+    "resourceDirections": [
+      "character_skin",
+      "weapon_skin",
+      "emote",
+      "finisher"
+    ]
   }
 }
