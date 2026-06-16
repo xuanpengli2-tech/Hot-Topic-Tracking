@@ -24,6 +24,7 @@ interface Report {
   category?: string;
   game?: string;
   title: string;
+  memeIntro?: string;
   highlights: string;
   summary: string;
   sourceUrl: string;
@@ -178,7 +179,14 @@ export default function TrendDashboard() {
         <h3 className="card-title">{report.title}</h3>
 
         <div className="card-highlights">
-          <p>{report.highlights}</p>
+          <strong>梗介绍</strong>
+          <p>{report.memeIntro || report.highlights}</p>
+          {report.memeIntro && (
+            <div className="resource-observation">
+              <strong>资源观察</strong>
+              <p>{report.highlights}</p>
+            </div>
+          )}
         </div>
 
         {report.resourceImageUrl && (

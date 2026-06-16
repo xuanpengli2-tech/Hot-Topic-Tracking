@@ -148,6 +148,16 @@ npm run build
 npm run start
 ```
 
+## Asset Prompt Rules
+
+When adding new trend cards, follow the prompt rules in:
+
+```text
+docs/asset-prompt-rules.md
+```
+
+In short: cute/cartoon memes may become cute and humorous skins, while music, festival, sports, and fashion trends can become cooler sci-fi skins. The output should always stay attractive, polished, readable, and Bloodstrike-compatible. Avoid ugly, horror, disgusting, Cthulhu, gore, copied IP, and anything that breaks the weapon or character silhouette.
+
 ## Push Code To GitHub
 
 ### 1. Create A GitHub Repository

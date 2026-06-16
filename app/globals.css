@@ -419,11 +419,30 @@ body {
   margin-bottom: 12px;
 }
 
+.card-highlights > strong,
+.resource-observation strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
 .card-highlights p {
   font-size: 0.82rem;
   color: var(--text-secondary);
   margin: 0;
   line-height: 1.75;
+}
+
+.resource-observation {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(124, 108, 255, 0.18);
+}
+
+.resource-observation strong {
+  color: var(--accent-sea);
 }
 
 /* ============ Scores ============ */
