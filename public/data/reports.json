@@ -30,6 +30,81 @@
         "summary": "这个趋势直接给BS的Emote和皮肤展示提供灵感：①'角色选择界面pose'本身就是游戏内展示动作的核心——可以做成大厅待机动作或角色展示Emote；②结合扫描线/HUD特效的视觉风格可以融入皮肤设计（比如角色身上自带AR-HUD投影元素）。建议：做一套'Player Select'主题Emote——角色摆出经典FPS选人画面姿势+身边出现虚拟HUD框。",
         "sourceUrl": "https://www.epidemicsound.com/blog/latest-tiktok-trends",
         "imagePrompt": "Bloodstrike character skin concept art, full-body 3D render of male operator 'Jet' in 'Player Select' themed skin with integrated AR-HUD holographic elements, wearing sleek dark gray tactical suit with glowing cyan wireframe grid pattern overlaid on torso and limbs mimicking character selection screen scan effect, translucent holographic health bar floating above left shoulder, ammo counter projection near right wrist, faint scan line sweeping vertically across entire character body, face: confident smirk looking directly at viewer as if being selected, pose: classic weapon inspection stance — holding rifle one-handed pointed up with other hand adjusting earpiece, subtle slow rotation implied by slight twist in hips, proportions: lean athletic build, background: dark character selection menu environment with other blurred silhouettes in background, blue grid floor, floating UI elements and stat bars flanking character, soft blue ambient light with bright cyan rim light from holographic elements, PBR materials — matte tactical fabric with emissive cyan circuit pattern overlay, chrome metal accents, Bloodstrike futuristic HUD-integrated skin concept, 4K render"
+      },
+      {
+        "id": "trend-sea-0616-04",
+        "date": "2026-06-16",
+        "category": "🎧 菲律宾舞曲混剪",
+        "title": "【Kuya Magik 菲律宾 TikTok Mashup】高能舞曲串烧继续占据 YouTube/TikTok：适合做“胜利派对”Emote 与大厅节奏包",
+        "highlights": "Kuya Magik 的 New Tiktok Mashup 2026 Philippines Party Music Viral Dance Trends June 13th 在 YouTube 上显示 2026-06-12 首播，检索页显示约 32.4 万播放；他的 TikTok 账号也有千万级粉丝体量。菲律宾用户对“多段副歌/多动作一镜到底”的舞曲混剪接受度很高，常被拿来做校园、街头、网吧组队舞蹈二创。",
+        "summary": "BS 可把这种“高密度混剪”转成多人胜利 Emote：3 秒内从手枪甩拍、肩部弹动、脚步切换到终结定格，动作短、循环强、适合组队同屏。资源方向建议避开具体音乐版权，只提取霓虹 DJ 台、菲律宾街头派对、节拍切片 HUD。提示词已参考 BS 现有角色皮肤图：全身 3D 角色陈列、蓝灰棚拍地台、强轮廓光、战术装备与街头/幻想元素融合、PBR 金属皮革材质；避开真实人物肖像和受版权保护标识，只抽取动作、色彩与文化符号。",
+        "sourceUrl": "https://www.youtube.com/watch?v=iRUElQrgsiM",
+        "imageUrl": "https://i.ytimg.com/vi/iRUElQrgsiM/hqdefault.jpg",
+        "scores": {
+          "categoryAffinity": 8.6,
+          "adaptationCost": 7.7,
+          "mobileFit": 9.1,
+          "audienceMatch": 8.8,
+          "freshness": 9,
+          "marketHeat": 8.3,
+          "total": 8.6
+        },
+        "resourceTypes": [
+          "emote",
+          "lobby_theme",
+          "weapon_charm"
+        ],
+        "imagePrompt": "Bloodstrike team victory emote concept art, three tactical operators performing a synchronized Philippines TikTok mashup celebration, fast-cut dance poses frozen into one dynamic 3D key visual: front operator snapping a finger-gun beat gesture, second operator doing shoulder bounce with compact footwork, third operator spinning a glowing DJ-disc weapon charm, neon jeepney-inspired color accents in cyan, magenta and warm yellow on black tactical outfits, full-body game-character render on BS blue-gray studio platform, strong rim lighting, subtle music waveform HUD arcs around the squad, PBR leather, nylon straps and brushed metal buckles, energetic but combat-cool, no real celebrity likeness, 4K render"
+      },
+      {
+        "id": "trend-sea-0616-05",
+        "date": "2026-06-16",
+        "category": "💃 泰国 Kalasin Strut",
+        "title": "【Miss Grand Thailand “Kalasin Strut”】选美舞台突然变街舞：泰国社媒把自信走秀改成高传播动作梗",
+        "highlights": "CNA 的 TikTok 视频描述称 Darathorn Yoothong 在 Miss Grand Thailand 泳装环节以 top rock 舞步出圈；CNN 2026-03-31 报道称相关舞步在社交媒体浏览超过 3000 万。这个梗的核心不是选美，而是“庄重舞台突然切换成高能街舞”的反差。",
+        "summary": "BS 可转成“登场/挑衅/击杀后”Emote：角色先做标准战术走位，然后突然切 top rock 脚步和手臂摆动，最后以枪口上扬定格。皮肤方向可做泰式金色饰边、舞台流苏、竞技编号肩章，但保持战术服主体，避免照搬赛事和真人。提示词已参考 BS 现有角色皮肤图：全身 3D 角色陈列、蓝灰棚拍地台、强轮廓光、战术装备与街头/幻想元素融合、PBR 金属皮革材质；避开真实人物肖像和受版权保护标识，只抽取动作、色彩与文化符号。",
+        "sourceUrl": "https://www.tiktok.com/@channelnewsasia/video/7622860418695957778",
+        "imageUrl": "https://i.ytimg.com/vi/diUt169sCU4/hqdefault.jpg",
+        "scores": {
+          "categoryAffinity": 8.2,
+          "adaptationCost": 8.4,
+          "mobileFit": 9,
+          "audienceMatch": 8,
+          "freshness": 8.5,
+          "marketHeat": 8.7,
+          "total": 8.5
+        },
+        "resourceTypes": [
+          "emote",
+          "character_skin",
+          "spray"
+        ],
+        "imagePrompt": "Bloodstrike emote animation key art, female tactical operator performing a confident Kalasin Strut-inspired top-rock dance, phase pose: one foot crossed forward, shoulders tilted, one hand slicing across chest and the other holding compact SMG safely downward, outfit combines black tactical bodysuit with Thai stage-gold trim, small metallic tassels on hip plates, angular shoulder armor with warm gold inlay, full-body 3D render on BS blue-gray studio floor, bright stage spotlights behind, cyan and amber rim lights, motion trails on feet, expression excluded/neutral face, PBR satin fabric, polished gold metal and matte rubber boots, viral stage-to-combat contrast, 4K render"
+      },
+      {
+        "id": "trend-sea-0616-06",
+        "date": "2026-06-16",
+        "category": "🪼 印尼押韵梗",
+        "title": "【Ubur-ubur Ikan Lele】印尼 TikTok 押韵废话梗：一句开头无限续杯，适合做喷漆、挂饰和语音气泡资源",
+        "highlights": "TikTok 与印尼媒体均把 “Ubur-ubur ikan lele” 描述为高传播的押韵短句/pantun 梗：先抛出“水母/鲶鱼”的荒诞开头，再接任意吐槽句，最后用“leee”收尾。它适合评论区复读和二创，而不是长剧情内容。",
+        "summary": "BS 的低成本转化点很明确：做成水母+鲶鱼混合的荒诞武器挂饰、喷漆和短语音气泡。射击游戏里这种“明知很蠢但很顺口”的梗能降低内容门槛，适合免费任务或登录奖励，带动印尼本地玩家截图传播。提示词已参考 BS 现有角色皮肤图：全身 3D 角色陈列、蓝灰棚拍地台、强轮廓光、战术装备与街头/幻想元素融合、PBR 金属皮革材质；避开真实人物肖像和受版权保护标识，只抽取动作、色彩与文化符号。",
+        "sourceUrl": "https://www.tiktok.com/@crackz_id/video/7469621730588282118",
+        "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
+        "scores": {
+          "categoryAffinity": 7.9,
+          "adaptationCost": 9,
+          "mobileFit": 8.8,
+          "audienceMatch": 8.4,
+          "freshness": 7.2,
+          "marketHeat": 7.8,
+          "total": 8.2
+        },
+        "resourceTypes": [
+          "weapon_charm",
+          "spray",
+          "playpal"
+        ],
+        "imagePrompt": "Bloodstrike weapon charm concept art, absurd Indonesian meme charm combining a tiny translucent jellyfish bell with a chubby catfish tail, both stylized into a cute hard-surface collectible, dangling from a black assault rifle by a short red cord, charm body made of semi-transparent blue resin with tiny glowing bubbles, catfish whiskers as flexible rubber antennae, small speech-bubble tag engraved \"LEEE\" without copying any brand, BS style product render on blue-gray studio platform, close-up 3D PBR render, glossy resin, brushed metal clasp, playful but tactical, suitable as free event reward, 4K render"
       }
     ],
     "LATAM": [
@@ -62,6 +137,81 @@
         "summary": "这个趋势说明拉美男性玩家现在同时关注两件事：世界杯+网络梗。Emote方向：将Brainrot式的荒诞机械动作与足球庆祝动作混搭——比如做进球庆祝但中途突然变成机器人僵硬舞步。角色皮肤方向：'Meme Footballer'概念——把战术装备与足球元素荒诞混搭（护甲板上画足球涂鸦、头盔改造成守门员手套造型等）。",
         "sourceUrl": "https://www.epidemicsound.com/blog/latest-tiktok-trends",
         "imagePrompt": "Bloodstrike emote animation concept art, dynamic 3D character render of male operator 'Blast' performing 'Meme Footballer' taunt emote — two-phase animation: Phase 1: character does classic football knee-slide celebration with arms spread wide looking victorious, Phase 2: mid-slide character suddenly freezes and transitions into stiff robotic Brainrot puppet walk with arms locked at 90 degrees and head twitching mechanically side to side, creating absurd humor contrast between smooth celebration and glitchy robot movement, wearing tactical combat gear with one shin guard visible and a crudely drawn football doodle spray-painted on chest plate for comedic touch, expression shifts from triumphant smile to deadpan robot face, camera angle: side profile showing full slide-to-robot transition, background: simple gradient with comic-style impact lines radiating outward during transition moment, bright even lighting with exaggerated drop shadow for cartoon comedy feel, motion blur on transition frame, PBR rendered with slight cel-shade outline on character edges for meme aesthetic, Bloodstrike comedy fusion emote, 4K render"
+      },
+      {
+        "id": "trend-latam-0616-04",
+        "date": "2026-06-16",
+        "category": "🇧🇷 巴西 Funk 舞步",
+        "title": "【Brazilian TikTok Dance Mashup】Arthur Lima / Alencarzão 风格高频脚步：巴西 Funk 仍是拉美短视频最强动作素材库",
+        "highlights": "YouTube 检索页显示 ULTIMATE Brazilian TikTok Dance Mashup 2026 于 2026-04-27 发布，约 280 万播放，并提到 Arthur Lima 与 Alencarzão 相关内容在 TikTok 达到 5000 万级曝光。核心看点是高速脚步、胯部节拍和镜头前压迫感。",
+        "summary": "BS 可把 Brazilian Funk 的脚步转为“近战挑衅 Emote”：角色压低重心、快速交替脚步、手持武器做安全朝下的肩部节拍，最后以滑步后撤定格。皮肤不需要做足球或国旗，只用里约街头霓虹、运动短外套、金属脚踝护具表达地区感。提示词已参考 BS 现有角色皮肤图：全身 3D 角色陈列、蓝灰棚拍地台、强轮廓光、战术装备与街头/幻想元素融合、PBR 金属皮革材质；避开真实人物肖像和受版权保护标识，只抽取动作、色彩与文化符号。",
+        "sourceUrl": "https://www.youtube.com/watch?v=7X51T6GYlrY",
+        "imageUrl": "https://i.ytimg.com/vi/7X51T6GYlrY/hqdefault.jpg",
+        "scores": {
+          "categoryAffinity": 8.8,
+          "adaptationCost": 8,
+          "mobileFit": 9.2,
+          "audienceMatch": 8.9,
+          "freshness": 8.7,
+          "marketHeat": 9,
+          "total": 8.8
+        },
+        "resourceTypes": [
+          "emote",
+          "character_skin",
+          "lobby_theme"
+        ],
+        "imagePrompt": "Bloodstrike emote concept art, male operator performing Brazilian funk footwork taunt, low center of gravity, rapid alternating feet indicated by yellow-green motion trails, one hand tapping chest armor to the beat while rifle is slung safely behind back, outfit: black tactical streetwear with cropped athletic jacket, neon lime piping, reinforced ankle guards, subtle Rio street-graffiti patches, full-body 3D render on BS blue-gray studio floor, saturated club lighting in green, yellow and hot pink, dynamic camera at low angle, PBR nylon, rubber soles, anodized metal armor, no real dancer likeness, high-energy Latin street dance mood, 4K render"
+      },
+      {
+        "id": "trend-latam-0616-05",
+        "date": "2026-06-16",
+        "category": "🎧 Brazilian Phonk/Funk",
+        "title": "【Brazilian Phonk/Funk Mix】低音轰鸣+漂移感视觉：非常适合枪皮、载具皮和击杀特效音画包装",
+        "highlights": "多个 YouTube/YouTube Music 结果把 Brazilian funk、phonk、TikTok hits 作为 2026 高热播放列表关键词；相关视频常绑定“gym / driving / gaming / TikTok / Shorts”使用场景，说明它已经从舞蹈扩散到游戏、健身和车载视觉。",
+        "summary": "BS 可提炼“低频震动、漂移光轨、黑金霓虹”做武器皮或载具皮：开火时出现短促波形，换弹时有低音脉冲 HUD，击杀牌用巴西 phonk 的高速漂移线条表现。版权上只借鉴音乐场景语言，不使用具体歌曲采样。提示词已参考 BS 现有角色皮肤图：全身 3D 角色陈列、蓝灰棚拍地台、强轮廓光、战术装备与街头/幻想元素融合、PBR 金属皮革材质；避开真实人物肖像和受版权保护标识，只抽取动作、色彩与文化符号。",
+        "sourceUrl": "https://www.youtube.com/watch?v=0-xIbzO0AM4",
+        "imageUrl": "https://i.ytimg.com/vi/0-xIbzO0AM4/hqdefault.jpg",
+        "scores": {
+          "categoryAffinity": 8.5,
+          "adaptationCost": 7.9,
+          "mobileFit": 8.8,
+          "audienceMatch": 8.7,
+          "freshness": 8.2,
+          "marketHeat": 8.6,
+          "total": 8.5
+        },
+        "resourceTypes": [
+          "weapon_skin",
+          "vehicle_skin",
+          "finisher"
+        ],
+        "imagePrompt": "Bloodstrike weapon skin concept art, assault rifle \"Bass Drift\" inspired by Brazilian phonk/funk visual culture, matte black weapon body with neon green and gold waveform strips pulsing along barrel and magazine, chrome speaker-grille texture on handguard, small drift tire-mark decals near stock, muzzle surrounded by circular low-frequency shockwave rings, product render floating over BS blue-gray studio platform, background dark with hot pink and lime light streaks like night street racing, PBR gunmetal, glossy enamel decals, emissive waveform channels, aggressive gaming music vibe, no real music logos, 4K render"
+      },
+      {
+        "id": "trend-latam-0616-06",
+        "date": "2026-06-16",
+        "category": "🇲🇽 墨西哥地铁吊灯梗",
+        "title": "【Mexico City Metro Chandelier】世界杯期间“地铁吊灯舞会”梗出圈：日常通勤突然变宫廷派对，适合大厅主题和喷漆",
+        "highlights": "What’s Trending 2026-06-12 报道称墨西哥城 Hidalgo 地铁站为世界杯改造安装吊灯后，被 TikTok 做成 Bridgerton 式舞会梗、礼服 meetup 和吐槽视频；这类梗的核心是“公共交通+过度华丽装饰”的强反差。",
+        "summary": "BS 可做墨西哥城市限定大厅主题：战术仓库里突然挂一盏夸张水晶吊灯，角色穿礼服元素战术外套，喷漆是“地铁站舞会邀请函”。它和世界杯热度同频，但不直接使用 FIFA 标识，风险更低，也更像本地社媒梗。提示词已参考 BS 现有角色皮肤图：全身 3D 角色陈列、蓝灰棚拍地台、强轮廓光、战术装备与街头/幻想元素融合、PBR 金属皮革材质；避开真实人物肖像和受版权保护标识，只抽取动作、色彩与文化符号。",
+        "sourceUrl": "https://whatstrending.com/mexico-citys-metro-chandelier-is-the-first-meme-of-the-2026-world-cup/",
+        "imageUrl": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=900&q=80",
+        "scores": {
+          "categoryAffinity": 8.1,
+          "adaptationCost": 8.5,
+          "mobileFit": 8.2,
+          "audienceMatch": 8.4,
+          "freshness": 9.2,
+          "marketHeat": 8,
+          "total": 8.4
+        },
+        "resourceTypes": [
+          "lobby_theme",
+          "spray",
+          "character_skin"
+        ],
+        "imagePrompt": "Bloodstrike lobby theme concept art, \"Metro Ballroom\" Mexico City meme-inspired scene, tactical armory platform transformed with one oversized crystal chandelier hanging above a gritty subway-station floor, operators in dark tactical coats with subtle formal tailcoat silhouettes, marble tile reflections mixed with warning stripes and metro signage shapes without real logos, warm chandelier light sparkling over blue-gray BS hangar background, comedic contrast between elegant ballroom and combat loadout, spray decal on wall shaped like a metro ticket invitation, PBR crystal, polished brass, worn concrete, cinematic 3D environment render, 4K"
       }
     ]
   },
@@ -113,7 +263,7 @@
   },
   "meta": {
     "lastUpdate": "2026-06-16",
-    "totalTrends": 6,
+    "totalTrends": 12,
     "totalCompetitors": 4,
     "analyst": "小鹏 🎯",
     "retentionDays": 5

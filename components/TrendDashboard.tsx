@@ -22,6 +22,7 @@ interface Report {
   highlights: string;
   summary: string;
   sourceUrl: string;
+  imageUrl?: string;
   scores?: Scores;
   resourceTypes?: string[];
   imagePrompt?: string;
@@ -140,6 +141,25 @@ export default function TrendDashboard() {
           {report.scores && (
             <span className="card-tag score-tag">⭐ {report.scores.total.toFixed(1)}</span>
           )}
+        </div>
+
+        <div className={`card-media ${report.imageUrl ? "" : "placeholder"}`}>
+          {report.imageUrl && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={report.imageUrl}
+              alt={`${report.title} 封面`}
+              loading="lazy"
+              onError={(event) => {
+                event.currentTarget.style.display = "none";
+                event.currentTarget.parentElement?.classList.add("placeholder");
+              }}
+            />
+          )}
+          <div className="card-media-fallback">
+            <span>{report.category || report.game || "TREND"}</span>
+            <strong>{report.title.replace(/[【】]/g, "").slice(0, 30)}</strong>
+          </div>
         </div>
 
         <h3 className="card-title">{report.title}</h3>
