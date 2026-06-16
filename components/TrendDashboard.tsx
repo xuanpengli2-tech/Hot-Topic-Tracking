@@ -82,6 +82,11 @@ function getCoverLabel(report: Report) {
   return "Trend Source";
 }
 
+function isLocalCover(url?: string) {
+  return Boolean(url && url.startsWith("/covers/"));
+}
+
+
 // ============ Score Bar ============
 function ScoreBar({ label, value }: { label: string; value: number }) {
   const pct = Math.min(value * 10, 100);
@@ -174,6 +179,10 @@ export default function TrendDashboard() {
             ["--cover-bg" as string]: getCoverTone(report.id)[2],
           }}
         >
+          {isLocalCover(report.imageUrl) && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img className="card-media-image" src={report.imageUrl} alt={`${report.title} 封面`} loading="lazy" />
+          )}
           <div className="card-media-grid" />
           <div className="card-media-stripe one" />
           <div className="card-media-stripe two" />

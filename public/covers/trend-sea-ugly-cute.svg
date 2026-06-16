@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="Ugly cute weapon charm cover">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#141128"/>
+      <stop offset="1" stop-color="#12312c"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <path d="M190 330 L770 205" stroke="#1f2937" stroke-width="54" stroke-linecap="round"/>
+  <path d="M242 326 L735 220" stroke="#64748b" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="510" cy="300" r="112" fill="#8b5cf6"/>
+  <path d="M430 210 L386 138 L470 176 Z" fill="#a78bfa"/>
+  <path d="M590 210 L640 138 L550 176 Z" fill="#a78bfa"/>
+  <circle cx="468" cy="280" r="22" fill="#f8fafc"/>
+  <circle cx="552" cy="280" r="22" fill="#f8fafc"/>
+  <circle cx="468" cy="280" r="8" fill="#0f172a"/>
+  <circle cx="552" cy="280" r="8" fill="#0f172a"/>
+  <path d="M458 348 L482 384 L508 348 L532 384 L558 348" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="620" cy="190" r="28" fill="none" stroke="#22d3ee" stroke-width="8"/>
+  <text x="48" y="82" fill="#f5f3ff" font-family="Arial, sans-serif" font-size="44" font-weight="800">UGLY-CUTE CHARM</text>
+  <text x="51" y="124" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="22" font-weight="700">original monster collectible for guns</text>
+</svg>
