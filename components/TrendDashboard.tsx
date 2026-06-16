@@ -32,7 +32,7 @@ interface Report {
 interface ReportData {
   trends: { SEA: Report[]; LATAM: Report[] };
   competitors: { SEA: Report[]; LATAM: Report[] };
-  meta: { lastUpdate: string; totalTrends: number; totalCompetitors: number; analyst: string };
+  meta: { lastUpdate: string; totalTrends: number; totalCompetitors: number };
 }
 
 type MainTab = "trends" | "competitors";
@@ -84,6 +84,12 @@ function getCoverLabel(report: Report) {
 
 function isLocalCover(url?: string) {
   return Boolean(url && url.startsWith("/covers/"));
+}
+
+function getCoverSrc(url?: string) {
+  if (!url) return "";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  return isLocalCover(url) ? `${basePath}${url}` : url;
 }
 
 
@@ -181,7 +187,7 @@ export default function TrendDashboard() {
         >
           {isLocalCover(report.imageUrl) && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img className="card-media-image" src={report.imageUrl} alt={`${report.title} 封面`} loading="lazy" />
+            <img className="card-media-image" src={getCoverSrc(report.imageUrl)} alt={`${report.title} 封面`} loading="lazy" />
           )}
           <div className="card-media-grid" />
           <div className="card-media-stripe one" />
@@ -267,7 +273,7 @@ export default function TrendDashboard() {
         <h1>🎯 Bloodstrike 热梗资源雷达</h1>
         <p className="subtitle">AI深度分析 · 热点追踪 & 竞品监控 · 东南亚 & 拉美双市场</p>
         <p className="update-info">
-          更新: {data.meta.lastUpdate} · 热点 {data.meta.totalTrends} 条 · 竞品 {data.meta.totalCompetitors} 条 · 分析: {data.meta.analyst}
+          更新: {data.meta.lastUpdate} · 热点 {data.meta.totalTrends} 条 · 竞品 {data.meta.totalCompetitors} 条
         </p>
       </header>
 
