@@ -79,7 +79,7 @@
         "category": "泰国动物梗",
         "title": "Moo Deng 暴躁小河马：圆滚、湿润高光和冲撞反差，适合挂饰、表情动作和低门槛枪皮贴花",
         "highlights": "Moo Deng 的爆点是“可爱但有攻击性”：张嘴、弹跳、冲撞、水润皮肤。比普通萌宠更适合射击游戏，因为它有明确动作记忆点，可以转化成击杀嘲讽和武器挂饰的弹跳反馈。",
-        "summary": "BS 不必做真实动物复刻，而是做原创 angry baby hippo 系列。挂饰可以在开火时向前弹一下；Emote 可以表现角色被小河马冲撞后退；枪皮则抽取灰色湿润材质、粉色嘴部贴花和水花粒子，做成轻松但有战斗感的动物梗皮。避免使用动物园商标和真实命名。",
+        "summary": "BS 不必做真实动物复刻，而是做原创 angry baby hippo 系列。挂饰可以保留圆滚小动物的可爱冲撞感；Emote 可以表现角色被小河马冲撞后退；枪皮必须改成硬表面科幻枪械，只抽取“圆润徽章、水波能量、灰蓝+粉色点缀”这些抽象元素，绝不能把枪身做成动物皮肤、嘴巴或身体组织。避免使用动物园商标和真实命名。",
         "sourceUrl": "https://www.tiktok.com/@dailymail/video/7413161537498828065",
         "sourceMetric": "TikTok百万级互动热视频",
         "scores": { "categoryAffinity": 8.6, "adaptationCost": 7.7, "mobileFit": 9.1, "audienceMatch": 8.8, "freshness": 8.6, "marketHeat": 8.8, "total": 8.6 },
@@ -93,7 +93,7 @@
           {
             "type": "weapon_skin",
             "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike weapon skin concept art, side-on compact SMG product render, matte gunmetal base with glossy wet gray enamel panels inspired by baby hippo skin, pink mouth-shaped decal near magazine, aqua water ripple lines along barrel, small resin hippo charm attached to rail, dark studio background, cyan rim light, PBR metal, enamel and resin, clear silhouette, 4K"
+            "prompt": "Bloodstrike premium sci-fi weapon skin concept art, side-on compact SMG product render, realistic hard-surface firearm silhouette, 70% matte black gunmetal and dark graphite base, 20% clean cyan luminous water-channel inlays along receiver and barrel, 10% soft pink accent decals as abstract rounded hippo badge icons only, small cute resin hippo charm hanging under the rail, crisp mechanical panel seams, beveled armor plates, subtle holographic water ripple VFX near muzzle, dark blue studio background, cyan rim light, high-detail PBR metal, enamel, glass and resin, sleek futuristic shooter game skin, no organic flesh, no skin texture, no mouth-shaped grip, no teeth, no body parts, no gross wet creature surface, 4K"
           },
           {
             "type": "emote",
@@ -132,7 +132,7 @@
         "category": "Ugly-cute潮玩",
         "title": "Labubu式怪萌挂饰热：不碰现成IP，抽取尖牙、毛绒、盲盒编号和包挂展示逻辑",
         "highlights": "东南亚社媒和线下商场的怪萌挂饰热度持续，本质不是某个单品，而是“丑萌脸、尖牙、毛绒/搪胶质感、挂在包上展示”的社交货币。射击游戏里同样有枪械挂饰、背包和武器展示场景。",
-        "summary": "BS 可以做原创 street monster charm 系列：小怪物咬住枪托，开火时眼睛发光；枪皮用搪胶玩具质感、缝线、贴纸和盲盒编号；角色皮则把背包和肩甲做成潮玩收藏者风格。重点是原创轮廓，避免照搬具体玩具耳朵、脸型和品牌符号。",
+        "summary": "BS 可以做原创 street monster charm 系列：小怪物作为挂饰或背包装饰存在，开火时眼睛发光；枪皮只使用潮玩包装感、编号贴纸、霓虹眼睛图标和干净搪胶小配件，不要把枪身做成毛绒、牙齿或怪物身体。重点是原创轮廓，避免照搬具体玩具耳朵、脸型和品牌符号。",
         "sourceUrl": "https://www.tiktok.com/tag/labubu",
         "sourceMetric": "TikTok高热话题入口",
         "scores": { "categoryAffinity": 7.9, "adaptationCost": 9.0, "mobileFit": 8.8, "audienceMatch": 8.4, "freshness": 7.8, "marketHeat": 8.5, "total": 8.4 },
@@ -146,7 +146,7 @@
           {
             "type": "weapon_skin",
             "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike weapon skin concept art, side-on assault rifle render, matte black base covered with glossy vinyl toy panels, stitched seam decals, blind-box number stickers, neon purple monster-eye accent on receiver, small fuzzy original monster charm near magazine, dark blue studio background, PBR gunmetal, flocked fabric, soft rubber, polished collectible look, 4K"
+            "prompt": "Bloodstrike futuristic collectible weapon skin concept art, side-on assault rifle product render, realistic tactical rifle silhouette with hard-surface sci-fi paneling, matte black gunmetal base, glossy violet and cyan enamel armor plates, clean blind-box serial number decals, tiny holographic monster-eye icon on receiver, chrome rails and beveled edges, small original ugly-cute toy charm attached near magazine as the only creature element, dark blue studio background, premium PBR gunmetal, enamel, chrome and resin, cool tech-toy crossover style, no fur covering the gun, no teeth on the gun body, no monster body parts, no organic texture, 4K"
           }
         ]
       },
@@ -165,7 +165,7 @@
           {
             "type": "weapon_skin",
             "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike legendary weapon skin concept art, side-on assault rifle product render inspired by Thai Songkran water festival, translucent aqua water-tank panels on receiver and magazine, blue-green enamel gradients, white festival powder splash decals, neon cyan water trails along barrel, tropical flower micro decals, small waterproof pouch charm, dark blue studio background, strong rim lighting, PBR gunmetal, glassy resin, chrome and wet droplets, clear premium shooter skin silhouette, 4K"
+            "prompt": "Bloodstrike legendary sci-fi weapon skin concept art, side-on assault rifle product render inspired by Thai Songkran water festival, realistic hard-surface rifle silhouette, dark gunmetal chassis with polished chrome rails, translucent aqua energy-core panels on receiver and magazine, blue-green glass inlays, clean white powder-splash graphic decals, thin neon cyan water-flow light strips along barrel, small waterproof pouch charm, elegant tropical flower micro-engraving on stock, dark blue studio background, strong cyan rim lighting, high-detail PBR gunmetal, glass, enamel and chrome, sleek futuristic water festival skin, no toy water gun shape, no messy liquid coating, no organic slime, 4K"
           },
           {
             "type": "emote",
@@ -225,7 +225,7 @@
           {
             "type": "weapon_skin",
             "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike shotgun weapon skin concept art, side-on product render, matte black gunmetal base with engraved gold filigree panels, dark leather grip wrap, subtle desert dust texture, tiny eagle-feather charm, warm amber glow inside receiver cuts, dark studio background, premium black-gold legendary shooter skin, PBR metal and leather, 4K"
+            "prompt": "Bloodstrike premium shotgun weapon skin concept art, side-on product render, realistic tactical shotgun silhouette, matte black gunmetal chassis with engraved black-gold filigree armor plates, angular sci-fi bevels, dark leather grip wrap, subtle desert dust edge wear, warm amber energy glow inside receiver cuts, tiny metal eagle-feather charm under the barrel, dark blue studio background, cinematic rim light, high-detail PBR metal, leather, gold trim and emissive glass, sleek Latin dark-western futuristic shooter skin, no real musician logo, no skull gore, no excessive ornament blocking weapon silhouette, 4K"
           }
         ]
       },
@@ -259,7 +259,7 @@
         "category": "Capybara动物梗",
         "title": "Capybara / Capibara Chill Meme：拉美天然动物亲切感，可做“战场松弛感”枪皮和挂饰",
         "highlights": "Capybara 在英语互联网是老牌松弛动物梗，在西语/葡语语境里又有本地亲切感。它的传播点是极度淡定、谁都能坐在旁边、和高压战斗形成反差。",
-        "summary": "枪皮方向可以做暖棕皮革、水波纹、橙子小贴花和柔和水花枪口特效；挂饰方向是小水豚趴在枪侧，嘴里叼橙子；Emote 方向是角色在战场上突然进入“完全不慌”的泡温泉姿态。这个梗胜在情绪价值，玩家用它表达“我很稳”。",
+        "summary": "枪皮方向不要把水豚身体贴在枪上，而是做“暖棕+蓝色水波”的科技枪皮：碳纤维、皮革握把、半透明水纹能量板和小橙子贴标；挂饰方向才放小水豚。Emote 方向是角色在战场上突然进入“完全不慌”的泡温泉姿态。这个梗胜在情绪价值，玩家用它表达“我很稳”。",
         "sourceUrl": "https://www.tiktok.com/tag/capybara",
         "sourceMetric": "TikTok高热动物梗入口",
         "scores": { "categoryAffinity": 8.8, "adaptationCost": 8.0, "mobileFit": 9.2, "audienceMatch": 8.9, "freshness": 8.2, "marketHeat": 9.0, "total": 8.7 },
@@ -268,7 +268,7 @@
           {
             "type": "weapon_skin",
             "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike weapon skin concept art, side-on assault rifle product render, matte black receiver with warm brown capybara-inspired leather panels, soft water ripple decals along barrel, tiny orange fruit sticker near magazine, calm aqua droplet muzzle effect, small original capybara charm lying on side rail, dark blue studio lighting, PBR gunmetal, leather, resin, cozy but battle-ready, 4K"
+            "prompt": "Bloodstrike clean sci-fi weapon skin concept art, side-on assault rifle product render, realistic hard-surface firearm silhouette, matte black and dark bronze gunmetal frame, warm brown carbon-fiber grip panels, translucent aqua water-ripple energy inlays along receiver and barrel, tiny orange fruit sticker near magazine, small original capybara resin charm attached below rail only, subtle calm blue muzzle particle effect, dark blue studio lighting, high-detail PBR gunmetal, carbon fiber, enamel, leather and resin, cozy but premium tactical shooter skin, no animal body on gun, no fur texture, no organic skin, no cute face printed large on receiver, 4K"
           },
           {
             "type": "weapon_charm",
@@ -297,7 +297,7 @@
           {
             "type": "weapon_skin",
             "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike epic weapon skin concept art, side-on assault rifle product render inspired by Brazilian phonk visual culture, matte black gunmetal base, neon lime and gold waveform strips pulsing along barrel and magazine, chrome speaker-grille texture on handguard, tire-mark decals near stock, circular low-frequency shockwave muzzle effect, dark studio background with hot pink and lime light streaks, PBR metal, glossy enamel and emissive channels, 4K"
+            "prompt": "Bloodstrike epic futuristic weapon skin concept art, side-on assault rifle product render inspired by Brazilian phonk visual culture, realistic tactical rifle silhouette, matte black gunmetal base with angular chrome armor plates, neon lime and gold emissive waveform channels recessed into barrel and receiver, subtle speaker-grille micro texture on handguard, clean tire-mark decals near stock, circular low-frequency holographic shockwave muzzle effect, dark blue studio background with controlled hot pink and lime rim light streaks, high-detail PBR metal, glossy enamel, chrome and emissive glass, sleek aggressive cyber street racing gun skin, no messy graffiti overload, no cartoon proportions, 4K"
           },
           {
             "type": "vehicle_skin",
@@ -345,7 +345,7 @@
           {
             "type": "weapon_skin",
             "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike legendary weapon skin concept art, side-on assault rifle product render inspired by Brazilian Festa Junina, tactical matte black base with colorful triangular pennant enamel panels across receiver and stock, red-blue-yellow folk pattern decals, plaid fabric texture on magazine, warm bonfire orange glow inside muzzle brake, tiny corn lantern charm, dark blue studio background, premium PBR gunmetal, enamel, woven fabric and gold trim, clear mobile-readable silhouette, 4K"
+            "prompt": "Bloodstrike legendary sci-fi weapon skin concept art, side-on assault rifle product render inspired by Brazilian Festa Junina, realistic hard-surface rifle silhouette, tactical matte black gunmetal base with gold trim, colorful triangular pennant shapes as clean enamel inlays across receiver and stock, red-blue-yellow folk pattern micro-engraving, controlled plaid texture only on magazine insert, warm bonfire orange emissive core inside muzzle brake and receiver, tiny corn lantern charm under the rail, dark blue studio background, premium PBR gunmetal, enamel, woven insert, gold trim and emissive glass, festive but sleek futuristic shooter skin, no messy craft materials, no toy-like shape, clear mobile-readable silhouette, 4K"
           },
           {
             "type": "emote",
