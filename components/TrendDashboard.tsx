@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-// ============ Types ============
 interface Scores {
   categoryAffinity: number;
   adaptationCost: number;
@@ -11,6 +10,12 @@ interface Scores {
   freshness: number;
   marketHeat: number;
   total: number;
+}
+
+interface PromptSet {
+  type: string;
+  label: string;
+  prompt: string;
 }
 
 interface Report {
@@ -28,6 +33,7 @@ interface Report {
   scores?: Scores;
   resourceTypes?: string[];
   imagePrompt?: string;
+  promptSets?: PromptSet[];
 }
 
 interface ReportData {
@@ -38,20 +44,20 @@ interface ReportData {
 
 type MainTab = "trends" | "competitors";
 
-// ============ Score Labels ============
-const SCORE_LABELS: Record<string, string> = {
+const SCORE_LABELS: Record<keyof Scores, string> = {
   categoryAffinity: "品类契合",
   adaptationCost: "改编成本",
   mobileFit: "移动适配",
   audienceMatch: "受众匹配",
   freshness: "新鲜度",
   marketHeat: "市场热度",
+  total: "综合分",
 };
 
 const RESOURCE_LABELS: Record<string, string> = {
   character_skin: "角色皮肤",
-  weapon_skin: "武器皮肤",
-  weapon_charm: "武器挂件",
+  weapon_skin: "枪械皮肤",
+  weapon_charm: "武器挂饰",
   finisher: "终结技",
   emote: "表情动作",
   spray: "喷漆",
@@ -59,7 +65,7 @@ const RESOURCE_LABELS: Record<string, string> = {
   event_bundle: "活动礼包",
   parachute_skin: "降落伞",
   vehicle_skin: "载具皮肤",
-  playpal: "盘盘伴侣",
+  playpal: "战斗伙伴",
 };
 
 function getCoverLabel(report: Report) {
@@ -75,12 +81,15 @@ function getAssetSrc(url?: string) {
   return url.startsWith("/") ? `${basePath}${url}` : url;
 }
 
+function getPromptSets(report: Report): PromptSet[] {
+  if (report.promptSets?.length) return report.promptSets;
+  if (!report.imagePrompt) return [];
+  return [{ type: "legacy", label: "AI绘图提示词", prompt: report.imagePrompt }];
+}
 
-// ============ Score Bar ============
 function ScoreBar({ label, value }: { label: string; value: number }) {
   const pct = Math.min(value * 10, 100);
-  const color =
-    value >= 8 ? "#4ade80" : value >= 6 ? "#fbbf24" : "#f87171";
+  const color = value >= 8 ? "#4ade80" : value >= 6 ? "#fbbf24" : "#f87171";
   return (
     <div className="score-row">
       <span className="score-label">{label}</span>
@@ -92,34 +101,16 @@ function ScoreBar({ label, value }: { label: string; value: number }) {
   );
 }
 
-// ============ Component ============
 export default function TrendDashboard() {
   const [data, setData] = useState<ReportData | null>(null);
   const [loading, setLoading] = useState(true);
   const [mainTab, setMainTab] = useState<MainTab>("trends");
   const [expandedId, setExpandedId] = useState<string | null>(null);
-  const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [copiedKey, setCopiedKey] = useState<string | null>(null);
 
-  async function copyPrompt(report: Report) {
-    if (!report.imagePrompt) return;
-    try {
-      await navigator.clipboard.writeText(report.imagePrompt);
-      setCopiedId(report.id);
-      setTimeout(() => setCopiedId(null), 2000);
-    } catch (e) {
-      // fallback
-      const ta = document.createElement("textarea");
-      ta.value = report.imagePrompt;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand("copy");
-      document.body.removeChild(ta);
-      setCopiedId(report.id);
-      setTimeout(() => setCopiedId(null), 2000);
-    }
-  }
-
-  useEffect(() => { loadData(); }, []);
+  useEffect(() => {
+    loadData();
+  }, []);
 
   async function loadData() {
     try {
@@ -134,6 +125,22 @@ export default function TrendDashboard() {
     }
   }
 
+  async function copyPrompt(reportId: string, promptType: string, prompt: string) {
+    const key = `${reportId}:${promptType}`;
+    try {
+      await navigator.clipboard.writeText(prompt);
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = prompt;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+    }
+    setCopiedKey(key);
+    window.setTimeout(() => setCopiedKey(null), 1800);
+  }
+
   if (loading || !data) {
     return (
       <div className="loading-screen">
@@ -143,20 +150,20 @@ export default function TrendDashboard() {
     );
   }
 
-  const seaReports: Report[] = data[mainTab]["SEA"] || [];
-  const latamReports: Report[] = data[mainTab]["LATAM"] || [];
+  const seaReports: Report[] = data[mainTab].SEA || [];
+  const latamReports: Report[] = data[mainTab].LATAM || [];
 
   function renderCard(report: Report) {
     const isExpanded = expandedId === report.id;
+    const promptSets = getPromptSets(report);
+
     return (
       <div key={report.id} className="report-card">
         <div className="card-header">
           <span className="card-date">{report.date}</span>
           {report.category && <span className="card-tag cat">{report.category}</span>}
           {report.game && <span className="card-tag game">{report.game}</span>}
-          {report.scores && (
-            <span className="card-tag score-tag">⭐ {report.scores.total.toFixed(1)}</span>
-          )}
+          {report.scores && <span className="card-tag score-tag">★ {report.scores.total.toFixed(1)}</span>}
           {report.sourceMetric && <span className="card-tag heat-tag">{report.sourceMetric}</span>}
         </div>
 
@@ -185,24 +192,20 @@ export default function TrendDashboard() {
           </div>
         )}
 
-        {/* Scores */}
         {report.scores && isExpanded && (
           <div className="card-scores">
-            <strong>📊 评分维度</strong>
-            {Object.entries(SCORE_LABELS).map(([key, label]) => (
-              <ScoreBar
-                key={key}
-                label={label}
-                value={(report.scores as any)[key]}
-              />
-            ))}
+            <strong>评分维度</strong>
+            {Object.entries(SCORE_LABELS)
+              .filter(([key]) => key !== "total")
+              .map(([key, label]) => (
+                <ScoreBar key={key} label={label} value={report.scores?.[key as keyof Scores] || 0} />
+              ))}
           </div>
         )}
 
-        {/* Resource Types */}
         {report.resourceTypes && isExpanded && (
           <div className="card-resources">
-            <strong>🎨 建议资源类型</strong>
+            <strong>建议资源类型</strong>
             <div className="resource-tags">
               {report.resourceTypes.map((rt) => (
                 <span key={rt} className="resource-tag">
@@ -213,33 +216,39 @@ export default function TrendDashboard() {
           </div>
         )}
 
-        {/* Summary */}
         <div className={`card-summary ${isExpanded ? "expanded" : ""}`}>
-          <strong>🧠 深度分析 & BS启示</strong>
+          <strong>深度分析 & BS资源启示</strong>
           <p>{report.summary}</p>
         </div>
 
-        {/* Image Prompt Copy Button */}
-        {report.imagePrompt && isExpanded && (
-          <div className="card-prompt">
-            <button
-              className="copy-prompt-btn"
-              onClick={() => copyPrompt(report)}
-            >
-              {copiedId === report.id ? "✅ 已复制!" : "🎨 复制AI绘图提示词"}
-            </button>
+        {promptSets.length > 0 && isExpanded && (
+          <div className="prompt-panel">
+            <div className="prompt-panel-title">可一键复制的AI绘图提示词</div>
+            <div className="prompt-grid">
+              {promptSets.map((item) => {
+                const key = `${report.id}:${item.type}`;
+                return (
+                  <div className="prompt-card" key={key}>
+                    <div className="prompt-card-head">
+                      <strong>{item.label}</strong>
+                      <button className="copy-prompt-btn" onClick={() => copyPrompt(report.id, item.type, item.prompt)}>
+                        {copiedKey === key ? "已复制" : "复制"}
+                      </button>
+                    </div>
+                    <p>{item.prompt}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         )}
 
         <div className="card-actions">
-          <button
-            className="expand-btn"
-            onClick={() => setExpandedId(isExpanded ? null : report.id)}
-          >
-            {isExpanded ? "收起 ▲" : "展开详情 ▼"}
+          <button className="expand-btn" onClick={() => setExpandedId(isExpanded ? null : report.id)}>
+            {isExpanded ? "收起" : "展开详情"}
           </button>
           <a className="source-link" href={report.sourceUrl} target="_blank" rel="noopener noreferrer">
-            🔗 来源
+            来源
           </a>
         </div>
       </div>
@@ -248,30 +257,26 @@ export default function TrendDashboard() {
 
   return (
     <div className="dashboard">
-      {/* Header */}
       <header className="dashboard-header">
-        <h1>🎯 Bloodstrike 热梗资源雷达</h1>
+        <h1>Bloodstrike 热点资源雷达</h1>
         <p className="subtitle">AI深度分析 · 热点追踪 & 竞品监控 · 东南亚 & 拉美双市场</p>
         <p className="update-info">
           更新: {data.meta.lastUpdate} · 热点 {data.meta.totalTrends} 条 · 竞品 {data.meta.totalCompetitors} 条
         </p>
       </header>
 
-      {/* Main Tabs */}
       <div className="main-tabs">
         <button className={`main-tab ${mainTab === "trends" ? "active" : ""}`} onClick={() => setMainTab("trends")}>
-          📡 热点追踪
+          热点追踪
         </button>
         <button className={`main-tab ${mainTab === "competitors" ? "active" : ""}`} onClick={() => setMainTab("competitors")}>
-          🎮 竞品分析
+          竞品分析
         </button>
       </div>
 
-      {/* Two-Column Layout */}
       <div className="two-column">
         <div className="column">
           <div className="column-header">
-            <span className="column-icon">🌏</span>
             <span>东南亚 (SEA)</span>
             <span className="column-count">{seaReports.length}</span>
           </div>
@@ -283,7 +288,6 @@ export default function TrendDashboard() {
 
         <div className="column">
           <div className="column-header">
-            <span className="column-icon">🌎</span>
             <span>拉美 (LATAM)</span>
             <span className="column-count">{latamReports.length}</span>
           </div>

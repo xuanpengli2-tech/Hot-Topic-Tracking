@@ -591,31 +591,72 @@ body {
   color: var(--accent);
 }
 
-/* ============ Prompt Copy Button ============ */
-.card-prompt {
+/* ============ Prompt Cards ============ */
+.prompt-panel {
   margin-top: 12px;
   padding-top: 12px;
-  border-top: 1px dashed rgba(255,255,255,0.08);
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.prompt-panel-title {
+  margin-bottom: 10px;
+  color: var(--text-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.prompt-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.prompt-card {
+  padding: 12px;
+  border: 1px solid rgba(124, 108, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(124, 108, 255, 0.035);
+}
+
+.prompt-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.prompt-card-head strong {
+  color: var(--accent);
+  font-size: 0.76rem;
+}
+
+.prompt-card p {
+  max-height: 84px;
+  margin: 0;
+  overflow: auto;
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  line-height: 1.65;
 }
 
 .copy-prompt-btn {
-  width: 100%;
-  padding: 10px 16px;
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  flex: 0 0 auto;
+  min-width: 58px;
+  padding: 6px 10px;
+  background: rgba(124, 108, 255, 0.18);
   color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
+  border: 1px solid rgba(124, 108, 255, 0.35);
+  border-radius: 7px;
+  font-size: 0.72rem;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
-  letter-spacing: 0.3px;
 }
 
 .copy-prompt-btn:hover {
-  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+  background: var(--accent);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.24);
 }
 
 .copy-prompt-btn:active {
