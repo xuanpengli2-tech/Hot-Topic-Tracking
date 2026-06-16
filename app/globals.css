@@ -330,6 +330,12 @@ body {
   background: rgba(251, 191, 36, 0.06);
 }
 
+.card-tag.heat-tag {
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.22);
+  background: rgba(74, 222, 128, 0.07);
+}
+
 .card-title {
   font-size: 0.95rem;
   font-weight: 700;
@@ -348,19 +354,40 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(124, 108, 255, 0.16);
   background:
-    linear-gradient(135deg, rgba(34, 211, 238, 0.16), rgba(244, 114, 182, 0.12)),
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.14), transparent 28%),
-    var(--bg-card-hover);
+    linear-gradient(135deg, color-mix(in srgb, var(--cover-a) 34%, transparent), color-mix(in srgb, var(--cover-b) 24%, transparent)),
+    linear-gradient(160deg, transparent 0 38%, color-mix(in srgb, var(--cover-a) 28%, transparent) 38% 42%, transparent 42% 100%),
+    var(--cover-bg, var(--bg-card-hover));
 }
 
-.card-media img {
+.card-media-grid {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 2;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.86), transparent);
+  opacity: 0.55;
+}
+
+.card-media-stripe {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cover-a), var(--cover-b), transparent);
+  transform: rotate(-15deg);
+  opacity: 0.95;
+}
+
+.card-media-stripe.one {
+  left: -10%;
+  right: 24%;
+  top: 24%;
+}
+
+.card-media-stripe.two {
+  left: 18%;
+  right: -12%;
+  bottom: 24%;
 }
 
 .card-media::after {
@@ -382,10 +409,6 @@ body {
   justify-content: flex-end;
   gap: 6px;
   padding: 14px;
-  z-index: 1;
-}
-
-.card-media.placeholder .card-media-fallback {
   z-index: 4;
 }
 
@@ -406,6 +429,15 @@ body {
   font-size: 0.84rem;
   line-height: 1.35;
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55);
+}
+
+.card-media-fallback em {
+  color: color-mix(in srgb, var(--cover-b) 72%, #fff);
+  font-size: 0.66rem;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
 }
 
 .card-highlights {

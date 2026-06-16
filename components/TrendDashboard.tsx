@@ -23,6 +23,7 @@ interface Report {
   summary: string;
   sourceUrl: string;
   imageUrl?: string;
+  sourceMetric?: string;
   scores?: Scores;
   resourceTypes?: string[];
   imagePrompt?: string;
@@ -59,6 +60,27 @@ const RESOURCE_LABELS: Record<string, string> = {
   vehicle_skin: "载具皮肤",
   playpal: "盘盘伴侣",
 };
+
+const COVER_TONES = [
+  ["#22d3ee", "#7c6cff", "#0f172a"],
+  ["#f472b6", "#fbbf24", "#18111f"],
+  ["#4ade80", "#22d3ee", "#071a16"],
+  ["#fb7185", "#f97316", "#1f1111"],
+  ["#a78bfa", "#38bdf8", "#111827"],
+  ["#fde047", "#14b8a6", "#171307"],
+];
+
+function getCoverTone(id: string) {
+  const sum = id.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  return COVER_TONES[sum % COVER_TONES.length];
+}
+
+function getCoverLabel(report: Report) {
+  if (report.sourceUrl.includes("tiktok.com")) return "TikTok";
+  if (report.sourceUrl.includes("youtube.com") || report.sourceUrl.includes("youtu.be")) return "YouTube";
+  if (report.sourceUrl.includes("reddit.com")) return "Reddit";
+  return "Trend Source";
+}
 
 // ============ Score Bar ============
 function ScoreBar({ label, value }: { label: string; value: number }) {
@@ -141,24 +163,24 @@ export default function TrendDashboard() {
           {report.scores && (
             <span className="card-tag score-tag">⭐ {report.scores.total.toFixed(1)}</span>
           )}
+          {report.sourceMetric && <span className="card-tag heat-tag">{report.sourceMetric}</span>}
         </div>
 
-        <div className={`card-media ${report.imageUrl ? "" : "placeholder"}`}>
-          {report.imageUrl && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={report.imageUrl}
-              alt={`${report.title} 封面`}
-              loading="lazy"
-              onError={(event) => {
-                event.currentTarget.style.display = "none";
-                event.currentTarget.parentElement?.classList.add("placeholder");
-              }}
-            />
-          )}
+        <div
+          className="card-media"
+          style={{
+            ["--cover-a" as string]: getCoverTone(report.id)[0],
+            ["--cover-b" as string]: getCoverTone(report.id)[1],
+            ["--cover-bg" as string]: getCoverTone(report.id)[2],
+          }}
+        >
+          <div className="card-media-grid" />
+          <div className="card-media-stripe one" />
+          <div className="card-media-stripe two" />
           <div className="card-media-fallback">
             <span>{report.category || report.game || "TREND"}</span>
             <strong>{report.title.replace(/[【】]/g, "").slice(0, 30)}</strong>
+            <em>{getCoverLabel(report)}</em>
           </div>
         </div>
 
