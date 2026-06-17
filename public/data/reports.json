@@ -336,6 +336,96 @@
           }
         ],
         "memeIntro": "Songkran 是泰国新年泼水节，社媒上最常见的是街头大规模水战：水枪互射、泼水、白色粉末、花衬衫、防水袋、音乐和人群狂欢。它不是普通夏日玩水，而是东南亚识别度很强的节日场景。用户爱看这类内容，是因为画面直接、欢乐、参与感强，而且“水枪大战”天然和射击游戏有动作联想。"
+      },
+      {
+        "id": "trend-sea-0617-01",
+        "date": "2026-06-17",
+        "category": "动漫手势梗",
+        "title": "Food Jutsu 忍术吃播梗：把食物变成“召唤术”的短视频玩法，适合忍术角色皮、咒印枪皮和召唤Emote",
+        "memeIntro": "Food Jutsu 是近期短视频里很容易理解的动漫梗：创作者用类似忍者结印的手势、夸张音效和转场，把普通食物“召唤”出来，像在发动忍术。它的笑点是把日常吃东西拍成热血动漫招式，动作短、手势强、二创门槛低，也很适合东南亚玩家熟悉的日漫/忍者审美。",
+        "highlights": "这个热点最适合提取“结印手势、召唤阵、食物变道具、能量烟雾”四个元素。BS 里不建议直接做食物恶搞枪，而是做原创忍术战术风：角色皮用护臂符文、背部卷轴、能量手套；枪械皮用咒印能量槽、卷轴式弹匣和结印检视动画；Emote/处决则用短促召唤动作完成记忆点。",
+        "summary": "推荐资源优先级：角色皮肤 > 枪械皮肤 > Emote > 处决动作。角色皮要基于 BS 原皮骨骼和战术剪影，只在手套、护臂、肩甲、背包卷轴和眼部 VFX 上强化忍术主题；枪械可以大刀阔斧做成“咒印能量枪”，但仍保留清晰枪型。处决动作适合做击倒后结印，地面召唤阵把敌人弹起成烟雾，不要血腥。",
+        "sourceUrl": "https://genz.ai/trends/food/drops/food-jutsu-dot-cake-potato-hacks-2026/",
+        "sourceMetric": "Genz.ai Food Jutsu趋势说明",
+        "scores": {
+          "categoryAffinity": 8.8,
+          "adaptationCost": 7.4,
+          "mobileFit": 9.1,
+          "audienceMatch": 8.7,
+          "freshness": 9,
+          "marketHeat": 8.2,
+          "total": 8.6
+        },
+        "resourceTypes": [
+          "character_skin",
+          "weapon_skin",
+          "emote",
+          "finisher"
+        ],
+        "promptSets": [
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike character skin concept sheet, built on existing BS base operator skeleton and original skin proportions, full-body front render plus detail callouts for hand-sign gloves, forearm seal armor, scroll backpack, and eye VFX; original tactical shinobi operator inspired by viral Food Jutsu anime hand-sign energy, dark combat suit with graphite armor plates, crimson and cyan sealing runes, lightweight scarf, smoke-summon particles around hands, premium anime tactical shooter style, no copied Naruto symbols, no food costume, no horror, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on assault rifle render plus 4 detail callouts for receiver seal engine, barrel smoke VFX, scroll-style custom magazine, and inspection animation frame; drastic premium redesign with raised graphite armor shells, transparent crimson-cyan jutsu energy channels, mechanical paper-scroll panels unfolding near receiver during inspect, custom magazine shaped like reinforced tactical scroll case, muzzle emits clean smoke-ring summoning glyphs, kill effect flashes a circular seal burst, attractive anime sci-fi shooter skin, readable firearm silhouette, not a flat sticker, no copied anime logos, no horror, 4K"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike emote concept sheet, 4 key frames: operator performs fast anime hand signs, a glowing tactical summoning circle appears, a harmless holographic snack/energy orb pops up, operator catches it with confident pose, smoke puff and rune particles, funny but cool, no copied IP, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike post-knockdown finisher concept art, 3-panel sequence: operator performs hand signs over downed enemy, circular sealing glyph opens under target, clean smoke-dragon energy lifts target and pops into stylized paper talisman burst, no gore, no body horror, anime tactical VFX, 4K"
+          }
+        ]
+      },
+      {
+        "id": "trend-sea-0617-02",
+        "date": "2026-06-17",
+        "category": "东南亚游戏文化",
+        "title": "Southeast Asian Games Showcase 2026：本地霓虹、节奏和街头幻想成为玩家文化素材，适合高级角色皮和音乐能量枪皮",
+        "memeIntro": "Southeast Asian Games Showcase 是面向东南亚游戏开发与玩家社群的线上展示，2026 年继续把本地游戏、节奏音乐、街头视觉和幻想题材集中放到玩家面前。它不是一个单一梗，而是“东南亚玩家也有自己的审美主场”的文化信号：霓虹、音乐、城市夜景、本地怪谈和年轻人街头能量都能转成游戏资源。",
+        "highlights": "这个方向适合做更长期的 BS 区域资源，不靠一条短命梗，而靠东南亚玩家的本地自豪感和游戏文化认同。资源上可以做音乐反抗者角色皮、霓虹音波枪械皮、节奏检视动画和声波处决动作；相比直接复刻某款独立游戏，更安全的做法是抽取“本地霓虹+节奏能量+街头幻想”的通用风格。",
+        "summary": "推荐资源优先级：枪械皮肤 > 角色皮肤 > 处决动作。枪皮要大改结构：音波能量核心、发光琴弦式导轨、节拍可视化弹匣、检视时播放等波动画；角色皮基于 BS 原皮骨骼做街头音乐战术装甲，不做舞台服。这个方向适合作为 SEA 区域限定高级套装。",
+        "sourceUrl": "https://geekculture.co/southeast-asian-games-showcase-2026-recap/",
+        "sourceMetric": "Geek Culture SEA展示复盘",
+        "scores": {
+          "categoryAffinity": 8.3,
+          "adaptationCost": 7.1,
+          "mobileFit": 8.6,
+          "audienceMatch": 8.5,
+          "freshness": 8.7,
+          "marketHeat": 7.8,
+          "total": 8.2
+        },
+        "resourceTypes": [
+          "weapon_skin",
+          "character_skin",
+          "finisher"
+        ],
+        "promptSets": [
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike legendary weapon skin concept sheet, main side-on rifle render plus detail callouts for soundwave receiver core, glowing string-like barrel rails, equalizer magazine, and inspect animation frame; drastic SEA neon rhythm redesign, realistic rifle silhouette with raised chrome audio-reactive armor, cyan-magenta-gold emissive channels, transparent receiver window showing pulsing waveform engine, custom magazine visualizes beat bars while reloading, muzzle VFX fires compressed sonic rings, kill effect creates clean neon shockwave, premium sci-fi not a flat decal, dark blue studio, 4K"
+          },
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike character skin concept sheet, built on existing BS base operator skeleton, full-body front render plus helmet visor, shoulder speaker armor, glove controller, and boot light callouts; SEA neon rhythm rebel tactical operator, black urban combat suit, chrome shoulder plates, cyan-magenta cable lights, small batik-inspired micro pattern on fabric panels, confident street-game energy, tactical not stage costume, no copied game IP, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike post-knockdown finisher concept art, operator slams a wrist beat controller, sonic equalizer pillars rise around downed enemy, one clean neon bass pulse launches target backward into pixel-light fragments, no gore, no horror, SEA neon rhythm VFX, 4K"
+          }
+        ]
       }
     ],
     "LATAM": [
@@ -674,6 +764,96 @@
           }
         ],
         "memeIntro": "Festa Junina / São João 是巴西六月节日文化，社媒内容常见彩色三角旗、篝火、稻草帽、格纹衣服、玉米食物和 quadrilha 方阵舞。它不是单纯节庆新闻，而是一套很鲜明的本地视觉符号。用户看到这些元素，会想到乡村派对、舞蹈、集市、火光和集体庆祝，和泛足球内容相比更有本地差异化。"
+      },
+      {
+        "id": "trend-latam-0617-01",
+        "date": "2026-06-17",
+        "category": "巴西舞蹈热",
+        "title": "Arthur Lima x Alencarzão 巴西舞蹈热：高能短舞、街头节奏和表情反差，适合Emote、角色皮和节拍枪皮",
+        "memeIntro": "巴西舞蹈短视频的传播点通常很直接：节奏强、动作短、表情夸张、适合跟拍。Arthur Lima x Alencarzão 这类热门舞蹈剪辑把 funk/街头节奏、夸张表情和轻松群体参与结合起来，观众不用理解歌词也能被动作和节拍带动。对拉美玩家来说，这类内容比抽象国际梗更接地气。",
+        "highlights": "这个热点最适合先做 Emote，但也能扩展成街头节拍角色皮和节拍枪皮。角色皮不是舞台装，而是战术街舞外骨骼：运动护膝、节拍灯带、轻量护甲；枪械皮则要把节拍结构做进枪身，变成会随检视和开火跳动的高能武器。",
+        "summary": "推荐资源优先级：Emote > 角色皮肤 > 枪械皮肤。Emote 抓动作传播，角色皮负责拉美街头身份，枪械皮负责商店付费承接。处决动作可以做击倒后低音节拍冲击，把敌人弹开成干净速度线，不做暴力血腥。",
+        "sourceUrl": "https://www.youtube.com/watch?v=7X51T6GYlrY",
+        "sourceMetric": "YouTube 280万+播放舞蹈合集",
+        "scores": {
+          "categoryAffinity": 8.5,
+          "adaptationCost": 8.2,
+          "mobileFit": 9,
+          "audienceMatch": 8.8,
+          "freshness": 8.6,
+          "marketHeat": 8.4,
+          "total": 8.6
+        },
+        "resourceTypes": [
+          "emote",
+          "character_skin",
+          "weapon_skin",
+          "finisher"
+        ],
+        "promptSets": [
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike Brazilian street dance emote concept sheet, 5 key frames: operator does a short high-energy funk step, shoulder bounce, quick foot shuffle, playful facial attitude, final weapon-spin pose; neon lime and warm gold rhythm trails, tactical outfit, readable 3-second loop, fun not goofy, no real dancer likeness, 4K"
+          },
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike character skin concept sheet, built on existing BS base operator skeleton and original proportions, full-body front render plus knee pad, rhythm jacket, glove, and visor callouts; Brazilian street rhythm tactical operator, matte black combat suit, lightweight dance-ready armor, neon lime/gold beat strips, sport kneepads, chrome ankle braces, confident playful expression, premium shooter style, not stage costume, no real dancer likeness, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike weapon skin concept sheet, main side-on SMG render plus detail callouts for rhythm receiver, beat-reactive barrel lights, custom magazine equalizer, and inspect animation frame; drastic Brazilian funk street weapon redesign, compact SMG with raised black chrome armor, lime-gold emissive beat channels, translucent magazine showing pulsing equalizer bars, grip has sport rubber texture, inspect animation makes the lights bounce on rhythm, muzzle VFX emits clean bass rings, premium not just decals, no real music logos, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike post-knockdown finisher concept art, operator triggers a short funk beat step, bass rings pulse from boots and weapon, downed enemy is launched backward by a clean neon rhythm shockwave, no gore, no humiliation, energetic Latin street VFX, 4K"
+          }
+        ]
+      },
+      {
+        "id": "trend-latam-0617-02",
+        "date": "2026-06-17",
+        "category": "爆火影视幻想",
+        "title": "House of the Dragon S3 龙族回归热：龙鳞、王旗和火焰权力感，适合龙骑士角色皮、龙核枪皮和火焰处决",
+        "memeIntro": "House of the Dragon 第三季临近开播，社媒讨论会集中在龙、家族旗帜、王位争夺和火焰战争感上。它不是搞笑梗，而是强幻想题材的视觉热点：龙鳞、黑红金配色、火焰、古老王权、战场旗帜，非常适合玩家喜欢的高价值角色皮和枪械皮。",
+        "highlights": "这个题材的风险是太像中世纪盔甲或直接抄影视符号，所以 BS 应该抽象成原创“龙核战术骑士”：角色皮保留原皮骨骼和现代战术比例，只在肩甲、披风边、胸口能量核和头盔轮廓加入龙鳞语言；枪械皮可以大幅改成龙脊机械结构、透明火焰核心和检视时展开的龙翼散热片。",
+        "summary": "推荐资源优先级：角色皮肤 > 枪械皮肤 > 处决动作。枪械皮不要只是龙鳞贴图，而要有龙脊导轨、火焰核心、鳞片装甲开合、龙息枪口和击杀火焰徽记；处决动作是击倒后龙焰能量柱包围敌人并爆成无血腥火花。避免使用剧集家族徽章、角色肖像和真实龙造型。",
+        "sourceUrl": "https://www.forbes.com/sites/timlammers/2026/06/15/house-of-the-dragon-season-3-rotten-tomatoes-reviews-high-on-series-new-episodes/",
+        "sourceMetric": "Forbes 6月15日影视报道",
+        "scores": {
+          "categoryAffinity": 9,
+          "adaptationCost": 6.8,
+          "mobileFit": 8.4,
+          "audienceMatch": 8.9,
+          "freshness": 9.2,
+          "marketHeat": 8.7,
+          "total": 8.5
+        },
+        "resourceTypes": [
+          "character_skin",
+          "weapon_skin",
+          "finisher"
+        ],
+        "promptSets": [
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike character skin concept sheet, built on existing BS base operator skeleton and original tactical proportions, full-body front render plus helmet, shoulder armor, chest core, and cape-edge callouts; original dragon-core tactical knight operator, black graphite combat suit, layered crimson-black dragon-scale shoulder plates, gold heat-resistant trims, compact half-cape with carbon fiber lining, glowing ember chest reactor, heroic premium fantasy shooter style, no real House of the Dragon sigils, no actor likeness, no medieval cosplay bulk, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike legendary weapon skin concept sheet, main side-on assault rifle render plus 5 detail callouts for dragon-spine top rail, transparent fire-core receiver, scale armor magazine, wing-like heat vents, and inspect animation frame; drastic dragon-core sci-fi rifle redesign, realistic firearm silhouette with raised black-red scale armor shells, gold mechanical ribs, molten orange glass energy chamber, barrel shaped like angular dragon breath emitter, inspect animation opens side vents like mechanical dragon wings, kill effect creates clean ember crest burst, premium cinematic not flat dragon texture, no copied TV sigils, no gore, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike post-knockdown finisher concept art, operator marks downed enemy with glowing ember sigil, mechanical dragon-wing energy unfolds behind operator, vertical dragonfire column surrounds target and bursts into clean sparks, no gore, no burning body detail, cinematic fantasy tactical VFX, 4K"
+          }
+        ]
       }
     ]
   },
@@ -724,8 +904,8 @@
     ]
   },
   "meta": {
-    "lastUpdate": "2026-06-16",
-    "totalTrends": 14,
+    "lastUpdate": "2026-06-17",
+    "totalTrends": 18,
     "totalCompetitors": 4,
     "retentionDays": 5,
     "assetPromptRules": "docs/asset-prompt-rules.md",

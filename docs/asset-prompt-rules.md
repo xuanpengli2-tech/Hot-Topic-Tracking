@@ -59,6 +59,8 @@ Character prompts can use:
 - small side/back/detail callouts for helmet, backpack, gloves, shoulder armor, special effect
 - tactical silhouette first, trend details second
 - stylized but polished materials
+- build on the existing Bloodstrike base character skeleton and original skin proportions first, then add theme-specific armor, clothing, accessories, VFX, and material changes
+- avoid changing the character into a completely different creature or mascot unless the request is explicitly for a companion/mascot asset
 
 Cute or humorous character skins are allowed, such as shark, duck, capybara, or mascot-inspired skins, as long as they are not childish pajamas and still fit a shooter. Add enough gear structure so the skin feels like combat equipment, not cosplay clothing only.
 
@@ -67,7 +69,8 @@ Cute or humorous character skins are allowed, such as shark, duck, capybara, or 
 Emotes and finishers can carry more direct meme energy than weapon and character skins:
 
 - emotes can be funnier, more exaggerated, and more cartoon
-- finishers should turn the meme into a readable 2-4 second combat beat
+- finishers mean the short execution sequence after the player knocks down an enemy
+- finishers should turn the meme into a readable 2-4 second combat beat after knockdown
 - finishers can use VFX, camera cuts, impact frames, or a short prop/mascot appearance
 - finishers must avoid gore and horror even when the meme is dark
 
