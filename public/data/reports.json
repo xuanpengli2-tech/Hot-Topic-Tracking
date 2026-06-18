@@ -426,6 +426,90 @@
             "prompt": "Bloodstrike post-knockdown finisher concept art, operator slams a wrist beat controller, sonic equalizer pillars rise around downed enemy, one clean neon bass pulse launches target backward into pixel-light fragments, no gore, no horror, SEA neon rhythm VFX, 4K"
           }
         ]
+      },
+      {
+        "id": "trend-sea-0618-01",
+        "date": "2026-06-18",
+        "category": "动漫废土潮流",
+        "title": "Gachiakuta / Animation Meme 废土动画梗：垃圾朋克、涂鸦能量和脏帅角色感，适合废土角色皮与拼装枪皮",
+        "memeIntro": "Gachiakuta 和 Animation Meme 在 2026 的 anime TikTok 里被放在一起讨论：一边是更脏、更锋利、更街头的“垃圾朋克”视觉，一边是短动画模板、角色变身、节奏卡点和夸张表情。它不是单个表情包，而是一种“废料也能变成武器、脏乱也能很帅”的二创审美，适合喜欢动漫和街头风的玩家。",
+        "highlights": "这个热点能明显转成角色皮和枪械皮：角色皮走“废土清道夫/垃圾炼金术士”，但必须基于 BS 原皮骨骼，保持战术比例；枪械皮可以大胆做成拼装机械枪，使用废料装甲、涂鸦能量管、磁吸零件和检视时重组的动画。Emote 可以是角色把废料抛起变成能量核心；处决动作则是击倒后用磁场把碎片组成能量笼。",
+        "summary": "推荐资源优先级：角色皮肤 > 枪械皮肤 > 处决动作。枪械皮不能只是贴涂鸦，应该有 3D 拼装外壳、磁吸机械零件、透明废料能量仓、自定义弹匣和检视动画；角色皮则用破损边缘、贴布、涂鸦符号和机械护臂体现梗属性。整体要“脏帅”，不能真的脏、恶心或恐怖。",
+        "sourceUrl": "https://genz.ai/trends/anime/drops/how-animation-memes-and-gachiakuta-define-anime-tiktok/",
+        "sourceMetric": "Genz.ai 2026动画趋势说明",
+        "scores": {
+          "categoryAffinity": 9,
+          "adaptationCost": 7.1,
+          "mobileFit": 8.7,
+          "audienceMatch": 8.9,
+          "freshness": 8.8,
+          "marketHeat": 8.3,
+          "total": 8.5
+        },
+        "resourceTypes": [
+          "character_skin",
+          "weapon_skin",
+          "finisher"
+        ],
+        "promptSets": [
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike character skin concept sheet, built on existing BS base operator skeleton and original tactical proportions, full-body front render plus detail callouts for magnetic scrap gauntlet, patched shoulder armor, graffiti mask, and backpack reactor; original Gachiakuta-inspired wastepunk scavenger operator, dark combat suit with layered scrap-metal plates, neon teal-orange graffiti energy marks, asymmetrical streetwear straps, clean stylish dirt and edge wear, anime street-punk attitude, premium shooter skin, not horror, not disgusting, no copied anime symbols, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike legendary weapon skin concept sheet, main side-on assault rifle render plus 5 detail callouts for magnetic scrap receiver, modular barrel cage, transparent junk-energy core, custom patchwork magazine, and inspection animation frame; drastic wastepunk rifle redesign with readable firearm silhouette, raised mismatched armor shells, floating magnetic bolts, graffiti enamel panels, teal-orange energy tubes, reload animation snaps scrap plates into place, inspect animation reassembles the receiver with magnetic sparks, kill effect forms a clean scrap-energy cage, bold anime street-punk weapon, not flat graffiti decals, not dirty disgusting junk, no gore, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike post-knockdown finisher concept art, 3-panel sequence: operator raises magnetic scrap gauntlet, clean metal fragments orbit the downed enemy, fragments assemble into a glowing teal-orange energy cage and burst into harmless sparks, no gore, no body horror, stylish anime wastepunk VFX, 4K"
+          }
+        ]
+      },
+      {
+        "id": "trend-sea-0618-02",
+        "date": "2026-06-18",
+        "category": "怀旧玩具文化",
+        "title": "Toy Story 5 怀旧玩具潮：童年玩具、贴纸、塑料质感和成长反差，适合可爱角色皮与玩具机械枪皮",
+        "memeIntro": "Toy Story 5 将在 2026 年 6 月 19 日上映，社媒已经开始出现童年到成年对比、玩具回忆、角色贴纸、房间收藏和“长大后再看玩具”的怀旧内容。这个热点的情绪不是单纯可爱，而是“童年玩具回到成年人生活里”的反差，很适合做轻松、温暖、可收藏的游戏资源。",
+        "highlights": "BS 不能直接使用 Toy Story 角色或图标，但可以抽取“玩具包装、塑料装甲、贴纸、星星徽章、收藏编号、儿童房色彩”这些通用符号。角色皮可以是玩具收藏者战术装甲，枪械皮可以做成高级玩具机械枪：透明塑料能量仓、可动拼装外壳、贴纸编号和检视时弹出的收藏标签。",
+        "summary": "推荐资源优先级：枪械皮肤 > 角色皮肤 > Emote。枪皮要大胆做成“高端收藏玩具枪”，但仍保留真实枪械轮廓；角色皮基于 BS 原皮骨骼，用塑料护甲、收藏贴纸和背包玩具仓强化主题。Emote 可以是角色打开一个小玩具箱，弹出原创小机器人并敬礼。",
+        "sourceUrl": "https://newengen.com/insights/june-tiktok-trends/",
+        "sourceMetric": "NewEngen 6月趋势提到Toy Story 5怀旧",
+        "scores": {
+          "categoryAffinity": 8.4,
+          "adaptationCost": 7.8,
+          "mobileFit": 9,
+          "audienceMatch": 8.5,
+          "freshness": 9.1,
+          "marketHeat": 8.4,
+          "total": 8.5
+        },
+        "resourceTypes": [
+          "weapon_skin",
+          "character_skin",
+          "emote"
+        ],
+        "promptSets": [
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike cute premium toy-mecha weapon skin concept sheet, main side-on SMG render plus 5 detail callouts for transparent plastic receiver, snap-fit armor shell, sticker serial label, toy-box custom magazine, and inspection animation frame; drastic collectible toy gun redesign with realistic firearm silhouette, glossy blue-red-yellow enamel plates, translucent polycarbonate energy chamber, rounded but tactical 3D armor parts, small original robot mascot badge, reload animation clicks snap-fit panels together, inspect animation opens a tiny toy-box label drawer, kill effect releases clean star sticker burst, playful and premium, no copied Toy Story characters, not childish foam toy, 4K"
+          },
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike character skin concept sheet, built on existing BS base operator skeleton, full-body front render plus detail callouts for plastic shoulder armor, toy-box backpack, sticker patches, and visor charm; original toy collector tactical operator, matte combat undersuit with glossy plastic armor panels, blue-red-yellow toy packaging accents, collection serial tags, small original robot mascot patch, warm nostalgic but battle-ready, not cosplay, no copied movie IP, 4K"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike playful emote concept sheet, 4 key frames: operator opens a compact toy-box case, tiny original robot hologram pops out, operator taps it and it salutes, star sticker particles float, warm nostalgic lighting, cute but tactical, no copied characters, 4K"
+          }
+        ]
       }
     ],
     "LATAM": [
@@ -854,6 +938,90 @@
             "prompt": "Bloodstrike post-knockdown finisher concept art, operator marks downed enemy with glowing ember sigil, mechanical dragon-wing energy unfolds behind operator, vertical dragonfire column surrounds target and bursts into clean sparks, no gore, no burning body detail, cinematic fantasy tactical VFX, 4K"
           }
         ]
+      },
+      {
+        "id": "trend-latam-0618-01",
+        "date": "2026-06-18",
+        "category": "加勒比AI神曲",
+        "title": "Saxboy Billy《The Puerto Rico Song》：AI热带神曲争议和海岛旋律，适合加勒比霓虹枪皮与萨克斯声波处决",
+        "memeIntro": "《The Puerto Rico Song》在 TikTok 上爆火，同时因为它是 AI 生成歌曲而引发讨论。它的传播点很清楚：轻快、洗脑、带有 Puerto Rico / San Juan 的地名想象和热带度假感，用户会用它配旅行、街景、海岛情绪和搞笑 lip-sync。对拉美和加勒比语境来说，它既是神曲，也是“AI歌曲能不能代表地方文化”的讨论点。",
+        "highlights": "这个热点适合做枪械皮和处决动作，不建议直接做真实旗帜或政治符号。资源应抽取“热带霓虹、海浪、萨克斯铜管、加勒比街景、AI声波”这些元素。枪皮可以做海浪声波核心和铜管枪口，处决动作可以做击倒后萨克斯音波把敌人弹开成海浪光效。",
+        "summary": "推荐资源优先级：枪械皮肤 > 处决动作 > Emote。枪械一定要大刀阔斧：铜管声波枪口、海蓝透明能量仓、会跳动的 AI 波形弹匣、检视时吹出霓虹海浪。避免直接使用国旗、政治符号或真实艺人肖像；重点是热带声音和AI神曲的文化属性。",
+        "sourceUrl": "https://www.pastemagazine.com/music/tiktok/that-puerto-rico-song-going-viral-on-tiktok-is-ai-generated",
+        "sourceMetric": "Paste 讨论AI神曲爆火",
+        "scores": {
+          "categoryAffinity": 8.6,
+          "adaptationCost": 7.2,
+          "mobileFit": 8.8,
+          "audienceMatch": 8.7,
+          "freshness": 9.3,
+          "marketHeat": 8.5,
+          "total": 8.6
+        },
+        "resourceTypes": [
+          "weapon_skin",
+          "finisher",
+          "emote"
+        ],
+        "promptSets": [
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike legendary Caribbean neon weapon skin concept sheet, main side-on assault rifle render plus 5 detail callouts for brass saxophone-like muzzle resonator, transparent ocean-blue AI waveform receiver, tropical neon side armor, custom equalizer magazine, and inspection animation frame; drastic premium rifle redesign with readable firearm silhouette, polished brass and turquoise chrome, glowing wave channels, palm-shadow micro engravings, reload animation pulses AI-generated waveform bars through magazine, inspect animation releases neon ocean soundwave rings, kill effect creates clean tropical wave burst, no real flag, no political symbols, no real artist likeness, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike post-knockdown finisher concept art, operator raises rifle and triggers a brass sax-wave blast, ocean-blue neon sound rings spiral around downed enemy, target is lifted and pushed back by a clean tropical wave of light, no gore, no humiliation, Caribbean AI-song VFX, 4K"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike emote concept sheet, 4 key frames: operator taps wrist AI sampler, holographic sax notes and ocean waves appear, operator does a relaxed tropical shoulder bounce, final pose with neon wave behind, fun summer lip-sync energy, no real logos, 4K"
+          }
+        ]
+      },
+      {
+        "id": "trend-latam-0618-02",
+        "date": "2026-06-18",
+        "category": "复古英雄幻想",
+        "title": "Masters of the Universe 2026：力量剑、肌肉英雄和复古宇宙幻想，适合英雄角色皮、力量核心枪皮和能量斩处决",
+        "memeIntro": "Masters of the Universe 2026 的回归把 He-Man 式复古英雄幻想重新带回社媒：力量剑、夸张英雄姿态、宇宙城堡、金属护甲和非常鲜明的 80s 玩具感。它的价值不只是电影热度，而是“童年玩具英雄 + 现代大片特效”的复合情绪，适合做夸张但好看的高价值皮肤。",
+        "highlights": "BS 不应复制 He-Man、Skeletor 或官方符号，而是提取“力量剑、宇宙能量、金属胸甲、复古玩具英雄轮廓、蓝金紫对比”的通用语法。角色皮可以做原创宇宙冠军战术装甲；枪械皮可以做力量核心步枪，检视时展开能量剑刃导轨；处决动作是击倒后能量剑光斩，不血腥。",
+        "summary": "推荐资源优先级：角色皮肤 > 枪械皮肤 > 处决动作。角色皮要基于 BS 原皮骨骼，不做过度肌肉怪人，而是在胸甲、肩甲、腰带和能量剑背挂上体现复古英雄；枪械皮要大胆改成“力量核心武器”，带可展开剑刃导轨、透明能量水晶、金属护甲和宇宙光束击杀反馈。",
+        "sourceUrl": "https://www.youtube.com/watch?v=kaOXLqRsa0M",
+        "sourceMetric": "官方最终预告片",
+        "scores": {
+          "categoryAffinity": 8.9,
+          "adaptationCost": 6.9,
+          "mobileFit": 8.4,
+          "audienceMatch": 8.6,
+          "freshness": 8.6,
+          "marketHeat": 8.2,
+          "total": 8.4
+        },
+        "resourceTypes": [
+          "character_skin",
+          "weapon_skin",
+          "finisher"
+        ],
+        "promptSets": [
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike character skin concept sheet, built on existing BS base operator skeleton and original tactical proportions, full-body front render plus detail callouts for power chest armor, cosmic shoulder plates, energy sword back mount, and heroic belt core; original retro cosmic champion tactical operator, graphite combat suit with blue-gold armor, violet cosmic energy seams, angular heroic silhouette but not bulky bodybuilder, premium 80s-to-sci-fi shooter style, no He-Man likeness, no copied logos, no skull villain horror, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike mythic power-core weapon skin concept sheet, main side-on rifle render plus 5 detail callouts for crystal power receiver, unfolding sword-rail barrel, golden armor stock, cosmic magazine, and inspection animation frame; drastic retro-cosmic rifle redesign with readable firearm silhouette, blue-gold chrome armor shells, transparent violet energy crystal chamber, mechanical blade-like rails extend during inspect, reload animation charges the power core with star particles, muzzle VFX fires heroic light slash, kill effect creates clean cosmic sword arc, premium fantasy sci-fi not flat decals, no copied franchise symbols, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike post-knockdown finisher concept art, operator draws holographic power blade from rifle rail, strikes downward beside downed enemy, blue-gold cosmic energy arc lifts target into a clean starburst knockback, no gore, no horror, heroic retro fantasy VFX, 4K"
+          }
+        ]
       }
     ]
   },
@@ -904,8 +1072,8 @@
     ]
   },
   "meta": {
-    "lastUpdate": "2026-06-17",
-    "totalTrends": 18,
+    "lastUpdate": "2026-06-18",
+    "totalTrends": 22,
     "totalCompetitors": 4,
     "retentionDays": 5,
     "assetPromptRules": "docs/asset-prompt-rules.md",
