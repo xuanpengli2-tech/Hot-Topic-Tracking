@@ -2,6 +2,54 @@
   "trends": {
     "SEA": [
       {
+        "id": "trend-sea-0622-03",
+        "date": "2026-06-22",
+        "category": "硬核射击回潮",
+        "title": "Gears of War: E-Day 玩法展示热：厚重装甲、链锯枪、废墟城市和近距离压迫感，适合硬核战术角色皮与重型枪械蓝图",
+        "highlights": "近两周 Xbox Showcase 后，Gears of War: E-Day 的玩法展示和预览持续发酵。它的流行点不是轻梗，而是硬核射击玩家熟悉的“重装士兵 + 城市废墟 + 近距离火力压迫 + 工业机甲感”。这比音乐或玩偶类热点更贴近竞技射击基调，适合做高价值重型枪械皮、装甲角色皮和冲锋处决。",
+        "summary": "BS 可以提取“厚重但可读”的枪战语言：角色皮用宽肩装甲、胸前弹药模块、破损城市灰尘和蓝白战术灯；枪械皮要做成重型工业蓝图，重点是机械切割轨、钢铁护板、透明热能仓和近战锯齿护木，但不能复制 Gears 的 Lancer 或官方符号。动作方向可以做短距离冲刺、掩体撞击、钢铁火花处决，整体比泛娱乐热点更适合竞技射击用户。",
+        "sourceUrl": "https://www.gamesradar.com/games/gears-of-war/gears-of-war-e-day-xbox-games-showcase-2026-preview-interview/",
+        "sourceMetric": "近7天预览 / 2周内玩法展示",
+        "scores": {
+          "categoryAffinity": 9.4,
+          "adaptationCost": 7.6,
+          "mobileFit": 8.5,
+          "audienceMatch": 9.2,
+          "freshness": 9.1,
+          "marketHeat": 8.8,
+          "total": 8.9
+        },
+        "resourceTypes": [
+          "character_skin",
+          "weapon_skin",
+          "emote",
+          "finisher"
+        ],
+        "promptSets": [
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike character skin concept, full-body tactical operator render, original heavy urban assault armor built on BS base skeleton, broad reinforced shoulder plates, graphite ballistic chest rig, compact ammo blocks, scratched steel knee armor, blue-white tactical lamps, dust-stained dark fabric underlayers, broken-city rescue squad mood, powerful but mobile silhouette, no copied Gears symbols, no actor likeness, no bulky monster body, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike premium weapon skin beauty render, single full weapon only, side-on three-quarter studio render, no poster layout, no text, no labels, no logos, no callout boxes; readable competitive shooter firearm silhouette, aggressive but elegant proportions, high-value legendary skin quality, 3D hard-surface redesign instead of flat decals, layered armor shell kit, transparent energy chamber, custom magazine, sculpted muzzle device, premium PBR materials: anodized gunmetal, satin black ceramic, brushed steel, tempered glass, enamel inlays, carbon fiber grip, subtle edge wear, crisp bevels, balanced lighting on dark neutral studio background, attractive store-thumbnail composition, not ugly, not toy-like unless explicitly mascot themed, no gore, no dirty organic flesh, no random red waveform sticker spam, 4K; heavy urban breach rifle theme, large-caliber assault rifle with industrial steel armor shell kit, graphite and gunmetal body, transparent amber heat core inside receiver, reinforced top rail with mechanical cutter teeth as small functional vents not a copied chainsaw, hydraulic piston details near handguard, custom box magazine with visible brass feed spine under smoked glass, muzzle brake with controlled ember vents, inspect animation cycles heat through the chamber and briefly deploys micro-cutter rails, reload slams a heavy magazine with sparks, kill effect creates a short concrete-dust shock burst; grounded brutal military sci-fi, no copied Lancer silhouette, no skull gore, no oversized blade"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike heavy-cover emote concept, 4 key frames: operator shoulder-checks into invisible cover, racks heavy rifle, armor lamps flicker through dust, final low ready stance; short, forceful, readable, urban battlefield mood, no copied franchise pose, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike post-knockdown finisher concept art, operator performs a short armored breach dash, rifle vents flash amber, concrete dust ring erupts and pushes target backward cleanly, sparks and debris silhouettes only, no gore, no copied IP, cinematic hard-shooter VFX, 4K"
+          }
+        ],
+        "memeIntro": "Gears of War: E-Day 的热度来自硬核射击玩家对系列根源的回归期待：重装士兵、掩体推进、工业武器、废墟城市和近距离压迫感。它不是一个轻松梗，而是一种“老派厚重枪战回来了”的集体情绪，适合 BS 提取成原创重装战术主题。"
+      },
+      {
         "id": "trend-sea-0622-02",
         "date": "2026-06-22",
         "category": "怀旧复古梗",
@@ -34,7 +82,7 @@
           {
             "type": "weapon_skin",
             "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; 2016 nostalgia rifle theme, readable rifle silhouette with transparent old-phone-case receiver window, oversaturated cyan-magenta enamel armor plates, pixelated sticker inlays under glass, filter-switch dial near stock, custom magazine shaped like a clean cassette-phone hybrid, inspect animation cycles dog-ear filter, flower-crown light, and low-res selfie flash across the gun body, reload animation flips a bottle-cap cartridge into chamber, kill effect creates a brief pixelated throwback camera flash, no real social app logos, no copyrighted stickers"
+            "prompt": "Bloodstrike premium weapon skin beauty render, single full weapon only, side-on three-quarter studio render, no poster layout, no text, no labels, no logos, no callout boxes; readable competitive shooter firearm silhouette, aggressive but elegant proportions, high-value legendary skin quality, 3D hard-surface redesign instead of flat decals, layered armor shell kit, transparent energy chamber, custom magazine, sculpted muzzle device, premium PBR materials: anodized gunmetal, satin black ceramic, brushed steel, tempered glass, enamel inlays, carbon fiber grip, subtle edge wear, crisp bevels, balanced lighting on dark neutral studio background, attractive store-thumbnail composition, not ugly, not toy-like unless explicitly mascot themed, no gore, no dirty organic flesh, no random red waveform sticker spam, 4K; 2016 social-media nostalgia rifle theme, matte graphite assault rifle with glossy cyan-magenta enamel inlays under glass, transparent old-phone-case receiver window showing a tiny pixel camera sensor core, filter-switch mechanical dial near stock, clean pixel-grid micro engraving on handguard, custom magazine with low-res gradient light bars, bottle-cap inspired charging handle as a small metal detail, inspect animation cycles three AR filter light modes across the receiver, reload flips a glowing cap-shaped cartridge into the chamber, kill effect creates one crisp retro camera flash and pixel shimmer; fashionable throwback energy, no app logos, no dog-ear helmet stuck on the gun, no messy stickers"
           },
           {
             "type": "emote",
@@ -82,7 +130,7 @@
           {
             "type": "weapon_skin",
             "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; blind-box plush assault rifle theme, realistic rifle base wrapped with raised soft-resin armor shells, transparent mystery-box chamber inside receiver holding a tiny original mascot capsule, fuzzy ear-shaped but compact rear sight guards, stitched leather grip, pastel enamel panels, custom magazine as a rotating blind-box drawer with rarity color lights, inspect animation opens the box chamber and reveals a random mascot hologram, reload animation snaps a toy capsule into place, kill effect pops cute confetti and a small plush silhouette burst, coherent with the character suit, no copied Labubu teeth or face, no brand marks"
+            "prompt": "Bloodstrike premium weapon skin beauty render, single full weapon only, side-on three-quarter studio render, no poster layout, no text, no labels, no logos, no callout boxes; readable competitive shooter firearm silhouette, aggressive but elegant proportions, high-value legendary skin quality, 3D hard-surface redesign instead of flat decals, layered armor shell kit, transparent energy chamber, custom magazine, sculpted muzzle device, premium PBR materials: anodized gunmetal, satin black ceramic, brushed steel, tempered glass, enamel inlays, carbon fiber grip, subtle edge wear, crisp bevels, balanced lighting on dark neutral studio background, attractive store-thumbnail composition, not ugly, not toy-like unless explicitly mascot themed, no gore, no dirty organic flesh, no random red waveform sticker spam, 4K; original blind-box tactical plush rifle theme, premium black rifle base with soft-resin armor modules mounted as clean 3D panels, translucent mystery capsule chamber inside receiver with one tiny original mascot silhouette barely visible, rarity-color light strips under frosted glass, stitched black leather grip, enamel mint and hot-pink micro-inlays used sparingly, custom magazine shaped like a rotating capsule drawer but still functional, muzzle device has compact toy-capsule ring not oversized ears, inspect animation opens one chamber with soft confetti and holographic rarity glow, reload snaps a capsule magazine into place, kill effect is a small clean rarity starburst; coherent with a tactical plush operator suit, cute controlled luxury, no copied Labubu teeth, no Pop Mart logo, no cheap sticker collage"
           },
           {
             "type": "emote",
@@ -610,6 +658,54 @@
     ],
     "LATAM": [
       {
+        "id": "trend-latam-0622-02",
+        "date": "2026-06-22",
+        "category": "竞技射击节点",
+        "title": "Call of Duty / Black Ops 7 6月活动热：赛季奖励、军武蓝图和赛事观看奖励，适合黑金特战枪皮与竞技徽章角色皮",
+        "highlights": "Call of Duty 官方在6月20日前后集中推 Black Ops 7、Season 04 和 C.O.D.E. Bowl VII 观看奖励信息。它的热点价值不是单个梗，而是竞技射击用户对“赛季皮肤、蓝图、赛事奖励、军武身份”的稳定关注，尤其适合拉美和全球 FPS 用户的黑金、特战、赛事徽章类资源。",
+        "summary": "BS 适合把这个方向做成更硬核的竞技奖励主题：角色皮强调特战队服、赛事徽章、无线电模块和黑金赛季编号；枪械皮做成高端军武蓝图，主卖点是钛黑枪身、金属编号、战术红点、电路刻线、透明弹药计数仓和换弹检视动画。不要做成 COD 复制品，也不要堆满文字和队标，要提取“赛事奖励级军武质感”。",
+        "sourceUrl": "https://www.callofduty.com/blackops7",
+        "sourceMetric": "6月20日官方活动 / Season 04",
+        "scores": {
+          "categoryAffinity": 9.6,
+          "adaptationCost": 8.1,
+          "mobileFit": 8.9,
+          "audienceMatch": 9.4,
+          "freshness": 9.4,
+          "marketHeat": 9,
+          "total": 9.2
+        },
+        "resourceTypes": [
+          "character_skin",
+          "weapon_skin",
+          "emote",
+          "finisher"
+        ],
+        "promptSets": [
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike competitive special-ops operator skin concept, full-body front render plus helmet, radio pack, chest badge, glove, and boot callouts; matte black tactical uniform, graphite armor plates, restrained gold season-number trim, crimson optic glow, esports reward badge language without real tournament logos, sharp professional silhouette, premium FPS ranked-season skin, no copied Call of Duty marks, no real military insignia, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike premium weapon skin beauty render, single full weapon only, side-on three-quarter studio render, no poster layout, no text, no labels, no logos, no callout boxes; readable competitive shooter firearm silhouette, aggressive but elegant proportions, high-value legendary skin quality, 3D hard-surface redesign instead of flat decals, layered armor shell kit, transparent energy chamber, custom magazine, sculpted muzzle device, premium PBR materials: anodized gunmetal, satin black ceramic, brushed steel, tempered glass, enamel inlays, carbon fiber grip, subtle edge wear, crisp bevels, balanced lighting on dark neutral studio background, attractive store-thumbnail composition, not ugly, not toy-like unless explicitly mascot themed, no gore, no dirty organic flesh, no random red waveform sticker spam, 4K; ranked black-gold special operations rifle blueprint, realistic assault rifle base with titanium black ceramic receiver, brushed gunmetal barrel, restrained gold serial-number engraving on armor plates, crimson micro-LED circuit lines inside grooves, transparent ammo-count window integrated into magazine well, custom magazine with smoked glass and brass follower, compact competition muzzle brake, tactical red-dot mount, inspect animation shows gold serial plates unlocking and ammo counter sweeping once, reload animation snaps magazine with a crisp tournament reward flash, kill effect creates a clean gold chevron hit marker burst; elite ranked reward feel, no real COD logo, no fake brand text, no giant red wave effects"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike ranked victory emote concept sheet, operator checks wrist scoreboard, taps chest badge, rifle emits one gold confirmation pulse, final disciplined salute-to-ready stance; competitive reward mood, no real league logo, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike post-knockdown finisher concept art, operator marks target with a gold tactical chevron, radio call confirms objective, one precise crimson-gold energy shot creates a clean ranked emblem burst and pushes target away, no gore, no real insignia, professional FPS tournament VFX, 4K"
+          }
+        ],
+        "memeIntro": "COD/Black Ops 7 的近期热度来自典型竞技射击内容循环：新赛季、新蓝图、观看奖励和赛事节点。玩家对这类内容的期待非常清楚：枪要像高价值军武蓝图，角色要像赛季身份奖励，动作要有排名和胜利反馈。这种热点没有轻梗那么好笑，但更符合射击竞技游戏的消费基调。"
+      },
+      {
         "id": "trend-latam-0622-01",
         "date": "2026-06-22",
         "category": "拉丁电子音乐梗",
@@ -642,7 +738,7 @@
           {
             "type": "weapon_skin",
             "label": "枪械皮肤提示词",
-            "prompt": "Bloodstrike weapon skin concept sheet, main side-on full weapon render plus 4 detail callouts for receiver mechanism, barrel/muzzle VFX, custom magazine, and inspection animation frame; premium shooter-game asset, readable realistic firearm silhouette, upgraded 3D armor shells and layered mechanical parts, PBR gunmetal, enamel, chrome, glass, carbon fiber and emissive energy core, dark blue studio background, attractive store-thumbnail quality, not ugly, not horror, no gore, no Cthulhu, no copied logos, 4K; Latin electro gunfire rhythm rifle theme, realistic assault rifle base with raised red-black mechanical armor shells, transparent crimson waveform receiver, tribal-electro geometric inlays under glass, barrel has soundwave muzzle resonator instead of literal violence, custom magazine with pulsing beat meter, inspect animation sends rhythmic red light through chamber like electronic percussion, muzzle VFX emits clean concentric beat rings, kill effect creates a sharp crimson waveform burst, stylish not brutal, no real artist logos, no gore"
+            "prompt": "Bloodstrike premium weapon skin beauty render, single full weapon only, side-on three-quarter studio render, no poster layout, no text, no labels, no logos, no callout boxes; readable competitive shooter firearm silhouette, aggressive but elegant proportions, high-value legendary skin quality, 3D hard-surface redesign instead of flat decals, layered armor shell kit, transparent energy chamber, custom magazine, sculpted muzzle device, premium PBR materials: anodized gunmetal, satin black ceramic, brushed steel, tempered glass, enamel inlays, carbon fiber grip, subtle edge wear, crisp bevels, balanced lighting on dark neutral studio background, attractive store-thumbnail composition, not ugly, not toy-like unless explicitly mascot themed, no gore, no dirty organic flesh, no random red waveform sticker spam, 4K; Latin electro tactical rifle theme rebuilt around percussion mechanics, satin black and smoked chrome body with deep crimson ceramic armor plates, transparent ruby reactor tube integrated inside receiver like a precision power cell, machined brass rhythm pins along the handguard, subtle geometric inlays engraved into metal rather than painted on top, custom magazine with segmented red glass windows like a controlled beat meter, muzzle device shaped as a compact pressure-ring amplifier with layered vents, inspect animation makes internal pistons pulse once-two-three through the receiver, muzzle VFX is a tight crimson pressure ring not a huge audio wave, kill effect is a sharp angular red glass flare; premium nightclub-meets-armory mood, no title text, no cheap waveform poster, no random tribal clutter"
           },
           {
             "type": "emote",
@@ -1217,7 +1313,7 @@
   },
   "meta": {
     "lastUpdate": "2026-06-22",
-    "totalTrends": 25,
+    "totalTrends": 27,
     "totalCompetitors": 4,
     "retentionDays": 5,
     "assetPromptRules": "docs/asset-prompt-rules.md",
