@@ -81,6 +81,14 @@ function getPromptSets(report: Report): PromptSet[] {
   return [{ type: "legacy", label: "AI绘图提示词", prompt: report.imagePrompt }];
 }
 
+function sortReportsByLatest(reports: Report[]): Report[] {
+  return [...reports].sort((a, b) => {
+    const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
+    if (dateDiff !== 0) return dateDiff;
+    return b.id.localeCompare(a.id);
+  });
+}
+
 function ScoreBar({ label, value }: { label: string; value: number }) {
   const pct = Math.min(value * 10, 100);
   const color = value >= 8 ? "#4ade80" : value >= 6 ? "#fbbf24" : "#f87171";
@@ -144,8 +152,8 @@ export default function TrendDashboard() {
     );
   }
 
-  const seaReports: Report[] = data[mainTab].SEA || [];
-  const latamReports: Report[] = data[mainTab].LATAM || [];
+  const seaReports: Report[] = sortReportsByLatest(data[mainTab].SEA || []);
+  const latamReports: Report[] = sortReportsByLatest(data[mainTab].LATAM || []);
 
   function renderCard(report: Report) {
     const isExpanded = expandedId === report.id;
