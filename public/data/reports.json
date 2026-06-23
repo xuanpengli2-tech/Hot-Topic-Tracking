@@ -2,6 +2,102 @@
   "trends": {
     "SEA": [
       {
+        "id": "trend-sea-0623-02",
+        "date": "2026-06-23",
+        "category": "菲律宾Y2K美学",
+        "title": "Bebot / Filipina Y2K Glam：薄眉、冰霜眼影、亮唇和文化自豪感回潮，适合做霓虹Y2K角色皮与镀铬枪皮",
+        "memeIntro": "Bebot 趋势把 Black Eyed Peas 的 Tagalog 歌曲和 2000年代 Filipina glam 重新带回 TikTok。视频通常从素颜或日常状态切到薄眉、冰霜眼影、亮唇、蓬发和 Y2K 造型，核心情绪是“菲律宾美学也可以成为全球流行模板”。",
+        "highlights": "Tatler Asia、Hypebae、Vita Magazine 等都在 2026 年报道了 Bebot 趋势的扩散：它从菲律宾/Filipina 美妆文化出发，扩展到全球创作者的 Y2K glam 转场。这个热点视觉元素明确，适合做女性/中性角色皮、霓虹街头枪皮、镜面补妆 Emote 和舞台灯光处决。",
+        "summary": "资源转化重点是“Y2K 霓虹 + 菲律宾文化自豪感”，不是直接做真实人物妆容。角色皮可以用银色发夹、镜面护目镜、亮面短夹克、霓虹粉紫战术带、珠光装甲片来表达；枪皮用镀铬、珍珠漆、粉紫冷光、玻璃唇釉质感做高级材料。合规上避免刻板化，不做肤色玩笑，不复制具体创作者脸。",
+        "sourceUrl": "https://www.tatlerasia.com/style/beauty/non-filipino-influencers-bebot-trend",
+        "sourceMetric": "2026 Bebot全球扩散报道",
+        "scores": {
+          "categoryAffinity": 8.2,
+          "adaptationCost": 7.8,
+          "mobileFit": 8.7,
+          "audienceMatch": 8.8,
+          "freshness": 8,
+          "marketHeat": 8.7,
+          "total": 8.5
+        },
+        "resourceTypes": [
+          "character_skin",
+          "weapon_skin",
+          "emote",
+          "finisher"
+        ],
+        "promptSets": [
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike Y2K Filipina glam tactical operator concept sheet, full-body render plus visor, jacket, belt charm, glove, and boot callouts; glossy black combat bodysuit, cropped chrome-purple tactical jacket, pearl-pink armor panels, frosted silver eye-visor, thin neon brow-like helmet accent, glossy lip-shaped enamel charm as tiny accessory, confident club-to-combat silhouette, respectful cultural fashion inspiration, no real creator likeness, no stereotype, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike premium weapon skin beauty render, single full weapon only, side-on three-quarter studio render, no poster layout, no text, no labels, no logos, no callout boxes; readable competitive shooter firearm silhouette, high-value legendary skin quality, 3D hard-surface redesign instead of flat decals, layered armor shell kit, transparent energy chamber, custom magazine, sculpted muzzle device, premium PBR materials: anodized gunmetal, satin black ceramic, brushed steel, tempered glass, enamel inlays, carbon fiber grip, subtle edge wear, crisp bevels, balanced lighting on dark neutral studio background, attractive store-thumbnail composition, no gore, no dirty organic flesh, 4K; Y2K Bebot chrome rifle theme, sleek assault rifle with pearl-pink enamel armor plates, mirrored chrome receiver shell, frosted lavender glass energy chamber, glossy lip-oil shine on small inlay panels, rhinestone-like micro LEDs set into the stock as clean hardware not cheap gems, custom magazine with translucent pink gradient window, compact muzzle with silver club-light vents, inspect animation sweeps a mirror flash along the barrel, reload triggers a quick neon beauty-light pulse, kill effect creates a crisp pink-silver flash frame, fashionable but still tactical"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike Y2K glam transformation emote concept sheet, 4 key frames: operator lifts compact mirror, visor flashes pearl pink, jacket light strips activate, final confident pose with chrome sparkle trail; short fashion-transformation loop, no real person likeness, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike non-gore finisher concept art, operator snaps compact mirror open, pink-silver stage lights form a glossy frame around downed enemy, a chrome flash knocks target away cleanly, pearl particles and Y2K lens flare, stylish not mocking, 4K"
+          }
+        ]
+      },
+      {
+        "id": "trend-sea-0623-01",
+        "date": "2026-06-23",
+        "category": "动漫手势转场梗",
+        "title": "Food Jutsu：忍术手势、镜头硬切和物品召唤转场爆火，适合做召唤型Emote、术式枪皮和补给处决",
+        "memeIntro": "Food Jutsu 是 6月 TikTok 热门转场：创作者对镜头做动漫忍术/术式手势，下一帧食物或饮料像被召唤一样突然出现。它借用了 Naruto、Jujutsu Kaisen 等动漫语法，但传播点不是 IP 本身，而是“手势蓄力 - 镜头硬切 - 物品出现”的爽感。",
+        "highlights": "Epidemic Sound 6月18日将 Food Jutsu 列为最新 TikTok 趋势之一，Glamour UK 也在5月底解释了这个趋势如何用 JJK/Naruto 式手势和快速镜头切换制造食物显现效果。它的动作记忆点非常清楚，适合 BS 做短循环召唤动作、补给箱出现、术式枪口 VFX 和无血处决。",
+        "summary": "资源转化建议：优先做 Emote 和处决动作，再扩展到角色皮和枪皮。角色皮不能直接做 Naruto/JJK，而是抽象为“战术术式召唤者”：手套、袖口、符号环、腰间补给卷轴、蓝白能量切换光。枪皮要围绕“召唤切换”做结构，比如枪身内置符号转轮、弹匣像封印仓、检视时手势能量沿枪身点亮，避免只贴动漫符号。",
+        "sourceUrl": "https://www.epidemicsound.com/blog/latest-tiktok-trends/",
+        "sourceMetric": "6月18日趋势榜 / Glamour 5月底解释",
+        "scores": {
+          "categoryAffinity": 8.8,
+          "adaptationCost": 8.7,
+          "mobileFit": 9.2,
+          "audienceMatch": 8.5,
+          "freshness": 9.4,
+          "marketHeat": 8.6,
+          "total": 8.9
+        },
+        "resourceTypes": [
+          "character_skin",
+          "weapon_skin",
+          "emote",
+          "finisher"
+        ],
+        "promptSets": [
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike character skin concept sheet, full-body tactical operator render plus glove, sleeve, utility belt, back device, and visor callouts; original tactical summoner operator, matte black combat suit with blue-white hand-sign energy lines, reinforced fingerless casting gloves, compact supply-scroll canisters on belt, translucent wrist seal projectors, sharp anime-action influence but modern shooter silhouette, no Naruto or JJK symbols, no copied IP, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike premium weapon skin beauty render, single full weapon only, side-on three-quarter studio render, no poster layout, no text, no labels, no logos, no callout boxes; readable competitive shooter firearm silhouette, high-value legendary skin quality, 3D hard-surface redesign instead of flat decals, layered armor shell kit, transparent energy chamber, custom magazine, sculpted muzzle device, premium PBR materials: anodized gunmetal, satin black ceramic, brushed steel, tempered glass, enamel inlays, carbon fiber grip, subtle edge wear, crisp bevels, balanced lighting on dark neutral studio background, attractive store-thumbnail composition, no gore, no dirty organic flesh, 4K; food jutsu summoner SMG theme, compact tactical SMG with rotating seal-wheel module inside receiver, blue-white energy glyphs under tempered glass, custom magazine shaped like a clean supply capsule, sculpted muzzle ring that emits a short summoning flash, handguard has layered ceramic plates resembling folded paper seals without any copied anime symbols, inspect animation lights up from grip to barrel like a hand-sign combo, reload snaps a capsule magazine and projects a tiny supply hologram, kill effect creates a clean blue-white item-summon burst, stylish tactical magic not cosplay"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike Food Jutsu emote concept sheet, 5 key frames: operator plants feet, performs fast tactical hand signs, blue-white seal circle snaps open, a small supply crate materializes, operator catches it and returns to ready stance; crisp camera-cut timing, funny but cool, no copied anime symbols, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike post-knockdown finisher concept art, operator performs two fast hand signs, a glowing supply seal opens under target, non-gore shockwave launches target backward as ammo boxes and blue-white seal fragments appear for one frame, clean anime-action VFX, no horror, no copied IP, 4K"
+          }
+        ]
+      },
+      {
         "id": "trend-sea-0622-02",
         "date": "2026-06-22",
         "category": "怀旧复古梗",
@@ -609,6 +705,102 @@
       }
     ],
     "LATAM": [
+      {
+        "id": "trend-latam-0623-02",
+        "date": "2026-06-23",
+        "category": "世界杯热血音频",
+        "title": "Nyck Caution《PRESSURE!》体育高压音频爆红：世界杯、F1和足球剪辑都在用，适合竞技热血Emote与高压能量枪皮",
+        "memeIntro": "《PRESSURE!》在 6月成为 TikTok 体育剪辑常用热血音频，常配合进球、冲刺、极限动作和“关键时刻顶住压力”的画面。它不是某个竞品游戏，而是体育/世界杯内容里的高压情绪模板。",
+        "highlights": "Epidemic Sound 6月18日称《PRESSURE!》已被大量体育内容使用，并提到 F1、Real Madrid、Premier League、FIFA World Cup 官方账号等都在使用；Metricool 6月22日也把它列入本周 TikTok 热歌。它很适合拉美足球语境和竞技射击的胜利反馈。",
+        "summary": "资源转化方向：做“高压时刻”而不是具体球队。角色皮可用黑白运动压缩衣、战术心率灯、金属护膝和赛场灯光；枪皮用压力表、红线心跳、碳纤维、金属计时器和过载 VFX；Emote 做赛前深呼吸/压哨开火，处决动作做压力环收缩后爆开。避免真实球队、赛事 logo 和球员肖像。",
+        "sourceUrl": "https://www.epidemicsound.com/blog/latest-tiktok-trends/",
+        "sourceMetric": "6月18日趋势榜 / 6月22日TikTok热歌",
+        "scores": {
+          "categoryAffinity": 8.6,
+          "adaptationCost": 8.6,
+          "mobileFit": 9,
+          "audienceMatch": 9.1,
+          "freshness": 9.5,
+          "marketHeat": 9,
+          "total": 9
+        },
+        "resourceTypes": [
+          "character_skin",
+          "weapon_skin",
+          "emote",
+          "finisher"
+        ],
+        "promptSets": [
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike pressure-point athlete operator concept sheet, full-body tactical render plus visor, chest monitor, knee guard, glove, and boot callouts; black compression combat suit with carbon fiber armor, white-gold stadium light trims, red heartbeat line on chest device, reinforced athletic kneepads, calm clutch-player posture, no team logos, no real athlete likeness, premium competitive shooter style, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike premium weapon skin beauty render, single full weapon only, side-on three-quarter studio render, no poster layout, no text, no labels, no logos, no callout boxes; readable competitive shooter firearm silhouette, high-value legendary skin quality, 3D hard-surface redesign instead of flat decals, layered armor shell kit, transparent energy chamber, custom magazine, sculpted muzzle device, premium PBR materials: anodized gunmetal, satin black ceramic, brushed steel, tempered glass, enamel inlays, carbon fiber grip, subtle edge wear, crisp bevels, balanced lighting on dark neutral studio background, attractive store-thumbnail composition, no gore, no dirty organic flesh, 4K; PRESSURE clutch rifle theme, carbon fiber assault rifle with satin black receiver, white-gold competition armor plates, transparent pressure gauge chamber with red heartbeat line moving inside, compact stopwatch module near stock, custom magazine with vertical pressure meter, muzzle device has tight overpressure vent rings, inspect animation makes gauge needle climb then lock into green zone, reload snaps magazine with one stadium-light flash, kill effect creates a crisp red-white pressure-ring burst, elite sports hype energy, no FIFA or club logos, no jersey stickers"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike pressure moment emote concept sheet, 4 key frames: operator exhales slowly, taps chest monitor, heartbeat line spikes, rifle snaps into clutch-ready pose under stadium light; tense athletic energy, no team marks, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike post-knockdown finisher concept art, red-white pressure ring tightens around target, operator fires one precise shot as stadium lights blackout then flash, target is pushed away by clean overpressure wave, no gore, competitive clutch VFX, 4K"
+          }
+        ]
+      },
+      {
+        "id": "trend-latam-0623-01",
+        "date": "2026-06-23",
+        "category": "拉丁热歌动作梗",
+        "title": "Dame Un Grrr：拉丁流行、狮吼手势和“Un qué?”反应梗持续发酵，适合做野性节拍枪皮与挑衅Emote",
+        "memeIntro": "Dame Un Grrr 的传播点是极易复刻的“grrr / un qué?”问答和狮吼式动作。它不需要复杂舞蹈，用户只要做表情、肩部节奏和手势就能跟上，适合短视频二创和角色挑衅动作。",
+        "highlights": "资料显示《Dame Un Grrr》在 TikTok 上拥有千万级视频创作量；Metricool 和 Apple Music 的 2026 TikTok 热歌列表仍能看到它的持续热度。它适合拉美市场的轻量音乐热点，但要比此前的 Tiroteo 更偏表情梗和挑衅动作，而不是写实枪火。",
+        "summary": "BS 可把它做成“野性节拍”主题：角色皮加入豹纹/狮鬃式肩甲但保持战术剪影；枪皮用金黑、琥珀、红棕能量，不做真实动物头和夸张牙齿；Emote 做“Un qué?”疑惑转狮吼挑衅，处决动作做琥珀声波冲击。它适合活动商店中低价套装或音乐主题小礼包。",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Dame_Un_Grrr",
+        "sourceMetric": "TikTok千万级创作量 / 2026热歌列表仍在榜",
+        "scores": {
+          "categoryAffinity": 8.4,
+          "adaptationCost": 8.4,
+          "mobileFit": 8.9,
+          "audienceMatch": 8.6,
+          "freshness": 8.2,
+          "marketHeat": 8.8,
+          "total": 8.6
+        },
+        "resourceTypes": [
+          "character_skin",
+          "weapon_skin",
+          "emote",
+          "finisher"
+        ],
+        "promptSets": [
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike wild Latin rhythm operator concept sheet, full-body tactical render plus shoulder armor, glove, belt, visor, and boot callouts; matte black combat suit, amber-gold pulse trims, subtle lion-mane inspired layered shoulder cape as fabric armor, red-brown enamel details, confident taunt expression, stage-light energy, no real artist likeness, no animal costume head, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike premium weapon skin beauty render, single full weapon only, side-on three-quarter studio render, no poster layout, no text, no labels, no logos, no callout boxes; readable competitive shooter firearm silhouette, high-value legendary skin quality, 3D hard-surface redesign instead of flat decals, layered armor shell kit, transparent energy chamber, custom magazine, sculpted muzzle device, premium PBR materials: anodized gunmetal, satin black ceramic, brushed steel, tempered glass, enamel inlays, carbon fiber grip, subtle edge wear, crisp bevels, balanced lighting on dark neutral studio background, attractive store-thumbnail composition, no gore, no dirty organic flesh, 4K; Dame Un Grrr amber rhythm rifle theme, satin black rifle with amber-gold ceramic armor plates, red-brown enamel groove inlays, transparent warm amber reactor tube in receiver, compact claw-mark vent cuts as machined metal details not monster parts, custom magazine with segmented pulse windows, muzzle brake emits tight amber growl-ring VFX, inspect animation pulses one-two 'grrr' rhythm through the chamber, reload snaps with a brief gold stage-light flare, kill effect creates a clean amber roar ripple, playful Latin-pop attitude, no animal mouth gun, no cheap text decals"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike Dame Un Grrr taunt emote concept sheet, 4 key frames: operator leans in with confused 'un que' gesture, shoulder shimmy, quick claw-hand pose, amber rhythm ring pops behind, final smug stance; funny and readable, no real artist likeness, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike non-gore finisher concept art, operator snaps fingers on beat, amber rhythm rings compress around downed enemy, a clean lion-roar shaped light ripple pushes target backward, no animal gore, no horror, Latin pop stage VFX, 4K"
+          }
+        ]
+      },
       {
         "id": "trend-latam-0622-01",
         "date": "2026-06-22",
@@ -1314,8 +1506,8 @@
     ]
   },
   "meta": {
-    "lastUpdate": "2026-06-22",
-    "totalTrends": 25,
+    "lastUpdate": "2026-06-23",
+    "totalTrends": 29,
     "totalCompetitors": 6,
     "retentionDays": 5,
     "assetPromptRules": "docs/asset-prompt-rules.md",
