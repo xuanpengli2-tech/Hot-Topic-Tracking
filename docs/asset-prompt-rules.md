@@ -53,14 +53,18 @@ But keep the gun clean, premium, and game-ready.
 
 ## Character Skin Prompt Pattern
 
-Character prompts can use:
+Character prompts should use:
 
-- full-body front hero render
-- small side/back/detail callouts for helmet, backpack, gloves, shoulder armor, special effect
+- two full-body character views only: front view and back view on one clean concept-art canvas
+- no auxiliary detail panels, no UI labels, no text blocks, no material swatch boxes, no cropped close-ups
 - tactical silhouette first, trend details second
 - stylized but polished materials
 - build on the existing Bloodstrike base character skeleton and original skin proportions first, then add theme-specific armor, clothing, accessories, VFX, and material changes
 - avoid changing the character into a completely different creature or mascot unless the request is explicitly for a companion/mascot asset
+- use one strong silhouette idea, one dominant material family, one accent color family, and one memorable motif from the trend
+- make the outfit bolder than a basic tactical suit, but keep the visual hierarchy clean and readable
+- avoid scattering many tiny references across gloves, backpacks, knees, charms, patches, and shoes at the same time
+- prefer premium fashion/game-skin composition: large readable clothing shape, controlled ornament, refined trim, clear face/helmet area, strong back silhouette
 
 Cute or humorous character skins are allowed, such as shark, duck, capybara, or mascot-inspired skins, as long as they are not childish pajamas and still fit a shooter. Add enough gear structure so the skin feels like combat equipment, not cosplay clothing only.
 
