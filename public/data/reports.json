@@ -2,6 +2,102 @@
   "trends": {
     "SEA": [
       {
+        "id": "trend-sea-0625-02",
+        "date": "2026-06-25",
+        "category": "Y2K豪宅主妇美学",
+        "title": "Tuscan Mom：暖棕缎面、动物纹和厚重珠宝感在 TikTok 回潮，适合做奢感角色皮与金棕枪皮",
+        "memeIntro": "Tuscan mom aesthetic 这周在 TikTok 明显回潮，用户先怀念 2000 年代后期到 2010 年代早期的托斯卡纳厨房，再继续想象“这个家里的女主人会怎么穿”。它的传播点不是单一人物，而是暖棕豪宅感、低腰牛仔、缎面挂脖、厚重珠宝、动物纹和平台鞋拼成的浮夸 Y2K 成熟女人气场。",
+        "highlights": "Teen Vogue 在 2026 年 6 月 23 日总结这股热潮时，直接点名 Gabrielle Solis 式的 flashy 主妇风，并提炼出蛇纹/斑马纹、刺绣牛仔、缎面上衣、厚金属珠宝、肩背包和珠宝坡跟鞋这些高辨识元素。它很适合转成 BS 的高级暖棕时装战术主题，而不是简单复刻现实穿搭。",
+        "summary": "资源转化重点是“暖色奢感 + 夸张但有秩序的层次”。角色皮可用咖啡棕、香槟金、锈红、葡萄紫、缎面与金属件做出强正背面轮廓，再用少量蛇纹丝巾或动物纹衬片提味；枪皮则围绕镀金包扣、琥珀玻璃、暖棕珐琅和手袋五金感来做结构升级。避免真实品牌 logo、真实影视角色脸和纯时装 cosplay 感。",
+        "sourceUrl": "https://www.teenvogue.com/story/how-to-channel-the-y2k-tuscan-mom-aesthetic-going-viral-on-tiktok",
+        "sourceMetric": "Teen Vogue 6月23日 / TikTok 豪宅主妇风回潮",
+        "scores": {
+          "categoryAffinity": 8.7,
+          "adaptationCost": 8.2,
+          "mobileFit": 8.5,
+          "audienceMatch": 8.4,
+          "freshness": 9.4,
+          "marketHeat": 8.3,
+          "total": 8.6
+        },
+        "resourceTypes": [
+          "character_skin",
+          "weapon_skin",
+          "emote",
+          "finisher"
+        ],
+        "promptSets": [
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike premium character skin concept art, two full-body views only: front view and back view on one clean dark studio canvas, no auxiliary detail panels, no labels, no UI, no text, no cropped close-ups; built on the existing Bloodstrike base character skeleton with readable shooter proportions; bold coherent outfit silhouette, premium game skin quality, strong front silhouette and distinctive back silhouette, one dominant material family, one accent color family, one memorable trend motif, refined trim and clean material hierarchy, dramatic but not cluttered; original Tuscan glam tactical operator, espresso-brown combat bodysuit, champagne-gold hardware, rust satin halter-inspired armored top layer, smoky plum scarf panel, subtle python-print lining accents, chunky jewelry-like armor links, glossy amber visor details, confident villa-to-combat silhouette, luxurious but still combat ready, no real celebrity likeness, no real brand logos; keep the design attractive and store-thumbnail worthy, make the clothing and armor more daring than a basic tactical suit but visually controlled, avoid random small accessories, avoid sticker-collage design, avoid messy straps everywhere, no copied IP, no real person likeness, no real brand logos, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike premium weapon skin beauty render, single full weapon only, side-on three-quarter studio render, no poster layout, no text, no labels, no logos, no callout boxes; readable competitive shooter firearm silhouette, high-value legendary skin quality, 3D hard-surface redesign instead of flat decals, layered armor shell kit, transparent energy chamber, custom magazine, sculpted muzzle device, premium PBR materials: anodized gunmetal, satin black ceramic, brushed steel, tempered glass, enamel inlays, carbon fiber grip, subtle edge wear, crisp bevels, balanced lighting on dark neutral studio background, attractive store-thumbnail composition, no gore, no dirty organic flesh, 4K; Tuscan mom luxury rifle theme, satin espresso receiver with champagne-gold armored shell kit, smoked amber glass core, rust and plum enamel panels, subtle snake-print laser etching hidden under clear coat, custom magazine inspired by refined handbag hardware, sculpted muzzle with warm chandelier-like vent glow, inspect animation sweeps a soft golden light across the metal fittings, reload gives one clean jewelry-clasp flash, kill effect creates a crisp amber-gold resort shimmer, glamorous but disciplined, no real brand monograms, no fashion poster styling"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike luxury-glam emote concept sheet, 4 key frames: operator adjusts silk scarf at the shoulder, taps oversized sunglasses up to visor line, gold light catches on jewelry hardware, final smug ready stance; short chic loop, premium Y2K rich-aunt energy, no real celebrity likeness, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike non-gore finisher concept art, operator flicks a satin scarf panel forward, warm chandelier-like light frames the downed enemy, one amber-gold shock pulse sends target sliding back cleanly, luxury resort VFX, stylish not comedic, no gore, 4K"
+          }
+        ]
+      },
+      {
+        "id": "trend-sea-0625-01",
+        "date": "2026-06-25",
+        "category": "流体花纹美甲热",
+        "title": "Blooming Gel Nails：柔雾花瓣、蝴蝶斑纹和流体晕染回到夏季审美中心，适合做液态珐琅枪皮与高光角色皮",
+        "memeIntro": "Blooming gel nails 在 2026 夏季回归，但这次不再是 2023 年那种大面积 tie-dye 或高饱和度冲脸效果，而是更柔、更流动、更像热带花瓣和蝴蝶翅面纹理的梦幻晕染。它的传播点是“软流体 + 控制感 + 近看很精致”，很适合翻译成 BS 的高级材质语言。",
+        "highlights": "Allure 在 2026 年 5 月 27 日指出，夏季美甲趋势正在回到会产生 movement 和 texture 的设计；Spate 的数据则显示，“blooming gel nails” 在 Google、TikTok 和 Instagram 的搜索量过去一年增长了 39.2%。报道还特别强调，这轮流行更偏热带花卉、蝴蝶斑纹、柔雾果冻层和受控晕染，而不是 2023 年那种 loud 的效果。",
+        "summary": "资源转化建议是把它当作“液态珐琅材质系统”，而不是把美甲图案硬贴到枪上。角色皮用乳白树脂、雾面黑、冰蓝粉紫晕染甲片式护甲和蝴蝶翼纹理做出轻盈但昂贵的视觉；枪皮则用玻璃仓、流体珐琅、花瓣式分层壳板和柔色能量芯来建立记忆点。避免廉价指甲贴、少女玩具感和随机彩色涂鸦。",
+        "sourceUrl": "https://www.allure.com/story/blooming-gel-nail-designs-summer-2026",
+        "sourceMetric": "Allure 5月27日 / Spate 搜索年增 39.2%",
+        "scores": {
+          "categoryAffinity": 8.5,
+          "adaptationCost": 8.1,
+          "mobileFit": 8.8,
+          "audienceMatch": 8.2,
+          "freshness": 9,
+          "marketHeat": 8.4,
+          "total": 8.5
+        },
+        "resourceTypes": [
+          "character_skin",
+          "weapon_skin",
+          "emote",
+          "finisher"
+        ],
+        "promptSets": [
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike premium character skin concept art, two full-body views only: front view and back view on one clean dark studio canvas, no auxiliary detail panels, no labels, no UI, no text, no cropped close-ups; built on the existing Bloodstrike base character skeleton with readable shooter proportions; bold coherent outfit silhouette, premium game skin quality, strong front silhouette and distinctive back silhouette, one dominant material family, one accent color family, one memorable trend motif, refined trim and clean material hierarchy, dramatic but not cluttered; original fluid-enamel tactical operator, matte black undersuit with milky resin armor petals, controlled blooming gradients in ice blue, soft pink, seafoam and lilac, butterfly-wing inspired translucent shoulder and back plates, chrome edge trims, glossy iridescent visor accents, elegant but combat readable silhouette, no real nail product branding, no cosplay princess mood; keep the design attractive and store-thumbnail worthy, make the clothing and armor more daring than a basic tactical suit but visually controlled, avoid random small accessories, avoid sticker-collage design, avoid messy straps everywhere, no copied IP, no real person likeness, no real brand logos, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike premium weapon skin beauty render, single full weapon only, side-on three-quarter studio render, no poster layout, no text, no labels, no logos, and no callout boxes; readable competitive shooter firearm silhouette, high-value legendary skin quality, 3D hard-surface redesign instead of flat decals, layered armor shell kit, transparent energy chamber, custom magazine, sculpted muzzle device, premium PBR materials: anodized gunmetal, satin black ceramic, brushed steel, tempered glass, enamel inlays, carbon fiber grip, subtle edge wear, crisp bevels, balanced lighting on dark neutral studio background, attractive store-thumbnail composition, no gore, no dirty organic flesh, 4K; blooming gel luxury SMG theme, satin black base weapon with milky translucent shell panels, soft-flowing enamel blooms trapped under clear glass, butterfly-wing speckle textures blended into the receiver, seafoam and lilac energy suspended in a transparent chamber, custom magazine with layered petal-like armor geometry, muzzle emits a tight iridescent mist flare, inspect animation slowly diffuses color through the body then resolves into a crisp pattern, reload triggers one glossy bloom pulse, kill effect creates a clean pastel-glass burst, elegant and premium, no manicure poster styling, no cute sticker spam"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike glossy-bloom emote concept sheet, 4 key frames: operator raises one hand, iridescent bloom spreads across fingertips, a soft butterfly-wing light fan opens behind, colors settle into a polished ready pose; controlled dreamy loop, fashionable not magical-girl, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike non-gore finisher concept art, operator traces a small arc in the air, liquid-enamel petals bloom under the downed enemy, a butterfly-speckled glass shockwave rises and pushes target away cleanly, glossy pastel highlights, no gore, 4K"
+          }
+        ]
+      },
+      {
         "id": "trend-sea-0623-02",
         "date": "2026-06-23",
         "category": "菲律宾Y2K美学",
@@ -705,6 +801,54 @@
       }
     ],
     "LATAM": [
+      {
+        "id": "trend-latam-0625-01",
+        "date": "2026-06-25",
+        "category": "迷幻度假印花",
+        "title": "Psychedelic Prints：Pucci 式旋涡印花和高饱和度假配色回潮，适合做度假战术角色皮与旋涡能量枪皮",
+        "memeIntro": "2026 夏季的迷幻印花不是安静配角，而是高饱和电蓝、亮橙、荧粉和旋涡图案重新接管度假穿搭。它的传播点在于“夸张、复古、度假、看一眼就会截图”，本质上是 Gen Z 重新拥抱 Pucci-girl 式的戏剧性穿搭，而不是极简 clean look。",
+        "highlights": "Who What Wear 在 2026 年 6 月 4 日直接把 psychedelic prints 判断为今年夏天最大的趋势之一，点名 Hailey Bieber、Bella Hadid 和 Alabama Barker 都在推高这类视觉；文中还引用 Lyst 数据称，Pucci 单品搜索量曾经季度环比暴涨 96%。对于 LATAM 市场来说，这种高温高色彩的度假印花比纯奢侈时装更容易转成夏日战术主题。",
+        "summary": "BS 转化重点是把旋涡印花做成立体结构语言，而不是满屏贴花。角色皮可以用电蓝、火橙、洋红和黑色做出度假围巾感披片、弧线切分护甲和高识别背面轮廓；枪皮则用旋涡珐琅、透明反应仓、波浪壳板和阳光折射感来做 premium 重构。避免真实品牌纹样、廉价沙滩纪念品感和杂乱无章的图案铺满。",
+        "sourceUrl": "https://www.whowhatwear.com/fashion/trends/psychedelic-prints-fashion-trend-summer-2026",
+        "sourceMetric": "Who What Wear 6月4日 / Lyst 提到 Pucci 搜索量曾环比 +96%",
+        "scores": {
+          "categoryAffinity": 8.8,
+          "adaptationCost": 8,
+          "mobileFit": 8.9,
+          "audienceMatch": 8.8,
+          "freshness": 8.8,
+          "marketHeat": 8.9,
+          "total": 8.7
+        },
+        "resourceTypes": [
+          "character_skin",
+          "weapon_skin",
+          "emote",
+          "finisher"
+        ],
+        "promptSets": [
+          {
+            "type": "character_skin",
+            "label": "角色皮肤提示词",
+            "prompt": "Bloodstrike premium character skin concept art, two full-body views only: front view and back view on one clean dark studio canvas, no auxiliary detail panels, no labels, no UI, no text, no cropped close-ups; built on the existing Bloodstrike base character skeleton with readable shooter proportions; bold coherent outfit silhouette, premium game skin quality, strong front silhouette and distinctive back silhouette, one dominant material family, one accent color family, one memorable trend motif, refined trim and clean material hierarchy, dramatic but not cluttered; original resort-maximalist tactical operator, black base combat suit with electric blue, vivid orange and flamboyant fuchsia curved armor sections, scarf-like shoulder drape translated into hard-surface panels, glossy enamel swirl inserts, mirrored sunglass-inspired visor, strong jet-set back silhouette, playful luxury energy without copying any real fashion house print, no real celebrity likeness; keep the design attractive and store-thumbnail worthy, make the clothing and armor more daring than a basic tactical suit but visually controlled, avoid random small accessories, avoid sticker-collage design, avoid messy straps everywhere, no copied IP, no real person likeness, no real brand logos, 4K"
+          },
+          {
+            "type": "weapon_skin",
+            "label": "枪械皮肤提示词",
+            "prompt": "Bloodstrike premium weapon skin beauty render, single full weapon only, side-on three-quarter studio render, no poster layout, no text, no labels, no logos, and no callout boxes; readable competitive shooter firearm silhouette, high-value legendary skin quality, 3D hard-surface redesign instead of flat decals, layered armor shell kit, transparent energy chamber, custom magazine, sculpted muzzle device, premium PBR materials: anodized gunmetal, satin black ceramic, brushed steel, tempered glass, enamel inlays, carbon fiber grip, subtle edge wear, crisp bevels, balanced lighting on dark neutral studio background, attractive store-thumbnail composition, no gore, no dirty organic flesh, 4K; psychedelic resort rifle theme, deep black receiver rebuilt with curved enamel armor swirls in electric blue, vivid orange and hot fuchsia, transparent solar-reactor chamber with liquid color flow, custom magazine with wave-cut side windows, sculpted muzzle that emits a tight sunburst vortex flash, inspect animation sends one controlled swirl of color through the shell panels, reload hits with a bright vacation-light flare, kill effect creates a crisp spiral prism burst, maximal but coherent, no copied Pucci print, no cheap sticker wallpaper effect"
+          },
+          {
+            "type": "emote",
+            "label": "Emote提示词",
+            "prompt": "Bloodstrike resort-swirl emote concept sheet, 4 key frames: operator flicks a scarf-like holo ribbon outward, bright blue-orange-fuchsia rings spiral around the body, visor catches a sun flare, final playful confident pose; fast readable summer loop, no real fashion branding, 4K"
+          },
+          {
+            "type": "finisher",
+            "label": "处决动作提示词",
+            "prompt": "Bloodstrike non-gore finisher concept art, operator spins one hand and a vivid psychedelic vortex forms under the downed enemy, sunburst spiral light compresses then kicks target away cleanly, resort-chic energy, no gore, 4K"
+          }
+        ]
+      },
       {
         "id": "trend-latam-0623-02",
         "date": "2026-06-23",
@@ -1506,8 +1650,8 @@
     ]
   },
   "meta": {
-    "lastUpdate": "2026-06-23",
-    "totalTrends": 29,
+    "lastUpdate": "2026-06-25",
+    "totalTrends": 32,
     "totalCompetitors": 6,
     "retentionDays": 5,
     "assetPromptRules": "docs/asset-prompt-rules.md",
